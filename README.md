@@ -3,7 +3,7 @@
 
     The examples here are directly from the Project Jigsaw: Module System Quick-Start Guide, 
     see http://openjdk.java.net/projects/jigsaw/quick-start.
-   
+
 ## Examples covered
     - Greetings
     - Greetings world
@@ -17,7 +17,9 @@
     Each example is enclosed in a folder of its own containing bash scripts to compile, 
     package and run the respective examples.
 
-## Download 
+    Note: the bash files provided should work on Linux and in theory on the MacOS as well. For Windows we would have to manually convert the .sh files into .bat, with minor tweaks should also work there. Happy to received a pull request for it.
+
+## Download (all platforms)
 Early Access build of Jigsaw JDK9 is available at [https://jdk9.java.net/jigsaw/](https://jdk9.java.net/jigsaw/).
 
 The bash script ```getJigsawJDK.sh``` helps download the latest Jigsaw JDK from Oracle.   
