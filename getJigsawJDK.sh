@@ -29,13 +29,13 @@ fi
 JAVA_HOME_IS_SET=$(echo `echo $JAVA_HOME | grep "jdk1.9.0"`)
 echo ""
 if [ -z $JAVA_HOME_IS_SET ]; then
-	echo -e "JAVA_HOME does not points at \e[1;37m$JDK_DESTINATION/$JDK_FOLDER_NAME\e[0;37m"
-	echo -e "Please make it point to $JDK_DESTINATION/$JDK_FOLDER_NAME with the command \e[1;37mexport JAVA_HOME=$JDK_DESTINATION/$JDK_FOLDER_NAME\e[0;37m"
+	echo -e "JAVA_HOME does not point at \e[1;37m$JDK_DESTINATION/$JDK_FOLDER_NAME\e[0;37m"
+	echo -e "Please make it point at $JDK_DESTINATION/$JDK_FOLDER_NAME with the command \e[1;37mexport JAVA_HOME=$JDK_DESTINATION/$JDK_FOLDER_NAME\e[0;37m"
 else
 	echo -e "JAVA_HOME points at \e[1;37m$JAVA_HOME \e[0;37m"
 fi
 echo ""
-echo "Running java and javac with -version options, to verify if JDK 1.9.0 has been installed successfully."
+echo "Running java and javac with -version options, to verify if the right JDK 1.9.0 commands are being executed."
 java -version
 echo ""
 javac -version
