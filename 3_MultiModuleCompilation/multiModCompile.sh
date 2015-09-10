@@ -1,3 +1,7 @@
+#!/bin/bash
+
+set -eu
+
 DESTINATION_FOLDER="mods"
 echo "Creating folder $DESTINATION_FOLDER, if it does not exists."
 mkdir -p $DESTINATION_FOLDER

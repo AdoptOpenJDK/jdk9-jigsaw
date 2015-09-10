@@ -1,3 +1,7 @@
+#!/bin/bash
+
+set -eu
+
 COM_GREETINGS_FOLDER="mods/com.greetings"
 
 echo "Creating folder $COM_GREETINGS_FOLDER, if it does not exists."

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#set -x
+set -eu
 
 JDK_TAR_FILE_NAME="jigsaw-jdk-bin-linux-x64.tar.gz"
 JDK_DESTINATION="/usr/lib/jvm"
@@ -26,10 +26,16 @@ else
 	echo -e "The Jigsaw JDK has already been installed at \e[1;37m$JDK_DESTINATION/$JDK_FOLDER_NAME. \e[0;37m"
 fi
 
+JAVA_HOME_IS_SET=$(echo `echo $JAVA_HOME | grep "jdk1.9.0"`)
 echo ""
-echo -e "JAVA_HOME points at \e[1;37m$JAVA_HOME \e[0;37m"
+if [ -z $JAVA_HOME_IS_SET ]; then
+	echo -e "JAVA_HOME does not points at \e[1;37m$JDK_DESTINATION/$JDK_FOLDER_NAME\e[0;37m"
+	echo -e "Please make it point to $JDK_DESTINATION/$JDK_FOLDER_NAME with the command \e[1;37mexport JAVA_HOME=$JDK_DESTINATION/$JDK_FOLDER_NAME\e[0;37m"
+else
+	echo -e "JAVA_HOME points at \e[1;37m$JAVA_HOME \e[0;37m"
+fi
 echo ""
-echo "Running java and javac with -version options"
+echo "Running java and javac with -version options, to verify if JDK 1.9.0 has been installed successfully."
 java -version
 echo ""
 javac -version

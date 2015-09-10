@@ -1,3 +1,7 @@
+#!/bin/bash
+
+set -eu
+
 echo "Removing any existing greetings.jmod"
 rm -f greetings.jmod
 

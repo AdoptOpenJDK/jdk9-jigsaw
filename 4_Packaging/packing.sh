@@ -1,3 +1,7 @@
+#!/bin/bash
+
+set -eu
+
 mkdir -p mlib
 
 echo "Creating module org.astro as a jar"

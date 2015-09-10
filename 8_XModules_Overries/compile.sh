@@ -1,3 +1,7 @@
+#!/bin/bash
+
+set -eu
+
 PATCHES_FOLDER="mypatches/java.base"
 SRC_FOLDER="src"
 

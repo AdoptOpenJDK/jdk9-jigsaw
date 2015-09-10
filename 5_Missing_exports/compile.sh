@@ -1,3 +1,7 @@
+#!/bin/bash
+
+set -eu
+
 COM_GREETINGS_FOLDER="mods/com.greetings"
 ORG_ASTRO_FOLDER="mods/org.astro"
 
