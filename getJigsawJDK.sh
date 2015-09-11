@@ -3,7 +3,7 @@
 set -eu
 
 JDK_TAR_FILE_NAME="jigsaw-jdk-bin-linux-x64.tar.gz"
-JDK_DESTINATION="/usr/lib/jvm"
+JDK_DESTINATION=$(echo ```pwd```)
 JDK_FOLDER_NAME="jdk1.9.0"
 
 echo ""
@@ -21,21 +21,30 @@ if [ ! -d "$JDK_DESTINATION/$JDK_FOLDER_NAME" ]; then
 	echo "Unpacking the Jigsaw JDK..."
 	tar xzvf $JDK_TAR_FILE_NAME
 	echo "Installing the Jigsaw JDK into $JDK_DESTINATION"
-	sudo mv -f $JDK_FOLDER_NAME $JDK_DESTINATION
 else
 	echo -e "The Jigsaw JDK has already been installed at \e[1;37m$JDK_DESTINATION/$JDK_FOLDER_NAME. \e[0;37m"
 fi
 
-JAVA_HOME_IS_SET=$(echo `echo $JAVA_HOME | grep "jdk1.9.0"`)
+JAVA_HOME_IS_SET=$(echo `echo $JAVA_HOME | grep "$JDK_FOLDER_NAME"`)
 echo ""
 if [ -z $JAVA_HOME_IS_SET ]; then
 	echo -e "JAVA_HOME does not point at \e[1;37m$JDK_DESTINATION/$JDK_FOLDER_NAME\e[0;37m"
-	echo -e "Please make it point at $JDK_DESTINATION/$JDK_FOLDER_NAME with the command \e[1;37mexport JAVA_HOME=$JDK_DESTINATION/$JDK_FOLDER_NAME\e[0;37m"
+	echo -e "Please make it points at \e[1;37m$JDK_DESTINATION/$JDK_FOLDER_NAME\e[0;37m with the command \e[1;37mexport JAVA_HOME=$JDK_DESTINATION/$JDK_FOLDER_NAME\e[0;37m"
 else
 	echo -e "JAVA_HOME points at \e[1;37m$JAVA_HOME \e[0;37m"
 fi
+
+PATH_IS_SET=$(echo `echo $PATH | grep "$JDK_FOLDER_NAME"`)
 echo ""
-echo "Running java and javac with -version options, to verify if the right JDK 1.9.0 commands are being executed."
+if [ -z $PATH_IS_SET ]; then
+	echo -e "PATH does not contain \e[1;37m$JDK_DESTINATION/$JDK_FOLDER_NAME\e[0;37m"
+	echo -e "Please make it also point at it with the command \e[1;37mexport PATH=$JDK_DESTINATION/$JDK_FOLDER_NAME:\$PATH\e[0;37m"
+else
+	echo -e "PATH contains  \e[1;37m$JDK_DESTINATION/$JDK_FOLDER_NAME\e[0;37m"
+fi
+
+echo ""
+echo "Running java and javac with -version options, to verify if the right JDK 9 commands are being executed."
 java -version
 echo ""
 javac -version

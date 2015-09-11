@@ -25,6 +25,14 @@ see [http://openjdk.java.net/projects/jigsaw/quick-start](http://openjdk.java.ne
 ## Download (all platforms)
 Early Access build of Jigsaw JDK9 is available at [https://jdk9.java.net/jigsaw/](https://jdk9.java.net/jigsaw/).
 
+Please install the ```tree``` command before moving forward:
+
+        - Linux
+        sudo apt-get install tree
+
+        - MacOSX 
+        see http://apple.stackexchange.com/questions/128876/whats-the-equivalent-of-the-unix-tree-command-on-osx
+
 The bash script ```getJigsawJDK.sh``` helps download the latest Jigsaw JDK from Oracle.   
     
 ## Must reads
