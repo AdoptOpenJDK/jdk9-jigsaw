@@ -29,9 +29,11 @@ Please install the ```tree``` command before moving forward:
 
         - Linux
         sudo apt-get install tree
+        sudo apt-get install wget
 
         - MacOSX 
-        see http://apple.stackexchange.com/questions/128876/whats-the-equivalent-of-the-unix-tree-command-on-osx
+        install tree - http://apple.stackexchange.com/questions/128876/whats-the-equivalent-of-the-unix-tree-command-on-osx
+        install wget - http://stackoverflow.com/questions/4572153/os-x-equivalent-of-linuxs-wget
 
 The bash script ```getJigsawJDK.sh``` helps download the latest Jigsaw JDK from Oracle.   
     
