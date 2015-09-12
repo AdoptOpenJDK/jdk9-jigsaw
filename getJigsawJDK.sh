@@ -2,9 +2,15 @@
 
 set -eu
 
-JDK_TAR_FILE_NAME="jigsaw-jdk-bin-linux-x64.tar.gz"
 JDK_DESTINATION=$(echo ```pwd```)
-JDK_FOLDER_NAME="jdk1.9.0"
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+	JDK_TAR_FILE_NAME="jigsaw-jdk-bin-macosx-x86_64.tar.gz"
+	JDK_FOLDER_NAME="jdk1.9.0.jdk"
+else 
+	JDK_TAR_FILE_NAME="jigsaw-jdk-bin-linux-x64.tar.gz"
+	JDK_FOLDER_NAME="jdk1.9.0"
+fi
 
 function checkIfJigsawJDKIsDownloaded() {
 	echo ""
