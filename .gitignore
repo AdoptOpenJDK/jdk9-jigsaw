@@ -16,7 +16,7 @@
 *.jar
 *.war
 *.ear
-*.zip 
+*.zip
 *.tar.gz
 *.jimage
 *.jmod
@@ -26,3 +26,5 @@
 hs_err_pid*
 
 # Created by .ignore support plugin (hsz.mobi)
+
+9_JLink/executable/
