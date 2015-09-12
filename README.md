@@ -35,7 +35,7 @@ Please install the ```tree``` command before moving forward:
         install tree - http://apple.stackexchange.com/questions/128876/whats-the-equivalent-of-the-unix-tree-command-on-osx
         install wget - http://stackoverflow.com/questions/4572153/os-x-equivalent-of-linuxs-wget
 
-The bash script ```getJigsawJDK.sh``` helps download the latest Jigsaw JDK from Oracle.   
+The bash script ```getJigsawJDK.sh``` helps download the latest Jigsaw JDK from Oracle. Please run this once the repo is cloned.
     
 ## Must reads
 - [The State of the Module System](http://openjdk.java.net/projects/jigsaw/spec/sotms/)
