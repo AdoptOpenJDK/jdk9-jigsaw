@@ -37,6 +37,7 @@ The bash script ```getJigsawJDK.sh``` helps download the latest Jigsaw JDK from 
     
 ## Must reads
 - [The State of the Module System](http://openjdk.java.net/projects/jigsaw/spec/sotms/)
+- [JEP 261](http://openjdk.java.net/jeps/261)
 - [http://mail.openjdk.java.net/pipermail/adoption-discuss/2015-September/001053.html](http://mail.openjdk.java.net/pipermail/adoption-discuss/2015-September/001053.html) <br/>
 - [http://mail.openjdk.java.net/pipermail/adoption-discuss/2015-September/001056.html](http://mail.openjdk.java.net/pipermail/adoption-discuss/2015-September/001056.html)
 
