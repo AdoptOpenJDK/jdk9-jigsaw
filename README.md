@@ -14,8 +14,9 @@ see [http://openjdk.java.net/projects/jigsaw/quick-start](http://openjdk.java.ne
     - Services
     - The linker
     - javac -Xmodule and java -Xoverride
+    - jlink
 
-    Each example is enclosed in a folder of its own containing bash scripts to compile, 
+    Each example is enclosed in a folder of its own containing bash scripts to compile,
     package and run the respective examples. Use these scripts for each of the example.
 
     Note: the bash files provided should work on Linux and in theory on the MacOS as well.
@@ -31,12 +32,12 @@ Please install the ```tree``` command before moving forward:
         sudo apt-get install tree
         sudo apt-get install wget
 
-        - MacOSX 
+        - MacOSX
         install tree - http://apple.stackexchange.com/questions/128876/whats-the-equivalent-of-the-unix-tree-command-on-osx
         install wget - http://stackoverflow.com/questions/4572153/os-x-equivalent-of-linuxs-wget
 
 The bash script ```getJigsawJDK.sh``` helps download the latest Jigsaw JDK from Oracle. Please run this once the repo is cloned.
-    
+
 ## Must reads
 - [The State of the Module System](http://openjdk.java.net/projects/jigsaw/spec/sotms/)
 - [JEP 261](http://openjdk.java.net/jeps/261)
