@@ -16,7 +16,7 @@ see [http://openjdk.java.net/projects/jigsaw/quick-start](http://openjdk.java.ne
     - javac -Xmodule and java -Xoverride
 
     Each example is enclosed in a folder of its own containing bash scripts to compile, 
-    package and run the respective examples.
+    package and run the respective examples. Use these scripts for each of the example.
 
     Note: the bash files provided should work on Linux and in theory on the MacOS as well.
     For Windows we would have to manually convert the .sh files into .bat, with minor tweaks
