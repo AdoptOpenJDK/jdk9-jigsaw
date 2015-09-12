@@ -5,10 +5,11 @@ set -eu
 JDK_DESTINATION=$(echo ```pwd```)
 JDK_FOLDER_NAME="jdk1.9.0"
 JDK_HOME_OS_SPECIFIC="$JDK_DESTINATION/$JDK_FOLDER_NAME"
+
 if [[ "$OSTYPE" == "darwin"* ]]; then
 	JDK_TAR_FILE_NAME="jigsaw-jdk-bin-macosx-x86_64.tar.gz"
 	JDK_FOLDER_NAME="$JDK_FOLDER_NAME.jdk"
-	JDK_HOME_OS_SPECIFIC="$JDK_HOME_OS_SPECIFIC/Contents/Home"
+	JDK_HOME_OS_SPECIFIC="$JDK_DESTINATION/$JDK_FOLDER_NAME/Contents/Home"
 else 
 	JDK_TAR_FILE_NAME="jigsaw-jdk-bin-linux-x64.tar.gz"
 fi
