@@ -14,7 +14,8 @@ see [http://openjdk.java.net/projects/jigsaw/quick-start](http://openjdk.java.ne
     - Services
     - The linker
     - javac -Xmodule and java -Xoverride
-    - jlink
+    - JLink example
+    - Modules export conflit
 
     Each example is enclosed in a folder of its own containing bash scripts to compile,
     package and run the respective examples. Use these scripts for each of the example.
