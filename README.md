@@ -15,7 +15,7 @@ see [http://openjdk.java.net/projects/jigsaw/quick-start](http://openjdk.java.ne
     - The linker
     - javac -Xmodule and java -Xoverride
     - JLink example
-    - Modules export conflit
+    - Modules export conflict
 
     Each example is enclosed in a folder of its own containing bash scripts to compile,
     package and run the respective examples. Use these scripts for each of the example.
@@ -36,6 +36,10 @@ Please install the ```tree``` command before moving forward:
         - MacOSX
         install tree - http://apple.stackexchange.com/questions/128876/whats-the-equivalent-of-the-unix-tree-command-on-osx
         install wget - http://stackoverflow.com/questions/4572153/os-x-equivalent-of-linuxs-wget
+
+        - Windows
+        Manually convert the .sh files into .bat, with minor tweaks
+    should also work there. Install cygwin and Git for windows. Tree command is built into the OS.
 
 The bash script ```getJigsawJDK.sh``` helps download the latest Jigsaw JDK from Oracle. Please run this once the repo is cloned.
 
