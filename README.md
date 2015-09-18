@@ -27,6 +27,8 @@ see [http://openjdk.java.net/projects/jigsaw/quick-start](http://openjdk.java.ne
 ## Download (all platforms)
 Early Access build of Jigsaw JDK9 is available at [https://jdk9.java.net/jigsaw/](https://jdk9.java.net/jigsaw/).
 
+OpenJDK Jigsaw JDK9 can also be downloaded from the [Adopt OpenJDK Cloudbees build farm](https://adopt-openjdk.ci.cloudbees.com/view/OpenJDK/job/project-jigsaw-openjdk-1.9-linux-x86_64/lastSuccessfulBuild/artifact/). Note: the binaries may not be tested as well as the EA builds.
+
 Please install the ```tree``` command before moving forward:
 
         - Linux
