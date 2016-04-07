@@ -3,15 +3,15 @@
 set -eu
 
 JDK_DESTINATION=$(echo ```pwd```)
-JDK_FOLDER_NAME="jdk1.9.0"
+JDK_FOLDER_NAME="jdk-9"
 JDK_HOME_OS_SPECIFIC="$JDK_DESTINATION/$JDK_FOLDER_NAME"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
-	JDK_TAR_FILE_NAME="jigsaw-jdk-bin-macosx-x86_64.tar.gz"
+	JDK_TAR_FILE_NAME="jigsaw-jdk-9-ea+111_osx-x64_bin.tar.gz"
 	JDK_FOLDER_NAME="$JDK_FOLDER_NAME.jdk"
 	JDK_HOME_OS_SPECIFIC="$JDK_DESTINATION/$JDK_FOLDER_NAME/Contents/Home"
 else 
-	JDK_TAR_FILE_NAME="jigsaw-jdk-bin-linux-x64.tar.gz"
+	JDK_TAR_FILE_NAME="jigsaw-jdk-9-ea+111_linux-x64_bin.tar.gz"
 fi
 
 JDK_HOME_OS_SPECIFIC_BIN="$JDK_HOME_OS_SPECIFIC/bin"
@@ -21,7 +21,7 @@ function checkIfJigsawJDKIsDownloaded() {
 	echo "Checking if the Jigsaw JDK has already been downloaded..."
 	if [ ! -f "$JDK_TAR_FILE_NAME" ]; then
 		echo "No Jigsaw JDK does not exist, downloading now..."
-		wget --no-check-certificate --header "Cookie: oraclelicense=accept-securebackup-cookie" -O $JDK_TAR_FILE_NAME http://download.java.net/jigsaw/archive/b80/binaries/$JDK_TAR_FILE_NAME?q=download/jigsaw/archive/b80/binaries/$JDK_TAR_FILE_NAME 
+		wget --no-check-certificate --header "Cookie: oraclelicense=accept-securebackup-cookie" -O $JDK_TAR_FILE_NAME http://www.java.net/download/java/jigsaw/archive/111/binaries/$JDK_TAR_FILE_NAME 
 	else
 		echo -e "The Jigsaw JDK ($JDK_TAR_FILE_NAME) has already been downloaded."
 	fi
