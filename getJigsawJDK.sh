@@ -7,11 +7,11 @@ JDK_FOLDER_NAME="jdk-9"
 JDK_HOME_OS_SPECIFIC="$JDK_DESTINATION/$JDK_FOLDER_NAME"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
-	JDK_TAR_FILE_NAME="jigsaw-jdk-9-ea+111_osx-x64_bin.tar.gz"
+	JDK_TAR_FILE_NAME="jigsaw-jdk-9-ea+142_osx-x64_bin.tar.gz"
 	JDK_FOLDER_NAME="$JDK_FOLDER_NAME.jdk"
 	JDK_HOME_OS_SPECIFIC="$JDK_DESTINATION/$JDK_FOLDER_NAME/Contents/Home"
 else 
-	JDK_TAR_FILE_NAME="jigsaw-jdk-9-ea+111_linux-x64_bin.tar.gz"
+	JDK_TAR_FILE_NAME="jigsaw-jdk-9-ea+142_linux-x64_bin.tar.gz"
 fi
 
 JDK_HOME_OS_SPECIFIC_BIN="$JDK_HOME_OS_SPECIFIC/bin"
