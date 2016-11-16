@@ -20,7 +20,7 @@ javac -d $ORG_ASTRO2_FOLDER \
 tree -fl $ORG_ASTRO2_FOLDER
 
 echo "Compiling modules in $COM_GREETINGS_FOLDER"
-javac -modulepath mods -d $COM_GREETINGS_FOLDER \
+javac --module-path mods -d $COM_GREETINGS_FOLDER \
         src/com.greetings/module-info.java src/com.greetings/com/greetings/Main.java
 
 tree -fl $COM_GREETINGS_FOLDER

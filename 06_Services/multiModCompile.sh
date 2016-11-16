@@ -8,10 +8,9 @@ mkdir -p $DESTINATION_FOLDER
 
 echo "Compiling modules in $DESTINATION_FOLDER"
 javac -d $DESTINATION_FOLDER \
-	-modulesourcepath src $(find src -name "*.java")
+  --module-source-path src $(find src -name "*.java")
 
 tree -fl $DESTINATION_FOLDER
 
 #echo "Compiling modules in com.greetings - separately"
-#javac -d mods/com.greetings/ -mp mods $(find src/com.greetings/ -name "*.java")
-
+#javac -d mods/com.greetings/ --module-path mods $(find src/com.greetings/ -name "*.java")

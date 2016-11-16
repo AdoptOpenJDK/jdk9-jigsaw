@@ -7,6 +7,6 @@ rm -rf executable
 
 echo
 echo "Create an executable version of the com.greetings module"
-jlink --modulepath $JAVA_HOME/jmods:mlib --addmods com.greetings --output executable
+jlink --module-path $JAVA_HOME/jmods:mlib --add-modules com.greetings --output executable
 
 tree executable
