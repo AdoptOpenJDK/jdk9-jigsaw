@@ -2,11 +2,8 @@
 
 set -eu
 
-# Update version number as a string when a new binary is available
-JDK_CURRENT_VERSION="142"
-
 # Binary name and download path composed with these values and current version
-JDK_NAME_GENERIC="jigsaw-jdk-9-ea+"
+JDK_NAME_GENERIC="jdk-9-ea+"
 JDK_NAME_LINUX="_linux-x64_bin.tar.gz"
 JDK_NAME_OSX="_osx-x64_bin.tar.gz"
 
@@ -14,12 +11,16 @@ JDK_DESTINATION=$(echo ```pwd```)
 JDK_FOLDER_NAME="jdk-9"
 JDK_HOME_OS_SPECIFIC="$JDK_DESTINATION/$JDK_FOLDER_NAME"
 
+JDK_DOWNLOAD_HOME_URL="https://jdk9.java.net"
+BUILD_NUMBER=$(curl $JDK_DOWNLOAD_HOME_URL/download/ | grep build | awk '{print $9}' | tr -d "</a><br")
+JDK_DOWNLOAD_BASE_URL="http://www.java.net/"
+
 if [[ "$OSTYPE" == "darwin"* ]]; then
-  JDK_TAR_FILE_NAME=$JDK_NAME_GENERIC$JDK_CURRENT_VERSION$JDK_NAME_OSX
+  JDK_TAR_FILE_NAME=$JDK_NAME_GENERIC$BUILD_NUMBER$JDK_NAME_OSX
 	JDK_FOLDER_NAME="$JDK_FOLDER_NAME.jdk"
 	JDK_HOME_OS_SPECIFIC="$JDK_DESTINATION/$JDK_FOLDER_NAME/Contents/Home"
 else
-  JDK_TAR_FILE_NAME=$JDK_NAME_GENERIC$JDK_CURRENT_VERSION$JDK_NAME_LINUX
+  JDK_TAR_FILE_NAME=$JDK_NAME_GENERIC$BUILD_NUMBER$JDK_NAME_LINUX
 fi
 
 JDK_HOME_OS_SPECIFIC_BIN="$JDK_HOME_OS_SPECIFIC/bin"
@@ -29,7 +30,7 @@ function checkIfJigsawJDKIsDownloaded() {
 	echo "Checking if the Jigsaw JDK has already been downloaded..."
 	if [ ! -f "$JDK_TAR_FILE_NAME" ]; then
 		echo "No Jigsaw JDK does not exist, downloading now..."
-    wget --no-check-certificate --header "Cookie: oraclelicense=accept-securebackup-cookie" -O $JDK_TAR_FILE_NAME http://www.java.net/download/java/jigsaw/archive/$JDK_CURRENT_VERSION/binaries/$JDK_TAR_FILE_NAME
+    wget --no-check-certificate --header "Cookie: oraclelicense=accept-securebackup-cookie" -O $JDK_TAR_FILE_NAME "${JDK_DOWNLOAD_BASE_URL}/download/java/jdk9/archive/${BUILD_NUMBER}/binaries/${JDK_TAR_FILE_NAME}"
   else
     echo -e "The Jigsaw JDK ($JDK_TAR_FILE_NAME) has already been downloaded."
   fi
