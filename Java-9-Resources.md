@@ -31,6 +31,12 @@ Module system of the Java platform as specified by project Jigsaw JEPs covered:
 	JEPs related to a number of platform improvements
 	Many, many more JEPs
 
+JDK 9 Outreach
+	https://wiki.openjdk.java.net/display/Adoption/JDK+9+Outreach
+
+JDK 9 Quality Outreach (we could use your help)
+	https://wiki.openjdk.java.net/display/quality/Quality+Outreach
+
 Java 9:  REPL
 	https://www.voxxed.com/blog/2016/10/just-enough-code-hacking-jdk
 	https://www.voxxed.com/blog/2016/09/java-9-series-jshell/
