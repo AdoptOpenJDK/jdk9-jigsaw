@@ -11,7 +11,7 @@ Java/JDK 9 Resources
   - http://openjdk.java.net/projects/jigsaw/
 
 - JSRs involved
-	- 376: Java Platform Module System  - specified some of the below JEPs
+	- 376: Java Platform Module System (http://openjdk.java.net/projects/jigsaw/spec/) - specified some of the below JEPs
 
 - JEPs involved
 	- Module system of the Java platform as specified by project Jigsaw JEPs covered:
@@ -19,8 +19,8 @@ Java/JDK 9 Resources
 			- 201: Modular Source Code (http://openjdk.java.net/jeps/201)
 				- 220: Modular Run-Time Images (http://openjdk.java.net/jeps/220) (depends on [JEP 162]((http://openjdk.java.net/jeps/162)))
 			- 260: Encapsulate Most Internal APIs (http://openjdk.java.net/jeps/260) (no dependencies)
-			- 261: Module System (http://openjdk.java.net/jeps/261) (depends on JEP 220, related to JEP 238)
-			- 282: jlink: The Java Linker (http://openjdk.java.net/jeps/282) (replaces implementation of JEP 220)
+			- 261: Module System (http://openjdk.java.net/jeps/261) (depends on [JEP 220](http://openjdk.java.net/jeps/220), related to [JEP 238](http://openjdk.java.net/jeps/238))
+			- 282: jlink: The Java Linker (http://openjdk.java.net/jeps/282) (replaces implementation of [JEP 220](http://openjdk.java.net/jeps/220))
 			- 275: Modular Java Application Packaging (http://openjdk.java.net/jeps/275)
 		- 222: jshell: The Java Shell (Read-Eval-Print Loop) (http://openjdk.java.net/jeps/222)
 		- 193: Variable Handles (http://openjdk.java.net/jeps/193)
@@ -30,7 +30,7 @@ Java/JDK 9 Resources
 		- G1 related JEPs (3 of them)
 		- JEPs related to a number of security improvements
 		- JEPs related to a number of platform improvements
-		- Many, many more JEPs
+		- Many, many more JEPs (see http://openjdk.java.net/jeps/0)
 
 - JDK 9 Outreach
   - https://wiki.openjdk.java.net/display/Adoption/JDK+9+Outreach
