@@ -62,12 +62,13 @@ Java 9:  Jigsaw
 				https://www.youtube.com/watch?v=i9bnV0KKyAA 
 			180.Course Preview- Java 9 Modularity- First Look.mp4
 				https://www.youtube.com/watch?v=0UD3KIwXwJw
+	
 	New features
 		Summary of features
 			http://www.baeldung.com/new-java-9
 			https://docs.oracle.com/javase/9/whatsnew/toc.htm#JSNEW-GUID-656B84C8-2498-4CD0-B20D-8C9AC633746B
+			https://www.voxxed.com/blog/2015/07/the-features-project-jigsaw-brings-to-java-9/
 
-		https://www.voxxed.com/blog/2015/07/the-features-project-jigsaw-brings-to-java-9/
 		https://www.voxxed.com/blog/2015/12/project-jigsaw-hands-on-guide
 		https://www.voxxed.com/blog/2015/06/jumping-into-java-9-new-build-ready-to-test/
 		https://www.voxxed.com/blog/2016/09/java-9-weak-modules/	
@@ -124,13 +125,14 @@ Java 9:  Jigsaw
 		Java 9/10: var or val
 			https://www.voxxed.com/blog/2016/09/var-comes-to-java/
 
-	Cons of Java 9
+	Cons of Java 9 modularity (the other side of things)
 		https://www.voxxed.com/blog/2015/12/will-there-be-module-hell/
 		https://www.voxxed.com/blog/2015/05/will-java-9-mess-up-your-code
 		https://www.voxxed.com/blog/2016/11/problem-modules-reflective-access/
 		https://www.voxxed.com/blog/2016/11/issues-with-the-module-system/
 		https://www.voxxed.com/blog/2015/05/will-java-9-mess-up-your-code/
-		
+		https://blog.plan99.net/is-jigsaw-good-or-is-it-wack-ec634d36dd6f
+
 	Advanced Modular Development
 		[blog] http://blog.codefx.org/java/dev/javaone-2015-advanced-modular-development/
 		[video] https://www.youtube.com/watch?v=WJHjKMIrbD0 (5 months old)
