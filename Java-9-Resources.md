@@ -132,6 +132,7 @@ Java 9:  Jigsaw
 		https://www.voxxed.com/blog/2016/11/issues-with-the-module-system/
 		https://www.voxxed.com/blog/2015/05/will-java-9-mess-up-your-code/
 		https://blog.plan99.net/is-jigsaw-good-or-is-it-wack-ec634d36dd6f
+		https://developer.jboss.org/blogs/scott.stark/2017/04/14/critical-deficiencies-in-jigsawjsr-376-java-platform-module-system-ec-member-concerns?_sscc=t
 
 	Advanced Modular Development
 		[blog] http://blog.codefx.org/java/dev/javaone-2015-advanced-modular-development/
