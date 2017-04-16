@@ -7,9 +7,12 @@ Java/JDK 9 Resources
 - JDK 9 Installation
   - https://docs.oracle.com/javase/9/install/overview-jdk-9-and-jre-9-installation.htm#JSJIG-GUID-8677A77F-231A-40F7-98B9-1FD0B48C346A
 
-- JDK 9 Jigsaw page
-  - http://openjdk.java.net/projects/jigsaw/
+- JDK 9 Project page 
+  - http://openjdk.java.net/projects/jdk9/
 
+- JDK 9 Jigsaw Project page
+  - http://openjdk.java.net/projects/jigsaw/
+    
 - JSRs involved
 	- 376: Java Platform Module System (http://openjdk.java.net/projects/jigsaw/spec/) - specified some of the below JEPs
 
@@ -45,6 +48,9 @@ Java/JDK 9 Resources
 	- https://www.voxxed.com/blog/2015/07/a-sneak-peek-at-java-9-sleeper-feature-repl-and-jshell/
 
 - Java 9: Jigsaw
+    - Project Jigsaw @ conferences (slides and video)
+	    - http://openjdk.java.net/projects/jigsaw/talks
+	
 	- Useful topics
 		- https://www.sitepoint.com/java-9-resources/?utm_source=Sociallymap&utm_medium=Sociallymap&utm_campaign=Sociallymap
 
