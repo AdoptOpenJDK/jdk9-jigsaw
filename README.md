@@ -18,8 +18,8 @@ see [http://openjdk.java.net/projects/jigsaw/quick-start](http://openjdk.java.ne
         - javac -Xmodule and java -Xoverride (./session-1-jigsaw-intro/08_XModules_Overries)
         - Modules export conflict (./session-1-jigsaw-intro/10_ModulesExportConflict)
     - Session 2: JLink
-        - The linker (./session-2-jlink/10_ModulesExportConflict/07_The_linker) 
-        - JLink example (./session-1-2-jlink/09_JLink)
+        - The linker (./session-2-jlink/07_The_linker) 
+        - JLink example (./session-2-jlink/09_JLink)
     - Session 3: JShell (./session-3-jshell/)   
         
     Each example is enclosed in a folder of its own containing bash scripts to compile,
