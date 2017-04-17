@@ -6,17 +6,22 @@ The examples here are directly from the Project Jigsaw: Module System Quick-Star
 see [http://openjdk.java.net/projects/jigsaw/quick-start](http://openjdk.java.net/projects/jigsaw/quick-start).
 
 ## Examples covered
-    - Greetings
-    - Greetings world
-    - Multi-module compilation
-    - Packaging
-    - Missing requires or missing exports
-    - Services
-    - The linker
-    - javac -Xmodule and java -Xoverride
-    - JLink example
-    - Modules export conflict
-
+    - Session 1: Jigsaw Introduction
+        - Greetings (./session-1-jigsaw-intro/01_Greetings)
+        - Greetings world (./session-1-jigsaw-intro/02_GreetingsWorld)
+        - Multi-module compilation (./session-1-jigsaw-intro/03_MultiModuleCompilation)
+        - Packaging (./session-1-jigsaw-intro/04_Packaging)
+        - Missing requires or missing exports 
+          - (./session-1-jigsaw-intro/05_Missing_exports)
+          - (./session-1-jigsaw-intro/05_Missing_requires)
+        - Services (./session-1-jigsaw-intro/06_Services)
+        - javac -Xmodule and java -Xoverride (./session-1-jigsaw-intro/08_XModules_Overries)
+        - Modules export conflict (./session-1-jigsaw-intro/10_ModulesExportConflict)
+    - Session 2: JLink
+        - The linker (./session-2-jlink/10_ModulesExportConflict/07_The_linker) 
+        - JLink example (./session-1-2-jlink/09_JLink)
+    - Session 3: JShell (./session-3-jshell/)   
+        
     Each example is enclosed in a folder of its own containing bash scripts to compile,
     package and run the respective examples. Use these scripts for each of the example.
 
@@ -54,3 +59,4 @@ The bash script ```getJigsawJDK.sh``` helps download the latest Jigsaw JDK from 
 ## Other resources
 - [Adopt OpenJDK homepage](https://adoptopenjdk.java.net/)
 - [Adopt OpenJDK: Getting Started Kit](http://bit.ly/1NUkPWw)
+- [JDK 9 Resources](./Java-9-Resources.md)
