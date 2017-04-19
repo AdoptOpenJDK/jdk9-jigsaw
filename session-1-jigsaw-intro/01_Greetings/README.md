@@ -14,7 +14,7 @@ Perform the below commands to see the contents of the respective Java classes co
 
     $ cat src/com.greetings/com/greetings/Main.java
 
-The source code is compiled to the directory `mods/com.greetings` with the following commands:
+The source code is compiled into the directory `mods/com.greetings` with the following commands:
 
     $ ./compile.sh
     
