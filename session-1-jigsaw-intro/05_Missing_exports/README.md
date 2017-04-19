@@ -1,6 +1,6 @@
 ### Missing exports example
 
-In the examples we mistakenly omit the exports from the `com.astro` module declaration (in `module-info.java`).
+In the examples we mistakenly omit the `exports` from the `com.astro` module declaration (in `module-info.java`).
 
     $ cat src/org.astro/module-info.java
     

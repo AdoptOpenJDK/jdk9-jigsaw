@@ -12,7 +12,7 @@ COM_GREETINGS_FOLDER="mods/com.greetings"
 ORG_ASTRO_FOLDER="mods/org.astro"
 
 echo ""
-echo "${info} *** Compiling modules in $ORG_ASTRO_FOLDER (with requires commented out) *** ${normal}"
+echo "${info} *** Compiling modules in $ORG_ASTRO_FOLDER (with 'exports' commented out) *** ${normal}"
 javac -d $ORG_ASTRO_FOLDER \
        src/org.astro/module-info.java \
        src/org.astro/org/astro/World.java
