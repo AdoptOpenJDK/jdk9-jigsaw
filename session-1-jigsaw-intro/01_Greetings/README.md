@@ -23,3 +23,26 @@ And we run the example with the following command:
     $ ./run.sh
     
 Check the contents of both these script files (use the `cat` command or a text editor) to see what they are doing and why - interesting instructions and information in there.
+
+##### Minor confusion alert!
+
+Please do not get confused with the naming conventions of modules with that of packages, here's how they go:
+
+Modules in Java follow the the below convention, the name is the literal name of the folder itself:
+
+| Module name         | File system naming*   |
+|---------------------|-----------------------|
+| com.greetings.hello |  com.greetings.hello  |
+| com.greetings       |  com.greetings        |
+| com                 |  com                  |
+
+
+Packages in Java follow the usual convention:
+
+| Package name        | File system naming*   |
+|---------------------|-----------------------|
+| com.greetings.hello | com/greetings/hello   |
+| com.greetings       | com/greetings         |
+| abc                 | abc                   |
+
+*by `File system naming`, we mean the `directory structure` created as a result of a module or package
