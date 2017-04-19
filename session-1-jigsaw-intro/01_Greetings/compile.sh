@@ -11,17 +11,39 @@ normal=$(echo -en "${esc}[m\017")
 COM_GREETINGS_FOLDER="mods/com.greetings"
 
 echo ""
-echo "${info} *** Creating folder $COM_GREETINGS_FOLDER, if it does not exists *** ${normal}"
-mkdir -p $COM_GREETINGS_FOLDER
+echo "${info} *** Displaying the contents (source files) of the 'src' folder *** ${normal}"
+tree -fl src
 
 echo ""
-echo "${info} *** Compiling modules in $COM_GREETINGS_FOLDER *** ${normal}"
-javac --module-path mods -d $COM_GREETINGS_FOLDER \
-        src/com.greetings/module-info.java src/com.greetings/com/greetings/Main.java
+echo "${info} *** Compiling modules in '$COM_GREETINGS_FOLDER' *** ${normal}"
+
+
+# *******************************************************************************************************************************
+#
+# The javac command takes the --module-path parameter to refer to the 'mods' folder where the compiled modules will be outputted.
+# The -d parameter (does not have a long-form) is the location of the module directory where the compiled module(s) will be placed.
+#
+# The compiler creates the 'mods' folder, if it does not exist already and places compiled modules into them.
+
+javac --module-path mods \
+      -d $COM_GREETINGS_FOLDER \
+      src/com.greetings/module-info.java \
+      src/com.greetings/com/greetings/Main.java
+
+# In the above case, compile Java classes (module-info.class & Main.class) are placed in the respective folders within
+# 'mod/com.greetings' folder
+#
+# The javac command can take a chain of classes to compile to place in the respective module folder structure 'mod/com.greetings'.
+#
+# Run the 'javac --help' on the command-line to learn about more about the CLI arguments it can handle.
+#
+# *******************************************************************************************************************************
+
 
 echo ""
-echo "${info} *** Finished compiling modules into the $COM_GREETINGS_FOLDER folder *** ${normal}"
+echo "${info} *** Finished compiling modules into the '$COM_GREETINGS_FOLDER' folder *** ${normal}"
 
 echo ""
-echo "${info} *** Displaying the contents (modules) of the $COM_GREETINGS_FOLDER folder *** ${normal}"
+echo "${info} *** Displaying the contents (compiled modules) of the '$COM_GREETINGS_FOLDER' folder *** ${normal}"
 tree -fl $COM_GREETINGS_FOLDER
+
