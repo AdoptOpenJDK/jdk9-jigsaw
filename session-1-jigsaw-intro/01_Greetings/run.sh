@@ -13,7 +13,7 @@ echo "${info} *** Running 'com.greetings.Main' inside the 'mods' folder. ${norma
 echo
 
 # *******************************************************************************************************************************
-# The java command takes the -p parameter (long-form: --module-path) to refer to the 'mods' folder where the compiled modules are present.
+# The -p parameter (long-form: --module-path) of the java command takes one or more paths to module folders where the compiled modules are present (in the above case its 'mods').
 # The -m parameter (long-form: --module) takes the name of the initial module to resolve, and the name of the main class to execute.
 #
 
