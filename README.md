@@ -15,7 +15,7 @@ see [http://openjdk.java.net/projects/jigsaw/quick-start](http://openjdk.java.ne
    - Missing requires [./session-1-jigsaw-intro/05_Missing_requires](./session-1-jigsaw-intro/05_Missing_requires)
    - Missing exports [./session-1-jigsaw-intro/05_Missing_exports](./session-1-jigsaw-intro/05_Missing_exports)
    - Services [./session-1-jigsaw-intro/06_Services](./session-1-jigsaw-intro/06_Services)
-   - javac -Xmodule and java -Xoverride [./session-1-jigsaw-intro/08_XModules_Overries](session-1-jigsaw-intro/08_XModules_Overrides)
+   - javac --patch-module option [./session-1-jigsaw-intro/08_XModules_Overries](session-1-jigsaw-intro/08_patch_module_option)
    - Modules export conflict [./session-1-jigsaw-intro/10_ModulesExportConflict](./session-1-jigsaw-intro/10_ModulesExportConflict)
 
 - Session 2: JLink
