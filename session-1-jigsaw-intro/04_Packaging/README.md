@@ -4,6 +4,8 @@ In the examples so far then the contents of the compiled modules were exploded o
 
 A modular JAR is a regular JAR file that has a `module-info.class` in its top-level directory, it creates `org.astro@1.0.jar` and `com.greetings.jar` in directory `mlib`.
 
+**Note:** in case one of the below `.sh` script fails due to the `tree` command, please take a look at [Download and install the `tree` and `wget` command](../../README.md) section in the README.md file and apply the appropriate solution.
+
 Perform the below commands to see the contents of the respective sources contained in the `src` folder:
     
     $ tree -fl src

@@ -2,6 +2,8 @@
 
 This second example updates the module declaration to declare a dependency on module `org.astro`. Module `org.astro` exports the API package `org.astro`. 
 
+**Note:** in case one of the below `.sh` script fails due to the `tree` command, please take a look at [Download and install the `tree` and `wget` command](../../README.md) section in the README.md file and apply the appropriate solution.
+
 Perform the below commands to see the contents of the respective sources contained in the `src` folder:
     
     $ tree -fl src

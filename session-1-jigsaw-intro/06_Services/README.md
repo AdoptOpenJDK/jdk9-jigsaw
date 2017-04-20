@@ -37,6 +37,8 @@ Perform the below commands to see the contents of the respective sources contain
     $ cat src/com.greetings/com/greetings/Main.java
     ```
      
+**Note:** in case one of the below `.sh` script fails due to the `tree` command, please take a look at [Download and install the `tree` and `wget` command](../../README.md) section in the README.md file and apply the appropriate solution.
+
 Both the modules are compiled together from the sources into the folder `mods` with the following commands:
 
     $ ./compile.sh

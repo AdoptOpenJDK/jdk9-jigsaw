@@ -2,6 +2,8 @@
 
 In this example modules are compiled at the same time unlike with the previous example where the compilation happens sequentially.
 
+**Note:** in case one of the below `.sh` script fails due to the `tree` command, please take a look at [Download and install the `tree` and `wget` command](../../README.md) section in the README.md file and apply the appropriate solution.
+
 Perform the below commands to see the contents of the respective sources contained in the `src` folder:
     
     $ tree -fl src

@@ -4,6 +4,8 @@ In the examples we mistakenly omit the `requires` from the `com.greetings` modul
 
     $ cat src/com.greetings/module-info.java
     
+**Note:** in case one of the below `.sh` script fails due to the `tree` command, please take a look at [Download and install the `tree` and `wget` command](../../README.md) section in the README.md file and apply the appropriate solution.
+
 Try to compile the modules using the below command:
 
     $ ./compile.sh
