@@ -123,6 +123,7 @@ Read all about the Java REPL at
 Try some more JShell examples:
 - http://jakubdziworski.github.io/java/2016/07/31/jshell-getting-started-examples.html
 - https://java.net/downloads/adoptopenjdk/REPL_Tutorial.pdf
+- https://www.infoq.com/articles/Java9-New-HTTP-2-and-REPL (see towards the bottom of the blog post)
 
 Some online Java REPLs to play with:
 - http://www.javarepl.com/term.html
