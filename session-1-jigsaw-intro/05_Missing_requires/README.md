@@ -1,6 +1,6 @@
 ### Missing exports example
 
-In the examples we mistakenly omit the `requires` from the `com.greetings` module declaration (in `module-info.java`).
+In this example we mistakenly omit the `requires` from the `com.greetings` module declaration (in `module-info.java`).
 
     $ cat src/com.greetings/module-info.java
     
