@@ -78,9 +78,10 @@ Please install the ```tree``` command before moving forward:
         install `git-bash` (recommended) or `cgywin`
         ```
         
-        The `tree` command is built into Windows. From within `git-bash` or `cygwin`, the `tree` command can be invoked by executing this: `cmd //c tree`.
+        The `tree` command is built into Windows. From within `git-bash` or `cygwin`.
+        In case a script is invoking the `tree` command and failing, please replace the `tree` keyword with `cmd //c tree`.
         
-        Or manually convert the .sh files into .bat, with minor tweaks should also work there. Install cygwin and Git for windows. Tree command is built into the OS.
+        Or manually convert the `.sh` files into `.bat`, with minor tweaks should also work there.
 
 #### Vagrant box
 
