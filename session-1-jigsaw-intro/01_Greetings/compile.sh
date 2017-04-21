@@ -10,9 +10,21 @@ normal=$(echo -en "${esc}[m\017")
 
 COM_GREETINGS_FOLDER="mods/com.greetings"
 
+runTree() 
+{
+  if [[ "$OSTYPE" == "cygwin" ]] || [[ "$OSTYPE" == "msys" ]] ; then
+    cmd //c "tree /f /a $1"
+  else
+    tree -fl $1
+  fi
+}
+
+runTree src
+
 echo ""
 echo "${info} *** Displaying the contents (source files) of the 'src' folder *** ${normal}"
-tree -fl src
+
+	
 
 echo ""
 echo "${info} *** Compiling modules in '$COM_GREETINGS_FOLDER' *** ${normal}"
