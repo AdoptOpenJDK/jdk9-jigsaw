@@ -10,6 +10,10 @@ Perform the below commands to see the contents of the respective sources contain
     
     $ tree -fl src
 
+    or 
+
+    $ cmd //c "tree /f /a src"    (for Windows users)
+
 The modules are compiled from the sources into the folder `mods` with the following commands:
 
     $ ./compile.sh
@@ -21,6 +25,10 @@ Now create the packages (jar files) with the below command:
 Perform the below command to see the packages (jar files) created via the above script:
 
     $ tree -fl mlib
+
+    or 
+
+    $ cmd //c "tree /f /a mlib"    (for Windows users)
     
 You will notice that the module `org.astro` is packaged to indicate that its version is `1.0`. Module `com.greetings` has been packaged to indicate that its main class is `com.greetings.Main`. Module `com.greetings` can be executed without needing to specify its main class (`Main.class`).
     

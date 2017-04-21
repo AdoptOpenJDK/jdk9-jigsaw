@@ -44,10 +44,12 @@ Early Access build of Jigsaw JDK9 is available at [https://jdk9.java.net/jigsaw/
 - Install JDK 9 EA
   
   - Linux
-    - tar -xvf jigsaw-jdk-9*.tar
-    - mv -f jdk-9 [destination]  (might need to use `sudo` here)
-    - update your `.bashrc` or `bash_profile` with `export JAVA_HOME=[destination]`
-    - source `~/.bashrc` or `~/.bash_profile`
+    - `tar -xvf jigsaw-jdk-9*.tar`
+    - `mv -f jdk-9 [destination]`  (might need to use `sudo` here)
+    - update your `.bashrc` with `export JAVA_HOME=[destination]`
+    - `source ~/.bashrc` 
+
+    `[destination]` usually `/usr/lib/...` or related folder
 
   - MacOSX 
     - Please refer to this guide https://github.com/musinoli/guides/blob/master/setup_jigsaw.md (Thanks Nolita for your help)

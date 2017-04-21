@@ -8,6 +8,10 @@ Perform the below commands to see the contents of the respective sources contain
     
     $ tree -fl src
 
+    or 
+
+    $ cmd //c "tree /f /a src"    (for Windows users)
+
 Perform the below commands to see the contents of the respective Java classes contained in the `src` folder:
 
     $ cat src/org.astro/module-info.java

@@ -8,6 +8,10 @@ Perform the below commands to see the contents of the respective sources contain
     
     $ tree -fl src
 
+    or 
+
+    $ cmd //c "tree /f /a src"    (for Windows users)
+
 The sources are compiled into the folders `mods/org.astro` and `mods/com.greetings` with the following commands:
 
     $ ./multiModCompile.sh
