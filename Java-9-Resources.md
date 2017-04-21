@@ -158,6 +158,8 @@ Java/JDK 9 Resources
         - Refactoring legacy to modular apps (examples)
             - Rabea Gransberger: https://github.com/rgra/java9-module-refactoring 
             - Sander Mak & Paul Pakker: https://github.com/java9-modularity/java9-migration-demos
+     - Dependency / modularity visualisation
+        - https://github.com/accso/java9-jigsaw-depvis
 
 - Java 9: Migration
 	- https://docs.oracle.com/javase/9/migrate/toc.htm#JSMIG-GUID-7744EF96-5899-4FB2-B34E-86D49B2E89B6
