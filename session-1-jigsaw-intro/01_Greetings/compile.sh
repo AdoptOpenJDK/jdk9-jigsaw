@@ -22,9 +22,7 @@ runTree()
 runTree src
 
 echo ""
-echo "${info} *** Displaying the contents (source files) of the 'src' folder *** ${normal}"
-
-	
+echo "${info} *** Displaying the contents (source files) of the 'src' folder *** ${normal}"	
 
 echo ""
 echo "${info} *** Compiling modules in '$COM_GREETINGS_FOLDER' *** ${normal}"

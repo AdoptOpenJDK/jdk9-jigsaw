@@ -8,11 +8,20 @@ esc=$(echo -en "\033")
 info="${esc}[0;33m"
 normal=$(echo -en "${esc}[m\017")
 
+runTree() 
+{
+  if [[ "$OSTYPE" == "cygwin" ]] || [[ "$OSTYPE" == "msys" ]] ; then
+    cmd //c "tree /f /a $1"
+  else
+    tree -fl $1
+  fi
+}
+
 DESTINATION_FOLDER="mods"
 
 echo ""
 echo "${info} *** Displaying the contents (source files) of the 'src' folder *** ${normal}"
-tree -fl src
+runTree src
 
 echo ""
 echo "${info} *** Compiling both modules into the '$DESTINATION_FOLDER' folder *** ${normal}"
@@ -28,6 +37,6 @@ javac -d $DESTINATION_FOLDER \
 
 echo ""
 echo "${info} *** Displaying the contents (modules) of the 'mods' folder *** ${normal}"
-tree -fl $DESTINATION_FOLDER
+runTree "$DESTINATION_FOLDER"
 
 # See ../01_Greetings/compile.sh for explanations to above commands

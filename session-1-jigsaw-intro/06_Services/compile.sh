@@ -8,6 +8,15 @@ esc=$(echo -en "\033")
 info="${esc}[0;33m"
 normal=$(echo -en "${esc}[m\017")
 
+runTree() 
+{
+  if [[ "$OSTYPE" == "cygwin" ]] || [[ "$OSTYPE" == "msys" ]] ; then
+    cmd //c "tree /f /a $1"
+  else
+    tree -fl $1
+  fi
+}
+
 DESTINATION_FOLDER="mods"
 
 echo ""
@@ -24,4 +33,4 @@ javac -d mods/com.greetings/ \
 
 echo ""
 echo "${info} *** Displaying the contents (modules) of the '$DESTINATION_FOLDER' folder *** ${normal}"
-tree -fl $DESTINATION_FOLDER
+runTree "$DESTINATION_FOLDER"

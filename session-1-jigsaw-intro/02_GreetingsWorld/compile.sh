@@ -11,9 +11,18 @@ normal=$(echo -en "${esc}[m\017")
 COM_GREETINGS_FOLDER="mods/com.greetings"
 ORG_ASTRO_FOLDER="mods/org.astro"
 
+runTree() 
+{
+  if [[ "$OSTYPE" == "cygwin" ]] || [[ "$OSTYPE" == "msys" ]] ; then
+    cmd //c "tree /f /a $1"
+  else
+    tree -fl $1
+  fi
+}
+
 echo ""
 echo "${info} *** Displaying the contents (source files) of the 'src' folder *** ${normal}"
-tree -fl src
+runTree src
 
 echo ""
 echo "${info} *** Compiling module in folder $ORG_ASTRO_FOLDER *** ${normal}"
@@ -23,7 +32,7 @@ javac -d $ORG_ASTRO_FOLDER \
 
 echo ""
 echo "${info} *** Displaying the contents (modules) of the '$ORG_ASTRO_FOLDER' folder *** ${normal}"
-tree -fl $ORG_ASTRO_FOLDER
+runTree "$ORG_ASTRO_FOLDER"
 
 echo ""
 echo "${info} *** Compiling module in folder '$COM_GREETINGS_FOLDER' and linking it with module '$ORG_ASTRO_FOLDER' *** ${normal}"
@@ -41,6 +50,6 @@ javac --module-path mods \
 
 echo ""
 echo "${info} *** Displaying the contents (modules) of the '$COM_GREETINGS_FOLDER' folder *** ${normal}"
-tree -fl $COM_GREETINGS_FOLDER
+runTree "$COM_GREETINGS_FOLDER"
 
 # See ../01_Greetings/compile.sh for explanations to above commands
