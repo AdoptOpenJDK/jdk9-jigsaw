@@ -2,6 +2,15 @@
 
 set -eu
 
+runTree() 
+{
+  if [[ "$OSTYPE" == "cygwin" ]] || [[ "$OSTYPE" == "msys" ]] ; then
+    cmd //c "tree /f /a $1"
+  else
+    tree -fl $1
+  fi
+}
+
 mkdir -p mlib
 
 echo "Creating module org.astro as a jar"
@@ -13,7 +22,7 @@ echo "Creating module com.greetings as a jar"
 jar --create --file mlib/com.greetings.jar \
 	--main-class=com.greetings.Main -C mods/com.greetings .
 
-tree mlib
+runTree mlib
 
 echo
 echo "Printing module description for org.astro"
