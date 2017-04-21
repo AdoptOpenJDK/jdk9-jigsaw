@@ -105,7 +105,7 @@ Please install the ```tree``` command before moving forward:
         
         Or manually convert the `.sh` files into `.bat`, with minor tweaks should also work there.
 
-        Thanks Richard Kolb (@rjdkolb) for your continued support in this area.
+        Thanks Richard Kolb ([@rjdkolb](http://github.com/rjdkolb)) for your continued support in this area.
 
 #### Vagrant box
 

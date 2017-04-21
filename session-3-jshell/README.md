@@ -132,4 +132,4 @@ Some online Java REPLs to play with:
 - https://teamtreehouse.com/community/installing-java-repl
 
 Credits
-- Contributions from Hendrik Ebbers ( @hendrikebbers ) has been distilled above - thanks @hendrikebbers
+- Contributions from Hendrik Ebbers ([@hendrikebbers](http://github.com/hendrikebbers)) has been distilled above - thanks [@hendrikebbers](http://github.com/hendrikebbers)
