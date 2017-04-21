@@ -52,7 +52,8 @@ Early Access build of Jigsaw JDK9 is available at [https://jdk9.java.net/jigsaw/
     `[destination]` usually `/usr/lib/...` or related folder
 
   - MacOSX 
-    - Please refer to this guide https://github.com/musinoli/guides/blob/master/setup_jigsaw.md (Thanks Nolita for your help)
+    - Please refer to [this guide]( https://github.com/musinoli/guides/blob/master/setup_jigsaw.md) - thanks Nolita ([@musinoli](https://github.com/musinoli)) for your help
+    - In case a `.dmg` file is available, download it and follow the installation steps, you will still have to update your `JAVA_HOME` and start script as mentioned in [this guide]( https://github.com/musinoli/guides/blob/master/setup_jigsaw.md).    
   
   - Windows
     - Run the executable file. 
