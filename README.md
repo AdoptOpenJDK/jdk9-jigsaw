@@ -19,7 +19,7 @@ see [http://openjdk.java.net/projects/jigsaw/quick-start](http://openjdk.java.ne
    - Modules export conflict [./session-1-jigsaw-intro/10_ModulesExportConflict](./session-1-jigsaw-intro/10_ModulesExportConflict)
 
 - Session 2: JLink
-   - The linker [./session-2-jlink/07_The_linker](./session-2-jlink/07_The_linker) 
+   - The linker [./session-2-jlink/07_The_linker](session-2-jlink/07_JMod) 
    - JLink example [./session-2-jlink/09_JLink](./session-2-jlink/09_JLink)
 
 - Session 3: JShell [./session-3-jshell/](./session-3-jshell/)   
