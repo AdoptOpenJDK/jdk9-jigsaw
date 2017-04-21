@@ -55,5 +55,5 @@ echo "${info} *** Finished compiling modules into the '$COM_GREETINGS_FOLDER' fo
 
 echo ""
 echo "${info} *** Displaying the contents (compiled modules) of the '$COM_GREETINGS_FOLDER' folder *** ${normal}"
-tree -fl $COM_GREETINGS_FOLDER
+runTree "$COM_GREETINGS_FOLDER"
 

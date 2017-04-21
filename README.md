@@ -32,11 +32,31 @@ should also work there. Happy to received a pull request for it.
 
 ## Setup (all platforms)
 
-#### Download latest version of the JDK 9 EA
+#### Download and install latest version of the JDK 9 EA
 
+- Download JDK 9 EA
 Early Access build of Jigsaw JDK9 is available at [https://jdk9.java.net/jigsaw/](https://jdk9.java.net/jigsaw/).
 
-**Linux and MacOSX users only:** the bash script ```getJigsawJDK.sh``` in the root directory of this repo, helps download the latest Jigsaw JDK from Oracle. Please run this once the repo is cloned.
+**Linux and MacOSX users only:** the bash script ```getJigsawJDK.sh``` in the root directory of this repo, helps download the latest Jigsaw JDK from Oracle. Please run this once the repo is cloned. 
+
+**Windows users:** please feel free to run this script and if there are any tweaks to get it to work successfully, please let us know via a pull request.
+
+- Install JDK 9 EA
+  
+  - Linux
+    - tar -xvf jigsaw-jdk-9*.tar
+    - mv -f jdk-9 [destination]  (might need to use `sudo` here)
+    - update your `.bashrc` or `bash_profile` with `export JAVA_HOME=[destination]`
+    - source `~/.bashrc` or `~/.bash_profile`
+
+  - MacOSX 
+    - Please refer to this guide https://github.com/musinoli/guides/blob/master/setup_jigsaw.md (Thanks Nolita for your help)
+  
+  - Windows
+    - Run the executable file. 
+    - Follow the installation steps
+    - Make a note of the destination 
+    - Edit the `JAVA_HOME` and `PATH` environment variables via the `My Computer` > `Properties` option
 
 ##### Verify JDK installation
 
@@ -82,6 +102,8 @@ Please install the ```tree``` command before moving forward:
         In case a script is invoking the `tree` command and failing, please replace the `tree -fl` keywords with `cmd //c "tree /f /a"`. If that does not work either use `ls -R` instead, except you won't see the output in a tree format.
         
         Or manually convert the `.sh` files into `.bat`, with minor tweaks should also work there.
+
+        Thanks Richard Kolb (@rjdkolb) for your continued support in this area.
 
 #### Vagrant box
 

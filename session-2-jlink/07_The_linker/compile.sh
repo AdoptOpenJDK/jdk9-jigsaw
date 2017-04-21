@@ -2,6 +2,16 @@
 
 set -eu
 
+runTree() 
+{
+  if [[ "$OSTYPE" == "cygwin" ]] || [[ "$OSTYPE" == "msys" ]] ; then
+    cmd //c "tree /f /a $1"
+  else
+    tree -fl $1
+  fi
+}
+
+
 COM_GREETINGS_FOLDER="mods/com.greetings"
 ORG_ASTRO_FOLDER="mods/org.astro"
 
@@ -11,7 +21,7 @@ mkdir -p $ORG_ASTRO_FOLDER $COM_GREETINGS_FOLDER
 echo "Compiling modules in $ORG_ASTRO_FOLDER"
 javac -d $ORG_ASTRO_FOLDER \
         src/org.astro/module-info.java src/org.astro/org/astro/World.java
-tree -fl $ORG_ASTRO_FOLDER
+runTree "$ORG_ASTRO_FOLDER"
 
 echo "Compiling modules in $COM_GREETINGS_FOLDER"
 javac --module-path mods -d $COM_GREETINGS_FOLDER \
