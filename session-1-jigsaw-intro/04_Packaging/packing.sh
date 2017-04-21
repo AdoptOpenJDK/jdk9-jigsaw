@@ -8,6 +8,15 @@ esc=$(echo -en "\033")
 info="${esc}[0;33m"
 normal=$(echo -en "${esc}[m\017")
 
+runTree() 
+{
+  if [[ "$OSTYPE" == "cygwin" ]] || [[ "$OSTYPE" == "msys" ]] ; then
+    cmd //c "tree /f /a $1"
+  else
+    tree -fl $1
+  fi
+}
+
 echo ""
 echo "${info} *** Creating folder 'mlib' for the packages (jar files) to be created *** ${normal}"
 mkdir -p mlib              # this must be created in order for the jar commands below to be successful
@@ -28,7 +37,7 @@ jar --create \
 
 echo ""
 echo "${info} *** Displaying the contents (package files created) of the 'mlib' folder *** ${normal}"
-tree mlib
+runTree mlib
 
 echo ""
 echo "${info} *** Printing module description for org.astro as recorded in the module-info.class file in the package (jar) *** ${normal}"
