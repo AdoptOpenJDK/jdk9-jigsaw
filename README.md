@@ -79,7 +79,7 @@ Please install the ```tree``` command before moving forward:
         ```
         
         The `tree` command is built into Windows. From within `git-bash` or `cygwin`.
-        In case a script is invoking the `tree` command and failing, please replace the `tree` keyword with `cmd //c tree`.
+        In case a script is invoking the `tree` command and failing, please replace the `tree -fl` keywords with `cmd //c "tree /f /a"`. If that does not work either use `ls -R` instead, except you won't see the output in a tree format.
         
         Or manually convert the `.sh` files into `.bat`, with minor tweaks should also work there.
 
