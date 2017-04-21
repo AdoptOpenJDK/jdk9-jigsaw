@@ -15,14 +15,15 @@ see [http://openjdk.java.net/projects/jigsaw/quick-start](http://openjdk.java.ne
    - Missing requires [./session-1-jigsaw-intro/05_Missing_requires](./session-1-jigsaw-intro/05_Missing_requires)
    - Missing exports [./session-1-jigsaw-intro/05_Missing_exports](./session-1-jigsaw-intro/05_Missing_exports)
    - Services [./session-1-jigsaw-intro/06_Services](./session-1-jigsaw-intro/06_Services)
-   - javac --patch-module option [./session-1-jigsaw-intro/08_XModules_Overries](session-1-jigsaw-intro/07_patch_module_option)
-   - Modules export conflict [./session-1-jigsaw-intro/10_ModulesExportConflict](session-1-jigsaw-intro/08_ModulesExportConflict)
+   - javac --patch-module option [./session-1-jigsaw-intro/07_XModules_Overries](session-1-jigsaw-intro/07_patch_module_option)
+   - Modules export conflict [./session-1-jigsaw-intro/08_ModulesExportConflict](session-1-jigsaw-intro/08_ModulesExportConflict)
 
 - Session 2: JLink
-   - JLink example [./session-2-jlink/09_JLink](session-2-jlink/01_JLink)
+   - JLink example [./session-2-jlink/01_JLink](session-2-jlink/01_JLink)
    - JMod example [./session-2-jlink/02_JMod](session-2-jlink/02_JMod) 
 
-- Session 3: JShell [./session-3-jshell/](./session-3-jshell/)   
+- Session 3: JShell
+   - JShell examples [./session-3-jshell/](./session-3-jshell/)   
         
 Each example is enclosed in a folder of its own containing bash scripts to compile, package and run the respective examples. Use these scripts for each of the examples.
 
