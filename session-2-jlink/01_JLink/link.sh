@@ -24,7 +24,7 @@ rm -rf executable
 echo ""
 echo "${info} *** Create an executable version of the com.greetings module *** ${normal}"
 if [[ "$OSTYPE" == "cygwin" ]] || [[ "$OSTYPE" == "msys" ]] ; then
-    jlink --module-path "${JAVA_HOME}"/jmods;mlib \
+    jlink --module-path "${JAVA_HOME}\jmods;mlib" \
           --add-modules com.greetings \
           --output executable
 else
