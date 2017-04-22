@@ -95,7 +95,7 @@ Now try some more REPL commands, at the `jshell` prompt:
 As mentioned earlier, Java 9 provides a JShell API that we can access from within our application:
 
 ```java
-    JShell shell = JSheel.create();
+    JShell shell = JShell.create();
     shell.eval("int x = 5;");
     Stream<VarSnippet> vars = shell.variables();
 ```
