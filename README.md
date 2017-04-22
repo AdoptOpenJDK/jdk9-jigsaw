@@ -36,7 +36,7 @@ should also work there. Happy to received a pull request for it.
 #### Download and install latest version of the JDK 9 EA
 
 - Download JDK 9 EA
-Early Access build of Jigsaw JDK9 is available at [https://jdk9.java.net/jigsaw/](https://jdk9.java.net/jigsaw/).
+Early Access build of Jigsaw JDK9 is available at [https://jdk9.java.net/jigsaw/](https://jdk9.java.net/jigsaw/). **Alternative site to download JDK 9 EA binaries from http://bit.ly/2oyOAnf (build 166)**.
 
 **Linux and MacOSX users only:** the bash script ```getJigsawJDK.sh``` in the root directory of this repo, helps download the latest Jigsaw JDK from Oracle. Please run this once the repo is cloned. 
 
