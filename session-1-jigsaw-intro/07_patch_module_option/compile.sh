@@ -18,6 +18,7 @@ runTree()
 }
 
 PATCHES_FOLDER="mypatches/java.base"
+MODS_FOLDER="mods/com.greetings"
 SRC_FOLDER="src"
 
 echo ""
@@ -31,5 +32,18 @@ javac --patch-module java.base=src \
       src/java.base/java/util/concurrent/ConcurrentHashMap.java
 
 echo ""
+echo "${info} *** Compiling Main class*** ${normal}"
+
+javac --module-path mods \
+      -d mods/com.greetings/ \
+      src/com.greetings/module-info.java \
+      src/com.greetings/com/greetings/Main.java
+
+
+echo ""
 echo "${info} *** Displaying the contents in the '$PATCHES_FOLDER' folder *** ${normal}"
 runTree "$PATCHES_FOLDER"
+
+echo ""
+echo "${info} *** Displaying the contents in the '$MODS_FOLDER' folder *** ${normal}"
+runTree "$MODS_FOLDER"

@@ -2,44 +2,68 @@ package java.util.concurrent;
 
 import java.io.Serializable;
 import java.util.AbstractMap;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
 public class ConcurrentHashMap<K,V> extends AbstractMap<K,V> implements ConcurrentMap<K,V>, Serializable {
-
-	public static void main(String[] args) {
-		System.out.printf("ConcurrentHashMap");
-	}
+	private final Map<K, V> innerMap;
 
 	public ConcurrentHashMap() {
-	}
-
-	public ConcurrentHashMap(Map<? extends K, ? extends V> m) {
+		this.innerMap = new HashMap<>();
 	}
 
 	public ConcurrentHashMap(int initialCapacity) {
+		this.innerMap = new HashMap<>(initialCapacity);
 	}
 
-	public V put(K key, V value) {
-		throw new RuntimeException("Not implemented <ConcurrentHashMap>");
+	public ConcurrentHashMap(int initialCapacity,
+							 float loadFactor, int concurrencyLevel) {
+		this.innerMap = new HashMap<>(initialCapacity, loadFactor);
 	}
 
 	public Set<Map.Entry<K,V>> entrySet() {
-		return null;
+		return innerMap.entrySet();
 	}
 
+	@Override
 	public boolean replace(K key, V oldValue, V newValue) {
-		return true;
+		return innerMap.replace(key, oldValue, newValue);
 	}
 
+	@Override
 	public V replace(K key, V value) {
-		return null;
+		return innerMap.replace(key, value);
 	}
-	public V remove(Object o) { return null; }
 
-	public boolean remove(Object key, Object value) { return false; }
+	@Override
+	public V remove(Object o) { return innerMap.remove(o); }
 
+	@Override
+	public boolean remove(Object key, Object value) { return innerMap.remove(key, value); }
+
+	@Override
 	public V putIfAbsent(K key, V value) {
-		return null;
+		return innerMap.putIfAbsent(key, value);
+	}
+
+	@Override
+	public V put(K key, V value) {
+		return innerMap.put(key, value);
+	}
+
+	@Override
+	public V get(Object key) {
+		return innerMap.get(key);
+	}
+
+	@Override
+	public void putAll(Map<? extends K, ? extends V> map) {
+		innerMap.putAll(map);
+	}
+
+	@Override
+	public String toString() {
+		return "Patched ConcurrentHashMap";
 	}
 }
