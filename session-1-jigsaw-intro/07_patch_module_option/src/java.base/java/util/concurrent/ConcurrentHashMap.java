@@ -6,8 +6,22 @@ import java.util.Map;
 import java.util.Set;
 
 public class ConcurrentHashMap<K,V> extends AbstractMap<K,V> implements ConcurrentMap<K,V>, Serializable {
+
 	public static void main(String[] args) {
 		System.out.printf("ConcurrentHashMap");
+	}
+
+	public ConcurrentHashMap() {
+	}
+
+	public ConcurrentHashMap(Map<? extends K, ? extends V> m) {
+	}
+
+	public ConcurrentHashMap(int initialCapacity) {
+	}
+
+	public V put(K key, V value) {
+		throw new RuntimeException("Not implemented <ConcurrentHashMap>");
 	}
 
 	public Set<Map.Entry<K,V>> entrySet() {
