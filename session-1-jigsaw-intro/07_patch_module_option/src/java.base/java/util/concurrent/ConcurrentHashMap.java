@@ -1,10 +1,7 @@
 package java.util.concurrent;
 
 import java.io.Serializable;
-import java.util.AbstractMap;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class ConcurrentHashMap<K,V> extends AbstractMap<K,V> implements ConcurrentMap<K,V>, Serializable {
 	private final Map<K, V> innerMap;
@@ -62,8 +59,11 @@ public class ConcurrentHashMap<K,V> extends AbstractMap<K,V> implements Concurre
 		innerMap.putAll(map);
 	}
 
-	@Override
-	public String toString() {
-		return "Patched ConcurrentHashMap";
-	}
+    @Override
+    public boolean containsKey(Object key) {
+	    if (Objects.equals(key,     "Duke")) {
+	        return true;
+        }
+        return super.containsKey(key);
+    }
 }
