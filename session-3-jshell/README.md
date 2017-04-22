@@ -117,6 +117,11 @@ Or
     jshell> [Ctrl][D]     
     (quietly exits)
    
+Sampe repositories:   
+https://github.com/guigarage/JShell-Examples
+https://github.com/guigarage/shellFX
+https://github.com/guigarage/teamshell   
+   
 Read all about the Java REPL at 
 - Project Kulla: https://adoptopenjdk.gitbooks.io/adoptopenjdk-getting-started-kit/content/en/openjdk-projects/kulla/kulla.html
 
