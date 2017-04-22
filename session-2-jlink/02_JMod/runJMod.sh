@@ -16,9 +16,6 @@ rm -f greetings.jmod
 echo
 echo ""
 echo "${info} *** Creating a module (greetings.jmod) from multiple modules / packages / classes with jlink. *** ${normal}"
-jmod create \
-     --class-path "mods/com.greetings;mods/org.astro" \
-     greetings.jmod
 
 if [[ "$OSTYPE" == "cygwin" ]] || [[ "$OSTYPE" == "msys" ]] ; then
     jmod create \
