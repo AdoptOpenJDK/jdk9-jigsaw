@@ -22,7 +22,6 @@ public class ConcurrentHashMap<K,V> extends AbstractMap<K,V> implements Concurre
 		this.innerMap = new HashMap<>(initialCapacity, loadFactor);
 	}
 
-	@Override
 	public Set<Map.Entry<K,V>> entrySet() {
 		return innerMap.entrySet();
 	}
