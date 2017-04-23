@@ -9,8 +9,6 @@ public class Main {
         myMap.put("one", 1);
         myMap.put("two", 2);
         myMap.put("three", 3);
-        System.out.println(myMap);
-
         System.out.println("Is Duke home? " + myMap.containsKey("Duke"));
     }
 }
