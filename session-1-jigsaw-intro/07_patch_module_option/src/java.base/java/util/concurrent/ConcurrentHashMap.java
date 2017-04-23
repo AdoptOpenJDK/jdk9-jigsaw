@@ -59,11 +59,7 @@ public class ConcurrentHashMap<K,V> extends AbstractMap<K,V> implements Concurre
 		innerMap.putAll(map);
 	}
 
-    @Override
-    public boolean containsKey(Object key) {
-	    if (Objects.equals(key,     "Duke")) {
-	        return true;
-        }
-        return super.containsKey(key);
-    }
+    public String toString() {
+		return "Patched ConcurrentHashMap: " + super.toString();
+	}
 }
