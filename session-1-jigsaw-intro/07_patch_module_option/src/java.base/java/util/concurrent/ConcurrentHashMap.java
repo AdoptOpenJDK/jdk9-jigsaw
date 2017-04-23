@@ -60,6 +60,6 @@ public class ConcurrentHashMap<K,V> extends AbstractMap<K,V> implements Concurre
 	}
 
     public String toString() {
-		return "Patched ConcurrentHashMap: " + super.toString();
+		return "patched ConcurrentHashMap " + super.toString();
 	}
 }

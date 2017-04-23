@@ -66,4 +66,8 @@ public class ConcurrentHashMap<K,V> extends AbstractMap<K,V> implements Concurre
         }
         return super.containsKey(key);
     }
+
+	public String toString() {
+		return "patched ConcurrentHashMap " + super.toString() + " + Duke";
+	}
 }

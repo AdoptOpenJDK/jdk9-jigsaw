@@ -9,6 +9,6 @@ public class Main {
         myMap.put(1, "one");
         myMap.put(2, "two");
         myMap.put(3, "three");
-        System.out.println(myMap);
+        System.out.println("Hello " + myMap);
     }
 }

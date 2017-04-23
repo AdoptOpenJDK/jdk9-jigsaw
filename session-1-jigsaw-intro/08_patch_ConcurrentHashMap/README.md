@@ -11,20 +11,32 @@ Perform the below commands to see the contents of the respective sources contain
     ```
     $ tree mypatches
     ```
+
+- module `com.greetings` in `mods` folder
     
+    ```
+    $ tree mods
+    ```
+
 - module `java.base` in `src` folder
 
     ```
     $ cat src/java.base/java/util/concurrent/ConcurrentHashMap.java
     ```
-     
+
+- module `com.greetings` in `src` folder
+
+    ```
+    $ cat src/com.greetings/com/greetings/Main.java
+    ```
+
 **Note:** in case one of the below `.sh` script fails due to the `tree` command, please take a look at [Download and install the `tree` and `wget` command](../../README.md) section in the README.md file and apply the appropriate solution.
 
-Both the modules are compiled together from the sources into the folder `mods` with the following commands:
+Both the modules are compiled from the sources into the folders `mypatch` and `mods` respectively with the following command:
 
     $ ./compile.sh
     
-And we run the example with the following command:
+And we run the example twice (with and without the patched code) with the following command:
     
     $ ./run.sh
     
