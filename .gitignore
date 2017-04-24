@@ -28,3 +28,6 @@ hs_err_pid*
 # Created by .ignore support plugin (hsz.mobi)
 
 9_JLink/executable/
+
+# Do include library jars
+!**/lib/*.jar
