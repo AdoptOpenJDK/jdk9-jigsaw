@@ -16,7 +16,7 @@ Compile the 'hello world' example using:
     
 Create JAR modules out of the class files:
     
-    $ ./packing.sh
+    $ ./packaging.sh
 
 Run `jlink` to produce a new run-time image (distributable JDK + your app) for the 'hello world' example:
 

@@ -20,7 +20,7 @@ The modules are compiled from the sources into the folder `mods` with the follow
 
 Now create the packages (jar files) with the below command:
 
-    $ ./packing.sh
+    $ ./packaging.sh
 
 Perform the below command to see the packages (jar files) created via the above script:
 
