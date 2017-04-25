@@ -1,18 +1,8 @@
 ### External libraries example
 
 In this example we include external libraries, which haven't been modularized so far.
-These jar files can be translated into so called *"automatic modules"* by `javac`.
+These jar files can be translated into so called *[automatic modules](The State of the Module System)* by `javac`.
 To get an idea of how those modules will look and which dependencies they will require you can use the `jar` tool:
-
-    $ jar -d --file=lib/hamcrest-core-1.3.jar
-    o module descriptor found. Derived automatic module.
-    
-    module hamcrest.core@1.3 (automatic)
-      requires mandated java.base
-      contains org.hamcrest
-      contains org.hamcrest.core
-      contains org.hamcrest.internal
-and
 
     $ jar -d --file=lib/junit-4.12.jar
     No module descriptor found. Derived automatic module.
@@ -26,7 +16,8 @@ and
        contains org.junit
        ...
 
-The outputs of those do sadly not tell us, that JUnit depends on Hamcrest.
+This output tells us, that the automatic module will be called `junit` and will have the version number 4.12.
+It sadly doesn't tell us, that JUnit depends on Hamcrest.
 We can get a hint towards that using `jdeps` however:
 
     $ jdeps -s lib/junit-4.12.jar 
@@ -49,7 +40,23 @@ So to take a closer look, let's omit that:
        org.junit.rules                                    -> org.hamcrest                                       not found
 
 
-Aha! Hamcrest it is. And we also see, that there are no other unknown dependencies.
+Aha! Hamcrest it is. And we also see, that there are no other unknown dependencies from JUnit. Let's just check Hamcrest to be sure:
+
+    $ jar -d --file=lib/hamcrest-core-1.3.jar
+    o module descriptor found. Derived automatic module.
+    
+    module hamcrest.core@1.3 (automatic)
+      requires mandated java.base
+      contains org.hamcrest
+      contains org.hamcrest.core
+      contains org.hamcrest.internal
+
+And
+
+    $ jdeps -s lib/hamcrest-core-1.3.jar
+    hamcrest-core-1.3.jar -> java.base
+
+So, Hamcrest has no further dependencies.
 
 Perform the below commands to see the contents of the respective sources contained in the `src` folder:
 
@@ -57,8 +64,17 @@ Perform the below commands to see the contents of the respective sources contain
     $ cat src/com.greetings/main/java/com/greetings/Main.java
     $ cat src/com.greetings/main/java/com/greetings/Greet.java
     $ cat src/com.greetings/test/java/com/greetings/GreetTest.java 
-                
+
+As you can see in the `module-info.java`, we have added a dependency to JUnit using the module name retrieved with the above commands.
+Hamcrest is a transitive dependency and as such does not have to be added separately.
+Also, since JUnit will have to access our classes to run tests, we export `com.greetings` to the JUnit module.
+
+
 **Note:** in case one of the below `.sh` script fails due to the `tree` command, please take a look at [Download and install the `tree` and `wget` command](../../README.md) section in the README.md file and apply the appropriate solution.
+
+You can see the dependency information by running the command:
+
+    $ ./deps.sh
 
 Try to compile the modules using the below command:
 
