@@ -1,12 +1,6 @@
 #!/bin/bash
 
-set -eu
-
-# Escape code
-esc=$(echo -en "\033")
-
-info="${esc}[0;33m"
-normal=$(echo -en "${esc}[m\017")
+source ../../common.sh
 
 COM_GREETINGS_FOLDER="mods/com.greetings"
 
