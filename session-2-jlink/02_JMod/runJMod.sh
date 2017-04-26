@@ -2,12 +2,7 @@
 
 set -eu
 
-
-# Escape code
-esc=$(echo -en "\033")
-
-info="${esc}[0;33m"
-normal=$(echo -en "${esc}[m\017")
+source ../../common-functions.sh
 
 echo ""
 echo "${info} *** Removing any existing greetings.jmod *** ${normal}"
