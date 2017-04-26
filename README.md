@@ -31,9 +31,47 @@ Early Access build of Jigsaw JDK9 is available at [http://jdk.java.net/jigsaw/](
          `[destination]` usually `/usr/lib/...` or related folder
     
     - MacOSX 
+       #### Manual way
        - Please refer to [this guide]( https://github.com/musinoli/guides/blob/master/setup_jigsaw.md) - thanks Nolita ([@musinoli](https://github.com/musinoli)) for your help
-       - In case a `.dmg` file is available, download it and follow the installation steps, you will still have to update your `JAVA_HOME` and start script as mentioned in [this guide]( https://github.com/musinoli/guides/blob/master/setup_jigsaw.md).    
+       - In case a `.dmg` file is available, download it and follow the installation steps, you will still have to update your `JAVA_HOME` and start script as mentioned in [this guide]( https://github.com/musinoli/guides/blob/master/setup_jigsaw.md).
        - update your `.bashrc` with `export PATH=$JAVA_HOME/bin:$PATH`
+
+       #### Via Brew and jenv
+       You will need the latest version of brew with cask support (1.1.13 at the time of writing). If you don't have brew installed, go [here](https://brew.sh/) first.
+       - `brew install jenv`
+       - `brew cask install java9-beta`
+
+       You will need to make sure jenv is evaluated in every terminal session. Add `eval "$(jenv init -)"` to your shell's .rc file
+
+       Now run `jenv versions`. The output might differ (if you have other JDK's installed) but in general you should see something like this:
+       ```
+       ➜  ~ jenv versions
+         system
+       * 1.8 (set by /Users/ioannis/.jenv/version)
+         1.8.0.121
+         9-ea
+         oracle64-1.8.0.121
+         oracle64-9-ea
+       ```
+       If `9-ea` or `oracle64-9-ea` does not appear, add it manually
+
+       `jenv add /Library/Java/JavaVirtualMachines/jdk-9.jdk/Contents/Home`
+
+       If you want to limit use of JDK 9 to source in a specific directory, switch to that directory and do:
+
+       `jenv local 9-ea`
+
+       e.g.
+       ```
+       ➜  ~ cd test
+       ➜  test: jenv local 9-ea
+       ➜  test: jenv version
+       9-ea (set by /Users/ioannis/test/.java-version)
+       ➜  test: java -version
+       java version "9-ea"
+       Java(TM) SE Runtime Environment (build 9-ea+163)
+       Java HotSpot(TM) 64-Bit Server VM (build 9-ea+163, mixed mode)
+       ```
         
     - Windows
        - Run the executable file. 
