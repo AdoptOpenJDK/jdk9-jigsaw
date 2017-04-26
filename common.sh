@@ -10,5 +10,5 @@ esc=$(echo -en "\033")
 info="${esc}[0;33m"
 normal=$(echo -en "${esc}[m\017")
 
-java -version 2>&1 | grep -q '"9' || echo "**** Fix your PATH! ****" && java -version && exit 1
+java -version 2>&1 | grep -q '"9' || (echo "**** Fix your PATH! ****" && java -version && exit 1)
 
