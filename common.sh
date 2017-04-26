@@ -12,3 +12,11 @@ normal=$(echo -en "${esc}[m\017")
 
 java -version 2>&1 | grep -q '"9' || (echo "**** Fix your PATH! ****" && java -version && exit 1)
 
+runTree()
+{
+  if [[ "$OSTYPE" == "cygwin" ]] || [[ "$OSTYPE" == "msys" ]] ; then
+    cmd //c "tree /f /a $1"
+  else
+    tree -fl $1
+  fi
+}

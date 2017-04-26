@@ -4,15 +4,6 @@ source ../../common.sh
 
 COM_GREETINGS_FOLDER="mods/com.greetings"
 
-runTree() 
-{
-  if [[ "$OSTYPE" == "cygwin" ]] || [[ "$OSTYPE" == "msys" ]] ; then
-    cmd //c "tree /f /a $1"
-  else
-    tree -fl $1
-  fi
-}
-
 runTree src
 
 echo ""
