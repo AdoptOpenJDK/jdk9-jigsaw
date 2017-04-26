@@ -2,7 +2,7 @@
 
 set -eu
 
-source ../../common.sh
+source ../../common-functions.sh
 
 echo 
 echo "${info} *** Running 'com.greetings.Main' inside the 'mods' folder. ${normal}"

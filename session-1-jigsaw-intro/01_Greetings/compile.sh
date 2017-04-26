@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ../../common.sh
+source ../../common-functions.sh
 
 COM_GREETINGS_FOLDER="mods/com.greetings"
 
