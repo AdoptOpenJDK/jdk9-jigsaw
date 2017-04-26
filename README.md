@@ -41,10 +41,9 @@ Early Access build of Jigsaw JDK9 is available at [http://jdk.java.net/jigsaw/](
        - `brew install jenv`
        - `brew cask install java9-beta`
 
-       You will need to make sure jenv is evaluated in every terminal session. Add	`eval "$(jenv init -)"` to your shell's .rc file
+       You will need to make sure jenv is evaluated in every terminal session. Add `eval "$(jenv init -)"` to your shell's .rc file
 
-       Now run `jenv versions`. The output might differ (if you have other JDK's installed) but in general
-       you should see something like this:
+       Now run `jenv versions`. The output might differ (if you have other JDK's installed) but in general you should see something like this:
        ```
        ➜  ~ jenv versions
          system
