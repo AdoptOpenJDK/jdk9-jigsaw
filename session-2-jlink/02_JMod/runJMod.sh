@@ -2,12 +2,7 @@
 
 set -eu
 
-
-# Escape code
-esc=$(echo -en "\033")
-
-info="${esc}[0;33m"
-normal=$(echo -en "${esc}[m\017")
+source ../../common-functions.sh
 
 echo ""
 echo "${info} *** Removing any existing greetings.jmod *** ${normal}"
@@ -16,9 +11,15 @@ rm -f greetings.jmod
 echo
 echo ""
 echo "${info} *** Creating a module (greetings.jmod) from multiple modules / packages / classes with jlink. *** ${normal}"
-jmod create \
-     --class-path mods/com.greetings:mods/org.astro \
-     greetings.jmod
+if [[ "$OSTYPE" == "cygwin" ]] || [[ "$OSTYPE" == "msys" ]] ; then
+	jmod create \
+	     --class-path "mods\com.greetings;mods\org.astro" \
+	     greetings.jmod
+else
+	jmod create \
+	     --class-path mods/com.greetings:mods/org.astro \
+	     greetings.jmod
+fi
 
 echo ""
 echo "${info} *** Enlisting the contents of the module (greetings.jmod) *** ${normal}"

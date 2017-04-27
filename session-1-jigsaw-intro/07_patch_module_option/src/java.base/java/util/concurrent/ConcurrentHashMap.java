@@ -1,45 +1,69 @@
 package java.util.concurrent;
 
 import java.io.Serializable;
-import java.util.AbstractMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
-public class ConcurrentHashMap<K,V> extends AbstractMap<K,V> implements ConcurrentMap<K,V>, Serializable {
+public class ConcurrentHashMap<K, V> extends AbstractMap<K, V> implements ConcurrentMap<K, V>, Serializable {
+    private final Map<K, V> innerMap;
 
-	public static void main(String[] args) {
-		System.out.printf("ConcurrentHashMap");
-	}
+    public ConcurrentHashMap() {
+        this.innerMap = new HashMap<>();
+    }
 
-	public ConcurrentHashMap() {
-	}
+    public ConcurrentHashMap(int initialCapacity) {
+        this.innerMap = new HashMap<>(initialCapacity);
+    }
 
-	public ConcurrentHashMap(Map<? extends K, ? extends V> m) {
-	}
+    public ConcurrentHashMap(int initialCapacity,
+                             float loadFactor, int concurrencyLevel) {
+        this.innerMap = new HashMap<>(initialCapacity, loadFactor);
+    }
 
-	public ConcurrentHashMap(int initialCapacity) {
-	}
+    public Set<Map.Entry<K, V>> entrySet() {
+        return innerMap.entrySet();
+    }
 
-	public V put(K key, V value) {
-		throw new RuntimeException("Not implemented <ConcurrentHashMap>");
-	}
+    @Override
+    public boolean replace(K key, V oldValue, V newValue) {
+        return innerMap.replace(key, oldValue, newValue);
+    }
 
-	public Set<Map.Entry<K,V>> entrySet() {
-		return null;
-	}
+    @Override
+    public V replace(K key, V value) {
+        return innerMap.replace(key, value);
+    }
 
-	public boolean replace(K key, V oldValue, V newValue) {
-		return true;
-	}
+    @Override
+    public V remove(Object o) {
+        return innerMap.remove(o);
+    }
 
-	public V replace(K key, V value) {
-		return null;
-	}
-	public V remove(Object o) { return null; }
+    @Override
+    public boolean remove(Object key, Object value) {
+        return innerMap.remove(key, value);
+    }
 
-	public boolean remove(Object key, Object value) { return false; }
+    @Override
+    public V putIfAbsent(K key, V value) {
+        return innerMap.putIfAbsent(key, value);
+    }
 
-	public V putIfAbsent(K key, V value) {
-		return null;
-	}
+    @Override
+    public V put(K key, V value) {
+        return innerMap.put(key, value);
+    }
+
+    @Override
+    public V get(Object key) {
+        return innerMap.get(key);
+    }
+
+    @Override
+    public void putAll(Map<? extends K, ? extends V> map) {
+        innerMap.putAll(map);
+    }
+
+    public String toString() {
+        return "patched ConcurrentHashMap " + super.toString();
+    }
 }
