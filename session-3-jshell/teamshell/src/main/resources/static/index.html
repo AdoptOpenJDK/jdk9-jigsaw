@@ -1,0 +1,26 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+    <link rel="import" href="bower_components/paper-styles/paper-styles.html">
+    <link rel="import" href="bower_components/font-roboto/roboto.html">
+    <script src="bower_components/dolphin-platform-polymer/dist/dolphin-platform-polymer.js"></script>
+    <style>
+        body {
+            font-family: 'Roboto', 'Noto', sans-serif;
+            font-size: 14px;
+            margin: 0;
+            padding: 24px;
+        }
+    </style>
+    <script>
+        clientContext = dolphin.connect('http://localhost:8080/dolphin');
+        clientContext.on('error', function(error) {console.log('error', error)});
+    </script>
+    <link href="shell-view.html" rel="import">
+</head>
+<body unresolved class="fullbleed">
+<shell-view></shell-view>
+</body>
+</html>

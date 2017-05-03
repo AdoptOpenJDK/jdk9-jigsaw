@@ -1,0 +1,41 @@
+{
+  "name": "dolphin-platform-polymer",
+  "version": "0.12.0",
+  "authors": [
+    "Michael Heinrichs <michael.heinrichs@canoo.com>",
+    "Hendrik Ebbers <hendrik.ebbers@canoo.com>",
+    "Kunal Singh <kunal.singh@canoo.com>",
+    "Timo Brandstätter <timo.brandstaetter@canoo.com>"
+  ],
+  "homepage": "http://www.dolphin-platform.io",
+  "description": "The Dolphin Platform framework implements the presentation model pattern and provides a modern way to create enterprise applications.",
+  "keywords": [
+    "Dolphin Platform"
+  ],
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "main": "./dist/dolphin-platform-polymer.js",
+  "ignore": [
+    "**/.*",
+    "lib",
+    "src",
+    "test",
+    "gulpfile.js",
+    "package.json",
+    "sauce.launchers.js",
+    "sauce-template.json",
+    "wct.conf.js",
+    "sonar-project.properties"
+  ],
+  "devDependencies": {
+    "core.js": "2.4.0",
+    "dolphin-platform-js": "0.12.0"
+  },
+  "dependencies": {
+    "polymer": ">=1.0.4 <=1.4.0"
+  }
+}
