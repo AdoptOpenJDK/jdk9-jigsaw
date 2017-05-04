@@ -179,6 +179,7 @@ In the worst case scenario, we would have to manually convert the `.sh` files in
    - JMod example [./session-2-jlink/02_JMod](session-2-jlink/02_JMod) 
 
 - Session 3: JShell
+   - JShell quick tutorial [./session-3-jshell/](./session-3-jshell/)
    - JShell examples [./session-3-jshell/JShell-Examples](./session-3-jshell/JShell-Examples)
    - shellFX [./session-3-jshell/shellFX/](./session-3-jshell/shellFX/)
    - teamshell [./session-3-jshell/teamshell/](./session-3-jshell/teamshell/)
