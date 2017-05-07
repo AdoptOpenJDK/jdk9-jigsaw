@@ -2,7 +2,8 @@ Java/JDK 9 Resources
 ====================
 
 - JDK9 EA Download
-  - https://jdk9.java.net/jigsaw/
+  - http://jdk.java.net/9/
+  - http://jdk.java.net/jigsaw
 
 - JDK 9 Installation
   - https://docs.oracle.com/javase/9/install/overview-jdk-9-and-jre-9-installation.htm#JSJIG-GUID-8677A77F-231A-40F7-98B9-1FD0B48C346A
@@ -14,6 +15,7 @@ Java/JDK 9 Resources
   - http://openjdk.java.net/projects/jigsaw/
 
 - JSRs involved
+	- 379: JavaTM SE 9 Release Contents (https://jcp.org/en/jsr/detail?id=379) - umbrella JSR for Java 9
 	- 376: Java Platform Module System (http://openjdk.java.net/projects/jigsaw/spec/) - specified some of the below JEPs
 
 - JEPs involved
