@@ -1,18 +1,18 @@
 Java/JDK 9 Resources
 ====================
 
-- JDK9 EA Download 
-  - https://jdk9.java.net/jigsaw/	
+- JDK9 EA Download
+  - https://jdk9.java.net/jigsaw/
 
 - JDK 9 Installation
   - https://docs.oracle.com/javase/9/install/overview-jdk-9-and-jre-9-installation.htm#JSJIG-GUID-8677A77F-231A-40F7-98B9-1FD0B48C346A
 
-- JDK 9 Project page 
+- JDK 9 Project page
   - http://openjdk.java.net/projects/jdk9/
 
 - JDK 9 Jigsaw Project page
   - http://openjdk.java.net/projects/jigsaw/
-    
+
 - JSRs involved
 	- 376: Java Platform Module System (http://openjdk.java.net/projects/jigsaw/spec/) - specified some of the below JEPs
 
@@ -50,7 +50,7 @@ Java/JDK 9 Resources
 - Java 9: Jigsaw
     - Project Jigsaw @ conferences (slides and video)
 	    - http://openjdk.java.net/projects/jigsaw/talks
-	
+
 	- Useful topics
 		- https://www.sitepoint.com/java-9-resources/?utm_source=Sociallymap&utm_medium=Sociallymap&utm_campaign=Sociallymap
 
@@ -58,7 +58,7 @@ Java/JDK 9 Resources
 		- https://www.voxxed.com/blog/interview/java-9-coming-nicolai-parlog/
 		- https://www.voxxed.com/blog/2016/03/13285/
 		- https://www.voxxed.com/blog/2014/09/preparing-for-java-the-modular-edition/
-		
+
 		- http://blog.codefx.org/java/dev/javaone-2015-prepare-for-jdk-9/
 			- [blog] http://blog.codefx.org/java/dev/javaone-2015-introduction-to-modular-development/
 			- [video] https://www.youtube.com/watch?v=eALw4P_0O4k - Introduction to Modular Development by Alan Bateman (3 months)
@@ -68,10 +68,10 @@ Java/JDK 9 Resources
 			- Prepare for JDK 9 by haocheng - JCConf 2016 R0 Day2-4
 				- https://www.youtube.com/watch?v=S91fn0dFTTY
 			- Simon Ritter - Preparing for JDK 9 with Zulu and OpenJDK
-				- https://www.youtube.com/watch?v=i9bnV0KKyAA 
+				- https://www.youtube.com/watch?v=i9bnV0KKyAA
 			- 180.Course Preview- Java 9 Modularity- First Look.mp4
 				- https://www.youtube.com/watch?v=0UD3KIwXwJw
-	
+
 	- New features
 		- Summary of features
 			- http://www.baeldung.com/new-java-9
@@ -80,7 +80,7 @@ Java/JDK 9 Resources
 
 		- https://www.voxxed.com/blog/2015/12/project-jigsaw-hands-on-guide
 		- https://www.voxxed.com/blog/2015/06/jumping-into-java-9-new-build-ready-to-test/
-		- https://www.voxxed.com/blog/2016/09/java-9-weak-modules/	
+		- https://www.voxxed.com/blog/2016/09/java-9-weak-modules/
 
 		- Java 9: Encapsulate Most Internal APIs
 			- https://www.voxxed.com/blog/2016/11/java-9-series-encapsulate-internal-apis/
@@ -146,7 +146,7 @@ Java/JDK 9 Resources
 	- Advanced Modular Development
 		- [blog] http://blog.codefx.org/java/dev/javaone-2015-advanced-modular-development/
 		- [video] https://www.youtube.com/watch?v=WJHjKMIrbD0 (5 months old)
-	
+
 		- http://blog.codefx.org/java/dev/javaone-2015-under-the-hood-of-project-jigsaw/%22
 		- https://www.voxxed.com/blog/presentation/presentation-java-9-make-way-for-modules/
 		- [video] https://www.youtube.com/watch?v=IA8FkrY0VFE - Modular Development with JDK 9
@@ -156,7 +156,7 @@ Java/JDK 9 Resources
 			- The Java Module System In Action (Nicolai Parlog, Germany)
 				- https://www.youtube.com/watch?v=0M72pH2rXwA
         - Refactoring legacy to modular apps (examples)
-            - Rabea Gransberger: https://github.com/rgra/java9-module-refactoring 
+            - Rabea Gransberger: https://github.com/rgra/java9-module-refactoring
             - Sander Mak & Paul Pakker: https://github.com/java9-modularity/java9-migration-demos
         - [blog] http://blog.joda.org/2017/04/java-9-modules-jpms-basics.html
      - Dependency / modularity visualisation
