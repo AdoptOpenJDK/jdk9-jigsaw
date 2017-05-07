@@ -1,47 +1,40 @@
 Java/JDK 9 Resources
 ====================
 
-- JDK9 EA Download
-  - http://jdk.java.net/9/
-  - http://jdk.java.net/jigsaw
+- [JDK9 EA Download](http://jdk.java.net/9/); or [with latest Jigsaw changes](http://jdk.java.net/jigsaw)
 
-- JDK 9 Installation
-  - https://docs.oracle.com/javase/9/install/overview-jdk-9-and-jre-9-installation.htm#JSJIG-GUID-8677A77F-231A-40F7-98B9-1FD0B48C346A
+- [JDK 9 Installation](https://docs.oracle.com/javase/9/install/overview-jdk-9-and-jre-9-installation.htm#JSJIG-GUID-8677A77F-231A-40F7-98B9-1FD0B48C346A)
 
-- JDK 9 Project page
-  - http://openjdk.java.net/projects/jdk9/
+- [JDK 9 Project page](http://openjdk.java.net/projects/jdk9/)
 
-- JDK 9 Jigsaw Project page
-  - http://openjdk.java.net/projects/jigsaw/
+- [JDK 9 Jigsaw Project page](http://openjdk.java.net/projects/jigsaw/)
 
 - JSRs involved
-	- 379: JavaTM SE 9 Release Contents (https://jcp.org/en/jsr/detail?id=379) - umbrella JSR for Java 9
-	- 376: Java Platform Module System (http://openjdk.java.net/projects/jigsaw/spec/) - specified some of the below JEPs
+	- [379](https://jcp.org/en/jsr/detail?id=379): JavaTM SE 9 Release Contents - umbrella JSR for Java 9
+	- [376](https://jcp.org/en/jsr/detail?id=376): [Java Platform Module System](http://openjdk.java.net/projects/jigsaw/spec/) - specified some of the below JEPs
 
 - JEPs involved
 	- Module system of the Java platform as specified by project Jigsaw JEPs covered:
-		- 200: The Modular JDK (http://openjdk.java.net/jeps/200)
-			- 201: Modular Source Code (http://openjdk.java.net/jeps/201)
-				- 220: Modular Run-Time Images (http://openjdk.java.net/jeps/220) (depends on [JEP 162]((http://openjdk.java.net/jeps/162)))
-			- 260: Encapsulate Most Internal APIs (http://openjdk.java.net/jeps/260) (no dependencies)
-			- 261: Module System (http://openjdk.java.net/jeps/261) (depends on [JEP 220](http://openjdk.java.net/jeps/220), related to [JEP 238](http://openjdk.java.net/jeps/238))
-			- 282: jlink: The Java Linker (http://openjdk.java.net/jeps/282) (replaces implementation of [JEP 220](http://openjdk.java.net/jeps/220))
-			- 275: Modular Java Application Packaging (http://openjdk.java.net/jeps/275)
-		- 222: jshell: The Java Shell (Read-Eval-Print Loop) (http://openjdk.java.net/jeps/222)
-		- 193: Variable Handles (http://openjdk.java.net/jeps/193)
-		- 110: HTTP 2 Client (http://openjdk.java.net/jeps/110)
-		- 238: Multi-Release JAR Files (http://openjdk.java.net/jeps/238)
-		- 158: Unified JVM Logging (http://openjdk.java.net/jeps/158)
+		- [200](http://openjdk.java.net/jeps/200): The Modular JDK
+			- [201](http://openjdk.java.net/jeps/201): Modular Source Code
+				- [220](http://openjdk.java.net/jeps/220): Modular Run-Time Images  (depends on [JEP 162](http://openjdk.java.net/jeps/162))
+			- [260](http://openjdk.java.net/jeps/260): Encapsulate Most Internal APIs (no dependencies)
+			- [261](http://openjdk.java.net/jeps/261): Module System (depends on [JEP 220](http://openjdk.java.net/jeps/220), related to [JEP 238](http://openjdk.java.net/jeps/238))
+			- [282](http://openjdk.java.net/jeps/282): jlink: The Java Linker (replaces implementation of [JEP 220](http://openjdk.java.net/jeps/220))
+			- [275](http://openjdk.java.net/jeps/275): Modular Java Application Packaging
+		- [222](http://openjdk.java.net/jeps/222): jshell: The Java Shell (Read-Eval-Print Loop)
+		- [193](http://openjdk.java.net/jeps/193): Variable Handles
+		- [110](http://openjdk.java.net/jeps/110): HTTP 2 Client
+		- [238](http://openjdk.java.net/jeps/238): Multi-Release JAR Files
+		- [158](http://openjdk.java.net/jeps/158): Unified JVM Logging
 		- G1 related JEPs (3 of them)
 		- JEPs related to a number of security improvements
 		- JEPs related to a number of platform improvements
-		- Many, many more JEPs (see http://openjdk.java.net/jeps/0)
+		- Many, many more JEPs (see [list of all JEPs](http://openjdk.java.net/jeps/0))
 
-- JDK 9 Outreach
-  - https://wiki.openjdk.java.net/display/Adoption/JDK+9+Outreach
+- [JDK 9 Outreach](https://wiki.openjdk.java.net/display/Adoption/JDK+9+Outreach)
 
-- JDK 9 Quality Outreach (we could use your help here)
-  - https://wiki.openjdk.java.net/display/quality/Quality+Outreach
+- [JDK 9 Quality Outreach](https://wiki.openjdk.java.net/display/quality/Quality+Outreach) (we could use your help here)
 
 - Java 9: REPL
 	- https://www.voxxed.com/blog/2016/10/just-enough-code-hacking-jdk
@@ -164,17 +157,12 @@ Java/JDK 9 Resources
      - Dependency / modularity visualisation
         - https://github.com/accso/java9-jigsaw-depvis
 
-- Java 9: Migration
-	- https://docs.oracle.com/javase/9/migrate/toc.htm#JSMIG-GUID-7744EF96-5899-4FB2-B34E-86D49B2E89B6
+- [Java 9: Migration](https://docs.oracle.com/javase/9/migrate/toc.htm#JSMIG-GUID-7744EF96-5899-4FB2-B34E-86D49B2E89B6)
 
-- Java 9: Tool reference
-	- https://docs.oracle.com/javase/9/tools/tools-and-command-reference.htm#JSWOR596
+- [Java 9: Tool reference](https://docs.oracle.com/javase/9/tools/tools-and-command-reference.htm#JSWOR596)
 
-- Java 9: JavaDoc (API documentation)
-	- http://download.java.net/java/jdk9/docs/api/overview-summary.html
+- [Java 9: JavaDoc](http://download.java.net/java/jdk9/docs/api/overview-summary.html) (API documentation)
 
-- Java 9: Developer Guides
-	- https://docs.oracle.com/javase/9/javase-docs.htm#
+- [Java 9: Developer Guides](https://docs.oracle.com/javase/9/javase-docs.htm#)
 
-- Java 9: Quick Start guide
-	- http://openjdk.java.net/projects/jigsaw/quick-start
+- [Java 9: Quick Start guide](http://openjdk.java.net/projects/jigsaw/quick-start)
