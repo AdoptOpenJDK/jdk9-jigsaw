@@ -27,6 +27,8 @@ Community resources:
 
 - [Java 9 resources](https://blog.codefx.org/java/java-9-resources-talks-articles-blogs-books-courses/) (Nicolai Parlog)
 - [Ultimate Guide To Java 9](https://www.sitepoint.com/ultimate-guide-to-java-9/) (Nicolai Parlog)
+- [Inside Java 9 – Version Schema, Multi-Release JARs, and More](https://www.sitepoint.com/inside-java-9-part-i/) (Nicolai Parlog)
+- [Inside Java 9 – Performance, Compiler, and More](https://www.sitepoint.com/inside-java-9-part-ii/) (Nicolai Parlog)
 - [Java 9 New Features](http://www.baeldung.com/new-java-9) (Baeldung)
 - [Java 9 series: the JVM](https://www.voxxed.com/blog/2016/10/java-9-series-jvm/) (Katharine Beaumont)
 
@@ -49,6 +51,11 @@ Talks and Interviews:
 [JEP 269](http://openjdk.java.net/jeps/269): Convenience Factory Methods for Collections
 
 - [Java 9 series: Convenience Factory Methods for Collections](https://www.voxxed.com/blog/2017/01/java-9-series-factory-methods-collections/) (Katharine Beaumont)
+
+### Stream/Optional Improvements
+
+* [Java 9 Additions To Stream](https://blog.codefx.org/java/java-9-stream/) (Nicolai Parlog)
+* [Java 9 Additions To Optional](http://blog.codefx.org/java/java-9-option) (Nicolai Parlog)
 
 ### JShell
 
@@ -146,9 +153,16 @@ Other talks:
 
 ### Articles
 
-- [Project Jigsaw Hands-On Guide](https://blog.codefx.org/java/dev/jigsaw-hands-on-guide/) (Nicolai Parlog)
-- [Java 9 series: Encapsulate Most Internal APIs](https://www.voxxed.com/blog/2016/11/java-9-series-encapsulate-internal-apis/) (Katharine Beaumont)
+- [Hands-On Guide](https://blog.codefx.org/java/dev/jigsaw-hands-on-guide/) (Nicolai Parlog)
+- [Optional Dependencies](https://blog.codefx.org/java/module-system-optional-dependencies/) (Nicolai Parlog)
+- [Reflection vs Encapsulation](https://blog.codefx.org/java/reflection-vs-encapsulation/) (Nicolai Parlog)
+- [Implied Readability](https://blog.codefx.org/java/implied-readability/) (Nicolai Parlog)
 - [Java 9 modules - JPMS basics](http://blog.joda.org/2017/04/java-9-modules-jpms-basics.html) (Stephen Colebourne)
+
+Background of Project Jigsaw:
+
+- [Motivation And Goals](https://blog.codefx.org/java/dev/motivation-goals-project-jigsaw/) (Nicolai Parlog)
+- [Java 9 series: Encapsulate Most Internal APIs](https://www.voxxed.com/blog/2016/11/java-9-series-encapsulate-internal-apis/) (Katharine Beaumont)
 
 Downsides/hurdles of Java 9 modularity and Project Jigsaw:
 
