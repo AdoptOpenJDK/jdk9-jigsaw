@@ -31,6 +31,7 @@ Community resources:
 - [Inside Java 9 – Performance, Compiler, and More](https://www.sitepoint.com/inside-java-9-part-ii/) (Nicolai Parlog)
 - [Java 9 New Features](http://www.baeldung.com/new-java-9) (Baeldung)
 - [Java 9 series: the JVM](https://www.voxxed.com/blog/2016/10/java-9-series-jvm/) (Katharine Beaumont)
+- [9 new features in Java 9](https://www.pluralsight.com/blog/software-development/java-9-new-features) (Sander Mak)
 
 Talks and Interviews:
 
@@ -171,9 +172,11 @@ Downsides/hurdles of Java 9 modularity and Project Jigsaw:
 - [How do you solve a problem like Java 9 modules and reflective access?](https://www.voxxed.com/blog/2016/11/problem-modules-reflective-access/) (Katharine Beaumont)
 - [Issues with the Module System](https://www.voxxed.com/blog/2016/11/issues-with-the-module-system/) (Katharine Beaumont)
 - [Concerns Regarding Jigsaw(JSR-376, Java Platform Module System)](https://developer.jboss.org/blogs/scott.stark/2017/04/14/critical-deficiencies-in-jigsawjsr-376-java-platform-module-system-ec-member-concerns?_sscc=t) (JBoss Developer; [a reply](https://blog.plan99.net/is-jigsaw-good-or-is-it-wack-ec634d36dd6f))
+- [Response to the JCP vote: Yet Another Jigsaw Opinion Piece](http://mydailyjava.blogspot.nl/2017/05/yet-another-jigsaw-opinion-piece.html) (Rafael Winterhalter)
 
 ### Repositories
 
 - [rgra/java9-module-refactoring](https://github.com/rgra/java9-module-refactoring) (Rabea Gransberger)
 - [java9-modularity/java9-migration-demos](https://github.com/java9-modularity/java9-migration-demos) (Sander Mak, Paul Bakker)
+- [https://github.com/java9-modularity/easytext](https://github.com/java9-modularity/java9-migration-demos) (Sander Mak, Paul Bakker), sample application from [O'Reilly's Java 9 Modularity book](http://shop.oreilly.com/product/0636920049494.do)
 - [accso/java9-jigsaw-depvis](https://github.com/accso/java9-jigsaw-depvis) (Martin Lehmann, Kristine Schaal, Rüdiger Grammes)
