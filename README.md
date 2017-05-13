@@ -74,8 +74,9 @@ Early Access build of Jigsaw JDK9 is available at [http://jdk.java.net/jigsaw/](
        ```
         
     - Windows
-       - Run the executable file. 
-       - Follow the installation steps
+       - the file format has changed over time, so you might have downloaded either an `.exe` or a `.zip`.
+         - If you have an executable file, then run it and follow the instructions
+         - If you have a zip file, then just unzip it
        - Make a note of the destination 
        - Edit the `JAVA_HOME` and `PATH` environment variables via the `My Computer` > `Properties` option
          - `JAVA_HOME`: `JAVA_HOME=[jdk destination]`
