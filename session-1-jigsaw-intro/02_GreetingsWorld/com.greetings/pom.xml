@@ -1,0 +1,24 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.wordpress.londonjavacommunity.adoptopenjdk</groupId>
+        <artifactId>jdk9-jigsaw.session1-02</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>jdk9-jigsaw.session1-02.com-greetings</artifactId>
+
+    <build>
+        <outputDirectory>target/classes/com.greetings</outputDirectory>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.wordpress.londonjavacommunity.adoptopenjdk</groupId>
+            <artifactId>jdk9-jigsaw.session1-02.org-astro</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+</project>

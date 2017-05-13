@@ -13,14 +13,14 @@ echo "${info} *** Creating module org.astro as a package file (jar) *** ${normal
 jar --create \
     --file mlib/org.astro@1.0.jar \
 	--module-version 1.0 \
-	-C mods/org.astro .
+	-C org.astro/target/classes .
 
 echo ""
 echo "${info} *** Creating module com.greetings as a package file (jar) *** ${normal}"
 jar --create \
     --file mlib/com.greetings.jar \
 	--main-class=com.greetings.Main \
-	-C mods/com.greetings .
+	-C com.greetings/target/classes .
 
 echo ""
 echo "${info} *** Displaying the contents (package files created) of the 'mlib' folder *** ${normal}"
@@ -32,7 +32,7 @@ jar --verbose \
     --describe-module \
     --file=mlib/org.astro@1.0.jar
 
-    echo ""
+echo ""
 echo "${info} *** Displaying contents of the module package org.astro@1.0 *** ${normal}"
 jar --verbose \
     --list \
@@ -44,7 +44,7 @@ jar --verbose \
     --describe-module \
     --file=mlib/com.greetings.jar
 
-    echo ""
+echo ""
 echo "${info} *** Displaying contents of the module package com.greetings *** ${normal}"
 jar --verbose \
     --list \

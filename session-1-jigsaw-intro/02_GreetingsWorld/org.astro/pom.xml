@@ -1,0 +1,16 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.wordpress.londonjavacommunity.adoptopenjdk</groupId>
+        <artifactId>jdk9-jigsaw.session1-02</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <build>
+        <outputDirectory>target/classes/org.astro</outputDirectory>
+    </build>
+
+    <artifactId>jdk9-jigsaw.session1-02.org-astro</artifactId>
+
+</project>

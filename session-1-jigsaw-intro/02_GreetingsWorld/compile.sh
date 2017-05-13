@@ -4,29 +4,33 @@ set -eu
 
 source ../../common-functions.sh
 
-COM_GREETINGS_FOLDER="mods/com.greetings"
-ORG_ASTRO_FOLDER="mods/org.astro"
+COM_GREETINGS_FOLDER="com.greetings/target/classes/com.greetings"
+ORG_ASTRO_FOLDER="org.astro/target/classes/org.astro"
 
 echo ""
-echo "${info} *** Displaying the contents (source files) of the 'src' folder *** ${normal}"
-runTree src
+echo "${info} *** Displaying the contents (source files) of the 'org.astro' folder *** ${normal}"
+runTree org.astro/src/main/java
+
+echo ""
+echo "${info} *** Displaying the contents (source files) of the 'com.greetings' folder *** ${normal}"
+runTree com.greetings/src/main/java
 
 echo ""
 echo "${info} *** Compiling module in folder $ORG_ASTRO_FOLDER *** ${normal}"
-javac -d $ORG_ASTRO_FOLDER \
-        src/org.astro/module-info.java \
-        src/org.astro/org/astro/World.java
+javac -d org.astro/target/classes/org.astro \
+      org.astro/src/main/java/module-info.java \
+      org.astro/src/main/java/org/astro/World.java
 
 echo ""
-echo "${info} *** Displaying the contents (modules) of the '$ORG_ASTRO_FOLDER' folder *** ${normal}"
-runTree "$ORG_ASTRO_FOLDER"
+echo "${info} *** Displaying the contents (modules) of the org.astro/target/classes folder *** ${normal}"
+runTree org.astro/target/classes
 
 echo ""
 echo "${info} *** Compiling module in folder '$COM_GREETINGS_FOLDER' and linking it with module '$ORG_ASTRO_FOLDER' *** ${normal}"
-javac --module-path mods \
-      -d $COM_GREETINGS_FOLDER \
-      src/com.greetings/module-info.java \
-      src/com.greetings/com/greetings/Main.java
+javac --module-path org.astro/target/classes \
+                 -d com.greetings/target/classes/com.greetings \
+      com.greetings/src/main/java/module-info.java \
+      com.greetings/src/main/java/com/greetings/Main.java
 
 # *************************************************************************************
 #

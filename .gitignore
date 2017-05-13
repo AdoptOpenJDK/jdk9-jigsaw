@@ -4,6 +4,10 @@
 .project
 .*
 *.iml
+generated/
+out/
+mods/
+target/
 
 !.gitignore
 
