@@ -1,0 +1,69 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.wordpress.londonjavacommunity.adoptopenjdk</groupId>
+    <artifactId>jdk9-jigsaw.session1-04</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>com.greetings</module>
+        <module>org.astro</module>
+    </modules>
+
+    <build>
+        <pluginManagement>
+
+            <!-- as per https://cwiki.apache.org/confluence/display/MAVEN/Java+9+-+Jigsaw -->
+            <plugins>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.6.1</version>
+                     <configuration>
+                        <!--
+                        for now, have not tried to support older versions;
+                        see https://maven.apache.org/plugins/maven-compiler-plugin/examples/module-info.html
+                        -->
+                        <source>9</source>
+                        <target>9</target>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.plexus</groupId>
+                    <artifactId>plexus-compiler-plugin</artifactId>
+                    <version>2.8.1</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>2.10.4</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-plugin-plugin</artifactId>
+                    <version>3.5</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>3.1.0</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.plexus</groupId>
+                    <artifactId>plexus-component-metadata</artifactId>
+                    <version>1.7</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.20</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-failsafe-plugin</artifactId>
+                    <version>2.20</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.plexus</groupId>
+                    <artifactId>plexus-archiver</artifactId>
+                    <version>3.0.3</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+</project>

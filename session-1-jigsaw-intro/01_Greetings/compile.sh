@@ -2,33 +2,32 @@
 
 source ../../common-functions.sh
 
-COM_GREETINGS_FOLDER="mods/com.greetings"
-
-runTree src
+runTree com.greetings/src/main/java
 
 echo ""
-echo "${info} *** Displaying the contents (source files) of the 'src' folder *** ${normal}"	
+echo "${info} *** Displaying the contents (source files) of the 'com.greetings' module *** ${normal}"
 
 echo ""
-echo "${info} *** Compiling modules in '$COM_GREETINGS_FOLDER' *** ${normal}"
+echo "${info} *** Compiling modules in 'com.greetings' *** ${normal}"
 
 
 # *******************************************************************************************************************************
 #
-# The --module-path parameter of javac takes the name of module folder (in this case 'mode') where the compiled modules will be outputted.
+# The --module-path parameter of javac takes the name of directory where the compiled modules will be outputted.  Each module underneath should have its own directory
 # The -d parameter (does not have a long-form) is the location of the module directory where the compiled module(s) will be placed.
 #
-# The compiler creates the 'mods' folder, if it does not exist already and places compiled modules into them.
+#
+#
 
-javac --module-path mods \
-      -d $COM_GREETINGS_FOLDER \
-      src/com.greetings/module-info.java \
-      src/com.greetings/com/greetings/Main.java
+javac --module-path com.greetings/target/classes \
+                 -d com.greetings/target/classes/com.greetings \
+      com.greetings/src/main/java/module-info.java \
+      com.greetings/src/main/java/com/greetings/Main.java
 
 # In the above case, compile Java classes (module-info.class & Main.class) are placed in the respective folders within
-# 'mod/com.greetings' folder
+# 'com.greetings/target/classes/com.greetings' folder
 #
-# The javac command can take a chain of classes to compile to place in the respective module folder structure 'mod/com.greetings'.
+# The javac command can take a chain of classes to compile to place in the respective module folder structure 'com.greetings/target/classes/com.greetings'.
 #
 # Run the 'javac --help' on the command-line to learn about more about the CLI arguments it can handle.
 #
@@ -36,9 +35,9 @@ javac --module-path mods \
 
 
 echo ""
-echo "${info} *** Finished compiling modules into the '$COM_GREETINGS_FOLDER' folder *** ${normal}"
+echo "${info} *** Finished compiling modules into the 'com.greetings/target/classes' folder *** ${normal}"
 
 echo ""
-echo "${info} *** Displaying the contents (compiled modules) of the '$COM_GREETINGS_FOLDER' folder *** ${normal}"
-runTree "$COM_GREETINGS_FOLDER"
+echo "${info} *** Displaying the contents (compiled modules) of the 'com.greetings/target/classes' folder *** ${normal}"
+runTree com.greetings/target/classes
 

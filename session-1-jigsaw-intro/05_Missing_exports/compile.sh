@@ -4,14 +4,14 @@ set -eu
 
 source ../../common-functions.sh
 
-COM_GREETINGS_FOLDER="mods/com.greetings"
-ORG_ASTRO_FOLDER="mods/org.astro"
+COM_GREETINGS_FOLDER="com.greetings/target/classes"
+ORG_ASTRO_FOLDER="org.astro/target/classes"
 
 echo ""
 echo "${info} *** Compiling modules in $ORG_ASTRO_FOLDER (with 'exports' commented out) *** ${normal}"
 javac -d $ORG_ASTRO_FOLDER \
-       src/org.astro/module-info.java \
-       src/org.astro/org/astro/World.java
+       org.astro/src/main/java/module-info.java \
+       org.astro/src/main/java/org/astro/World.java
 
 echo ""
 echo "${info} *** Displaying the contents (modules) of the '$ORG_ASTRO_FOLDER' folder *** ${normal}"
@@ -19,10 +19,10 @@ runTree "$ORG_ASTRO_FOLDER"
 
 echo ""
 echo "${info} *** Compiling modules in $COM_GREETINGS_FOLDER (fails with an error due to module 'org.astro' not being visible) *** ${normal}"
-javac --module-path mods \
+javac --module-path $ORG_ASTRO_FOLDER \
       -d $COM_GREETINGS_FOLDER \
-      src/com.greetings/module-info.java \
-      src/com.greetings/com/greetings/Main.java
+      com.greetings/src/main/java/module-info.java \
+      com.greetings/src/main/java/com/greetings/Main.java
 
 # ********************************************************************************
 # Compilation does not finish due to compilation error, no artifacts are created.

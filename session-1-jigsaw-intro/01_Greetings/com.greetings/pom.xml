@@ -1,0 +1,17 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.wordpress.londonjavacommunity.adoptopenjdk</groupId>
+        <artifactId>jdk9-jigsaw.session1-01</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>jdk9-jigsaw.session1-01.com-greetings</artifactId>
+
+    <build>
+        <!-- so compatible with javac's module-path flag (directory is the module name) -->
+        <outputDirectory>target/classes/com.greetings</outputDirectory>
+    </build>
+
+</project>
