@@ -11,9 +11,9 @@ JDK_DESTINATION=$(echo ```pwd```)
 JDK_FOLDER_NAME="jdk-9"
 JDK_HOME_OS_SPECIFIC="$JDK_DESTINATION/$JDK_FOLDER_NAME"
 
-JDK_DOWNLOAD_HOME_URL="https://jdk9.java.net"
-BUILD_NUMBER=$(curl $JDK_DOWNLOAD_HOME_URL/download/ | grep build | awk '{print $9}' | tr -d "</a><br")
-JDK_DOWNLOAD_BASE_URL="http://www.java.net/"
+JDK_DOWNLOAD_HOME_PAGE="http://jdk.java.net/9/"
+BUILD_NUMBER=$(curl $JDK_DOWNLOAD_HOME_PAGE/ | grep "Most recent build" | awk '{print $4}' |  tr -d "</h2>" | grep -oP "jdk\-9\+\K\w+")
+JDK_DOWNLOAD_BASE_URL="http://download.java.net/"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
   JDK_TAR_FILE_NAME=$JDK_NAME_GENERIC$BUILD_NUMBER$JDK_NAME_OSX
@@ -30,7 +30,7 @@ function checkIfJigsawJDKIsDownloaded() {
 	echo "Checking if the Jigsaw JDK has already been downloaded..."
 	if [ ! -f "$JDK_TAR_FILE_NAME" ]; then
 		echo "No Jigsaw JDK does not exist, downloading now..."
-    wget --no-check-certificate --header "Cookie: oraclelicense=accept-securebackup-cookie" -O $JDK_TAR_FILE_NAME "${JDK_DOWNLOAD_BASE_URL}/download/java/jdk9/archive/${BUILD_NUMBER}/binaries/${JDK_TAR_FILE_NAME}"
+	    wget --no-check-certificate --header "Cookie: oraclelicense=accept-securebackup-cookie" -O $JDK_TAR_FILE_NAME "${JDK_DOWNLOAD_BASE_URL}/java/jdk9/archive/${BUILD_NUMBER}/binaries/${JDK_TAR_FILE_NAME}"
   else
     echo -e "The Jigsaw JDK ($JDK_TAR_FILE_NAME) has already been downloaded."
   fi
