@@ -9,7 +9,9 @@ Many of the examples here are directly from the Project Jigsaw: Module System Qu
 #### Download and install latest version of the JDK 9 EA
 
 - Download JDK 9 EA
-Early Access build of Jigsaw JDK9 is available at [http://jdk.java.net/jigsaw/](http://jdk.java.net/jigsaw/). **Alternative site to download JDK 9 EA binaries from http://bit.ly/2oyOAnf (build 166)**.
+  
+  - Early Access build of JDK9 is available at [http://jdk.java.net/9/](http://jdk.java.net/9/)
+  - Early Access build of JDK9 with Project Jigsaw is available at [http://jdk.java.net/jigsaw/](http://jdk.java.net/jigsaw/)
 
 - Install JDK 9 EA
   
