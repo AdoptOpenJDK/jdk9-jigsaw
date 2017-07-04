@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="06_Services" basedir="." default="run">
+  <target name="init">
+    <property name="src.dir" value="src"/>
+    <property name="dist.dir" value="mods"/>
+    <property name="greetings.pkg" value="com.greetings"/>
+    <property name="greetings.src.dir" value="${src.dir}/${greetings.pkg}"/>
+    <property name="greetings.dist.dir" value="${dist.dir}/${greetings.pkg}"/>
+    <property name="greetings.main" value="${greetings.pkg}/${greetings.pkg}.Main"/>
+  </target>
+
+  <target name="prepare" depends="init">
+    <mkdir dir="${dist.dir}"/>
+    <mkdir dir="${greetings.dist.dir}"/>
+  </target>
+
+  <target name="run-tree" depends="init">
+    <echo>*** Displaying the contents of the '${dir}' folder ***</echo>
+    <exec executable="tree">
+      <arg value="-fl"/>
+      <arg value="${dir}"/>
+    </exec>
+  </target>
+
+  <target name="compile" depends="prepare">
+    <javac destdir="${dist.dir}"
+      modulesourcepath="${src.dir}"
+      includeantruntime="false"/>
+
+    <echo>
+      *** Compiling modules in com.greetings - separately ***
+    </echo>
+    <javac destdir="${greetings.dist.dir}"
+      modulepath="${dist.dir}"
+      srcdir="${greetings.src.dir}"
+      includeantruntime="false"/>
+
+    <antcall target="run-tree">
+      <param name="dir" value="${dist.dir}"/>
+    </antcall>
+  </target>
+
+  <target name="run" depends="compile">
+    <echo>
+      *** Running 'com.greetings.Main' from within the mods folder (depends on 'com.socket' from within the mods folder) ***
+    </echo>
+    <java modulepath="${dist.dir}"
+      module="${greetings.main}"
+      fork="true"/>
+    <echo>
+      *** 'com.greetings.Main' imports and creates 'com.socket.NetworkSocket' ***
+      *** 'NetworkSocket.open()' returns a type of NetworkSocket with the help of a factory ***
+      *** The factory is a service provider that iterates through list of loaded services ***
+    </echo>
+  </target>
+
+  <target name="clean" depends="init">
+    <delete dir="${dist.dir}"/>
+  </target>
+</project>
