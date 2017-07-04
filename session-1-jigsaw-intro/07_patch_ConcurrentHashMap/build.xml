@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="07_patch_ConcurrentHashMap" basedir="." default="run">
+  <target name="init">
+    <property name="src.dir" value="src"/>
+    <property name="patch.dir" value="${src.dir}/java.base"/>
+    <property name="dist.dir" value="mods"/>
+    <property name="patch.dist.dir" value="mypatches/java.base"/>
+    <property name="greetings.pkg" value="com.greetings"/>
+    <property name="greetings.src.dir" value="${src.dir}/${greetings.pkg}"/>
+    <property name="greetings.dist.dir" value="${dist.dir}/${greetings.pkg}"/>
+    <property name="greetings.main" value="${greetings.pkg}/${greetings.pkg}.Main"/>
+    <property name="compiler.override.option" value="--patch-module java.base=src" />
+    <property name="jvm.override.option" value="--patch-module java.base=${patch.dist.dir}"/>
+  </target>
+
+  <target name="prepare" depends="init">
+    <mkdir dir="${dist.dir}"/>
+    <mkdir dir="${greetings.dist.dir}"/>
+    <mkdir dir="${patch.dist.dir}"/>
+  </target>
+
+  <target name="run-tree" depends="init">
+    <echo>*** Displaying the contents of the '${dir}' folder ***</echo>
+    <exec executable="tree">
+      <arg value="-fl"/>
+      <arg value="${dir}"/>
+    </exec>
+  </target>
+
+  <target name="compile" depends="prepare">
+    <antcall target="run-tree">
+      <param name="dir" value="${src.dir}"/>
+    </antcall>
+
+    <echo>
+      *** Compiling a new version of ConcurrentHashMap ***
+    </echo>
+    <javac destdir="${patch.dist.dir}"
+      srcdir="${patch.dir}"
+      includeantruntime="false">
+      <compilerarg line="${compiler.override.option}"/>
+    </javac>
+
+    <echo>
+      *** Compiling Main class***
+    </echo>
+    <javac destdir="${greetings.dist.dir}"
+      modulepath="${dist.dir}"
+      srcdir="${greetings.src.dir}"
+      includeantruntime="false"/>
+
+    <antcall target="run-tree">
+      <param name="dir" value="${patch.dist.dir}"/>
+    </antcall>
+
+    <antcall target="run-tree">
+      <param name="dir" value="${dist.dir}"/>
+    </antcall>
+  </target>
+
+  <target name="run" depends="compile">
+    <echo>
+      *** Running without the patch from within the mods folder. ***
+    </echo>
+    <java modulepath="${dist.dir}"
+      module="${greetings.main}"
+      fork="true"/>
+    <echo>
+      *** Running with the patch from within the mods folder. ***
+    </echo>
+
+    <java modulepath="${dist.dir}"
+      module="${greetings.main}"
+      fork="true">
+      <jvmarg line="${jvm.override.option}"/>
+    </java>
+  </target>
+
+  <target name="clean" depends="init">
+    <delete dir="${dist.dir}"/>
+  </target>
+</project>

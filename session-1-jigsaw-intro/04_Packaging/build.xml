@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="04_Packaging" basedir="." default="run">
+  <target name="init">
+    <property name="src.dir" value="src"/>
+    <property name="mods.dir" value="mods"/>
+    <property name="astro.dir" value="${mods.dir}/org.astro"/>
+    <property name="module.lib.dir" value="mlib"/>
+    <property name="module.name" value="com.greetings"/>
+    <property name="greetings.dir" value="${mods.dir}/${module.name}"/>
+    <property name="module.version" value="1.0"/>
+    <property name="module.main" value="${module.name}.Main"/>
+    <property name="astro.jar" value="${module.lib.dir}/org.astro@${module.version}.jar"/>
+    <property name="greetings.jar" value="${module.lib.dir}/${module.name}.jar"/>
+  </target>
+
+  <target name="prepare" depends="init">
+    <mkdir dir="${mods.dir}"/>
+    <mkdir dir="${astro.dir}"/>
+    <mkdir dir="${greetings.dir}"/>
+    <mkdir dir="${module.lib.dir}"/>
+  </target>
+
+  <target name="run-tree" depends="init">
+    <echo>*** Displaying the contents of the '${dir}' folder ***</echo>
+    <exec executable="tree">
+      <arg value="-fl"/>
+      <arg value="${dir}"/>
+    </exec>
+  </target>
+
+  <target name="compile" depends="prepare">
+    <antcall target="run-tree">
+      <param name="dir" value="${src.dir}"/>
+    </antcall>
+
+    <javac destdir="${mods.dir}"
+      modulesourcepath="${src.dir}"
+      includeantruntime="false">
+    </javac>
+
+    <antcall target="run-tree">
+      <param name="dir" value="${mods.dir}"/>
+    </antcall>
+  </target>
+
+  <target name="jar" depends="compile">
+    <jar
+      destfile="${astro.jar}"
+      basedir="${astro.dir}">
+      <manifest>
+        <attribute name="Module-Version" value="${module.version}"/>
+      </manifest>
+    </jar>
+
+    <!-- Doesn't work
+    <jar destfile="${greetings.jar}" basedir="${greetings.dir}">
+      <manifest>
+        <attribute name="Main-Class" value="${module.main}"/>
+      </manifest>
+    </jar>
+    -->
+    <exec executable="jar">
+      <arg line="--create --file ${greetings.jar}"/>
+      <arg line="--main-class ${module.main}"/>
+      <arg line="-C ${greetings.dir} ."/>
+    </exec>
+
+    <antcall target="run-tree">
+      <param name="dir" value="${module.lib.dir}"/>
+    </antcall>
+  </target>
+
+  <target name="describe" depends="jar">
+    <echo>*** Printing module description for org.astro as recorded in the module-info.class file in the package (jar) ***</echo>
+    <exec executable="jar">
+      <arg value="--verbose"/>
+      <arg value="--describe-module"/>
+      <arg value="--file=${astro.jar}"/>
+    </exec>
+
+    <echo>
+      *** Displaying contents of the module package org.astro@1.0 ***
+    </echo>
+    <exec executable="jar">
+      <arg value="--verbose"/>
+      <arg value="--list"/>
+      <arg value="--file=${astro.jar}"/>
+    </exec>
+
+    <echo>*** Printing module description for org.astro as recorded in the module-info.class file in the package (jar) ***</echo>
+    <exec executable="jar">
+      <arg value="--verbose"/>
+      <arg value="--describe-module"/>
+      <arg value="--file=${greetings.jar}"/>
+    </exec>
+
+    <echo>
+      *** Displaying contents of the module package com.greetings ***
+    </echo>
+    <exec executable="jar">
+      <arg value="--verbose"/>
+      <arg value="--list"/>
+      <arg value="--file=${greetings.jar}"/>
+    </exec>
+
+  </target>
+
+  <target name="run" depends="describe">
+    <echo>*** Running 'com.greetings.Main' from within the module package in the 'mlib' folder (running 'org.astro.World' from within the module package in the 'mlib' folder) ***</echo>
+    <java
+      modulepath="${module.lib.dir}"
+      module="${module.name}"
+      fork="true">
+    </java>
+  </target>
+
+  <target name="clean" depends="init">
+    <delete dir="${mods.dir}"/>
+    <delete dir="${module.lib.dir}"/>
+  </target>
+</project>

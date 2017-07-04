@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="05_Missing_exports" basedir="." default="compile">
+  <target name="init">
+    <property name="src.dir" value="src"/>
+    <property name="mods.dir" value="mods"/>
+    <property name="astro.dir" value="${src.dir}/org.astro"/>
+    <property name="astro.dist" value="${mods.dir}/org.astro"/>
+    <property name="module.lib.dir" value="mlib"/>
+    <property name="module.name" value="com.greetings"/>
+    <property name="greetings.dir" value="${src.dir}/${module.name}"/>
+    <property name="greetings.dist" value="${mods.dir}/${module.name}"/>
+    <property name="module.version" value="1.0"/>
+    <property name="module.main" value="${module.name}.Main"/>
+    <property name="astro.jar" value="${module.lib.dir}/org.astro@${module.version}.jar"/>
+    <property name="greetings.jar" value="${module.lib.dir}/${module.name}.jar"/>
+  </target>
+
+  <target name="prepare" depends="init">
+    <mkdir dir="${mods.dir}"/>
+    <mkdir dir="${astro.dir}"/>
+    <mkdir dir="${greetings.dir}"/>
+    <mkdir dir="${module.lib.dir}"/>
+  </target>
+
+  <target name="run-tree" depends="init">
+    <echo>*** Displaying the contents of the '${dir}' folder ***</echo>
+    <exec executable="tree">
+      <arg value="-fl"/>
+      <arg value="${dir}"/>
+    </exec>
+  </target>
+
+  <target name="compile" depends="prepare">
+    <antcall target="run-tree">
+      <param name="dir" value="${src.dir}"/>
+    </antcall>
+
+    <javac srcdir="${astro.dir}"
+      destdir="${astro.dist}"
+      includeantruntime="false">
+    </javac>
+
+    <echo>
+      *** Compiling modules in ${greetings.dir} (fails with an error due to module 'org.astro' not being visible) ***
+    </echo>
+
+    <javac srcdir="${greetings.dir}"
+      destdir="${greetings.dist}"
+      modulepath="${mods.dir}"
+      includeantruntime="false">
+    </javac>
+
+    <antcall target="run-tree">
+      <param name="dir" value="${mods.dir}"/>
+    </antcall>
+  </target>
+
+  <target name="clean" depends="init">
+    <delete dir="${mods.dir}"/>
+    <delete dir="${module.lib.dir}"/>
+  </target>
+</project>
