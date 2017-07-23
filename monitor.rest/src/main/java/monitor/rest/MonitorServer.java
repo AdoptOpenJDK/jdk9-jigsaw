@@ -1,7 +1,8 @@
 package monitor.rest;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import monitor.statistics.Statistics;
-import monitor.statistics.Statistics.LivenessQuota;
 import spark.Spark;
 import sun.misc.BASE64Encoder;
 
@@ -10,9 +11,7 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import java.io.StringWriter;
 import java.util.function.Supplier;
-import java.util.stream.Collectors;
 
-import static java.lang.String.format;
 import static java.util.Objects.requireNonNull;
 
 public class MonitorServer {
@@ -39,15 +38,13 @@ public class MonitorServer {
 	}
 
 	private static String toJson(Statistics stats) {
-		String totalQuota = format("{ \"total\": %s }", toJson(stats.totalLivenessQuota()));
-		String serviceQuotas = stats.livenessQuotaByService()
-				.map(quota -> format("{ \"%s\": %s }", quota.getKey(), toJson(quota.getValue())))
-				.collect(Collectors.joining(", "));
-		return format("{ \"liveness\": [ %s, %s ] }%n", totalQuota, serviceQuotas);
-	}
-
-	private static String toJson(LivenessQuota quota) {
-		return format("{ \"quota\": %s, \"data points\": %d }", quota.livenessQuota(), quota.dataPointCount());
+		try {
+			ObjectMapper mapper = new ObjectMapper();
+			return mapper.writeValueAsString(StatisticsEntity.from(stats));
+		} catch (JsonProcessingException ex) {
+			// don't do this in real live
+			return ex.toString();
+		}
 	}
 
 	private String getStatisticsAsXml() {
@@ -56,11 +53,11 @@ public class MonitorServer {
 
 	private static String toXml(Statistics stats) {
 		try {
-			JAXBContext context = JAXBContext.newInstance(StatisticsXml.class);
+			JAXBContext context = JAXBContext.newInstance(StatisticsEntity.class);
 			Marshaller marshaller = context.createMarshaller();
 			marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
 			StringWriter writer = new StringWriter();
-			marshaller.marshal(StatisticsXml.from(stats), writer);
+			marshaller.marshal(StatisticsEntity.from(stats), writer);
 			return writer.toString();
 		} catch (JAXBException ex) {
 			// don't do this in real live

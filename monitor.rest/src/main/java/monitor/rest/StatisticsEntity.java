@@ -14,81 +14,81 @@ import static java.util.stream.Collectors.toList;
 
 @XmlRootElement(name = "statistics")
 @XmlType(propOrder = { "totalQuota", "quotas" })
-public class StatisticsXml {
+public class StatisticsEntity {
 
-	private QuotaXml totalQuota;
-	private QuotasXml quotas;
+	private QuotaEntity totalQuota;
+	private QuotasEntity quotas;
 
-	private StatisticsXml() { }
+	private StatisticsEntity() { }
 
-	public static StatisticsXml from(Statistics stats) {
-		StatisticsXml xml = new StatisticsXml();
-		xml.setTotalQuota(QuotaXml.from("total", stats.totalLivenessQuota()));
-		xml.setQuotas(QuotasXml.from(stats.livenessQuotaByService()));
-		return xml;
+	public static StatisticsEntity from(Statistics stats) {
+		StatisticsEntity entity = new StatisticsEntity();
+		entity.setTotalQuota(QuotaEntity.from("total", stats.totalLivenessQuota()));
+		entity.setQuotas(QuotasEntity.from(stats.livenessQuotaByService()));
+		return entity;
 	}
 
 	@XmlElement(name = "total")
-	public QuotaXml getTotalQuota() {
+	public QuotaEntity getTotalQuota() {
 		return totalQuota;
 	}
 
-	public void setTotalQuota(QuotaXml totalQuota) {
+	public void setTotalQuota(QuotaEntity totalQuota) {
 		this.totalQuota = totalQuota;
 	}
 
 	@XmlElement(name = "services")
-	public QuotasXml getQuotas() {
+	public QuotasEntity getQuotas() {
 		return quotas;
 	}
 
-	public void setQuotas(QuotasXml quotas) {
+	public void setQuotas(QuotasEntity quotas) {
 		this.quotas = quotas;
 	}
 
 	@XmlRootElement(name = "services")
-	public static class QuotasXml {
+	public static class QuotasEntity {
 
-		private List<QuotaXml> serviceQuotas;
+		private List<QuotaEntity> serviceQuotas;
 
-		private QuotasXml() { }
+		private QuotasEntity() { }
 
-		public static QuotasXml from(Stream<Entry<String, LivenessQuota>> quotas) {
-			QuotasXml xml = new QuotasXml();
-			xml.setServiceQuotas(quotas
-				.map(serviceQuota -> QuotaXml.from(serviceQuota.getKey(), serviceQuota.getValue()))
+		public static QuotasEntity from(Stream<Entry<String, LivenessQuota>> quotas) {
+			QuotasEntity entity = new QuotasEntity();
+			entity.setServiceQuotas(quotas
+				.map(serviceQuota -> QuotaEntity.from(serviceQuota.getKey(), serviceQuota.getValue()))
 				.collect(toList()));
-			return xml;
+			return entity;
 		}
 
 		@XmlElement(name = "service")
-		public List<QuotaXml> getServiceQuotas() {
+		public List<QuotaEntity> getServiceQuotas() {
 			return serviceQuotas;
 		}
 
-		public void setServiceQuotas(List<QuotaXml> serviceQuotas) {
+		public void setServiceQuotas(List<QuotaEntity> serviceQuotas) {
 			this.serviceQuotas = serviceQuotas;
 		}
 
 	}
 
 	@XmlRootElement(name = "quota")
-	public static class QuotaXml {
+	public static class QuotaEntity {
 
 		private String serviceName;
 		private long dataPointCount;
 		private long aliveCount;
 
-		private QuotaXml() {
+		private QuotaEntity() {
 		}
 
-		public static QuotaXml from(String name, LivenessQuota quota) {
-			QuotaXml xml = new QuotaXml();
-			xml.setServiceName(name);
-			xml.setDataPointCount(quota.dataPointCount());
+		public static QuotaEntity from(String name, LivenessQuota quota) {
+			QuotaEntity entity = new QuotaEntity();
+			entity.setServiceName(name);
+			entity.setDataPointCount(quota.dataPointCount());
 			long count = Math.round(quota.dataPointCount() * quota.livenessQuota());
-			xml.setAliveCount(count);
-			return xml;
+			entity.setAliveCount(count);
+			return entity;
 		}
 
 		@XmlElement(name = "name")
