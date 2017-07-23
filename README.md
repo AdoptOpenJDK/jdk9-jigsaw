@@ -30,6 +30,8 @@ In the project's root folder:
 
 * internal `BASE64Encoder` is gone ~> use `Base64.getEncoder` instead
 * JAXB API is not present ~> add _java.xml.bind_
+* Common annotations are not present ~> add _java.xml.ws.annotations_
+* split package: `javax.annotation` between _java.xml.ws.annotations_ and _jsr-305_ ~> patch _java.xml.ws.annotations_
 * old version of Mockito causes warnings ~> update to newer version
 
 ### Modularization

@@ -3,6 +3,7 @@ package monitor.rest;
 import monitor.statistics.Statistics;
 import monitor.statistics.Statistics.LivenessQuota;
 
+import javax.annotation.Generated;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
@@ -12,6 +13,7 @@ import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
 
+@Generated("NIPA-TYPING")
 @XmlRootElement(name = "statistics")
 @XmlType(propOrder = { "totalQuota", "quotas" })
 public class StatisticsEntity {

@@ -6,6 +6,7 @@ import monitor.statistics.Statistics;
 import spark.Spark;
 import sun.misc.BASE64Encoder;
 
+import javax.annotation.Nonnull;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
@@ -22,10 +23,12 @@ public class MonitorServer {
 		this.statistics = requireNonNull(statistics);
 	}
 
-	public static MonitorServer create(Supplier<Statistics> statistics) {
+	@Nonnull
+	public static MonitorServer create(@Nonnull Supplier<Statistics> statistics) {
 		return new MonitorServer(statistics);
 	}
 
+	@Nonnull
 	public MonitorServer start() {
 		Spark.get("/stats/json", (req, res) -> getStatisticsAsJson());
 		Spark.get("/stats/json64", (req, res) -> toBase64(getStatisticsAsJson()));
@@ -69,6 +72,7 @@ public class MonitorServer {
 		return new BASE64Encoder().encode(content.getBytes());
 	}
 
+	@Nonnull
 	public MonitorServer shutdown() {
 		Spark.stop();
 		return this;
