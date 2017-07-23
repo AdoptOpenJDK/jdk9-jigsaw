@@ -20,9 +20,11 @@ In the project's root folder:
 * to build: `mvn clean install`
 * to run: `java -cp 'monitor/target/libs/*':'monitor/target/main-1.0-SNAPSHOT.jar' monitor.Main`
 * to contact REST endpoint: `curl http://localhost:4567/statistics`
+* to contact Base 64 REST endpoint: `curl http://localhost:4567/statistics64 | base64 -d`
 
 ## Troubles
 
 ### Migration
 
+* internal `BASE64Encoder` is gone ~> use `Base64.getEncoder` instead
 * old version of Mockito causes warnings ~> update to newer version

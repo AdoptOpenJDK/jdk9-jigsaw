@@ -3,6 +3,7 @@ package monitor.rest;
 import monitor.statistics.Statistics;
 import monitor.statistics.Statistics.LivenessQuota;
 import spark.Spark;
+import sun.misc.BASE64Encoder;
 
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
@@ -24,6 +25,7 @@ public class MonitorServer {
 
 	public MonitorServer start() {
 		Spark.get("/statistics", (req, res) -> getStatisticsAsJson());
+		Spark.get("/statistics64", (req, res) -> toBase64(getStatisticsAsJson()));
 		return this;
 	}
 
@@ -41,6 +43,10 @@ public class MonitorServer {
 
 	private static String toJson(LivenessQuota quota) {
 		return format("{ \"quota\": %s, \"data points\": %d }", quota.livenessQuota(), quota.dataPointCount());
+	}
+
+	private static String toBase64(String content) {
+		return new BASE64Encoder().encode(content.getBytes());
 	}
 
 	public MonitorServer shutdown() {
