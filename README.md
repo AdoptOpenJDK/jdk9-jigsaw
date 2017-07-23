@@ -19,12 +19,19 @@ In the project's root folder:
 
 * to build: `mvn clean install`
 * to run: `java -cp 'monitor/target/libs/*':'monitor/target/main-1.0-SNAPSHOT.jar' monitor.Main`
-* to contact REST endpoint: `curl http://localhost:4567/statistics`
-* to contact Base 64 REST endpoint: `curl http://localhost:4567/statistics64 | base64 -d`
+* to contact REST endpoints:
+	* `curl http://localhost:4567/stats/json`
+	* `curl http://localhost:4567/stats/json64 | base64 -d`
+	* `curl http://localhost:4567/stats/xml`
 
 ## Troubles
 
 ### Migration
 
 * internal `BASE64Encoder` is gone ~> use `Base64.getEncoder` instead
+* JAXB API is not present ~> add _java.xml.bind_
 * old version of Mockito causes warnings ~> update to newer version
+
+### Modularization
+
+* unexpressed transitive dependencies _monitor.rest_ ~> _jackson.core_ (for `JsonProcessingException`)

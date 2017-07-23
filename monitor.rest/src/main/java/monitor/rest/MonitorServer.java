@@ -5,6 +5,10 @@ import monitor.statistics.Statistics.LivenessQuota;
 import spark.Spark;
 import sun.misc.BASE64Encoder;
 
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+import java.io.StringWriter;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
@@ -24,8 +28,9 @@ public class MonitorServer {
 	}
 
 	public MonitorServer start() {
-		Spark.get("/statistics", (req, res) -> getStatisticsAsJson());
-		Spark.get("/statistics64", (req, res) -> toBase64(getStatisticsAsJson()));
+		Spark.get("/stats/json", (req, res) -> getStatisticsAsJson());
+		Spark.get("/stats/json64", (req, res) -> toBase64(getStatisticsAsJson()));
+		Spark.get("/stats/xml", (req, res) -> getStatisticsAsXml());
 		return this;
 	}
 
@@ -43,6 +48,24 @@ public class MonitorServer {
 
 	private static String toJson(LivenessQuota quota) {
 		return format("{ \"quota\": %s, \"data points\": %d }", quota.livenessQuota(), quota.dataPointCount());
+	}
+
+	private String getStatisticsAsXml() {
+		return toXml(statistics.get());
+	}
+
+	private static String toXml(Statistics stats) {
+		try {
+			JAXBContext context = JAXBContext.newInstance(StatisticsXml.class);
+			Marshaller marshaller = context.createMarshaller();
+			marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+			StringWriter writer = new StringWriter();
+			marshaller.marshal(StatisticsXml.from(stats), writer);
+			return writer.toString();
+		} catch (JAXBException ex) {
+			// don't do this in real live
+			return ex.toString();
+		}
 	}
 
 	private static String toBase64(String content) {
