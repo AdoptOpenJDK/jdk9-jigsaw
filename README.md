@@ -34,4 +34,6 @@ In the project's root folder:
 
 ### Modularization
 
-* unexpressed transitive dependencies _monitor.rest_ ~> _jackson.core_ (for `JsonProcessingException`)
+* unexpressed transitive dependencies:
+	* _monitor_ ~> _monitor.statistics_ (for `Statistics` et al)
+	* _monitor.rest_ ~> _jackson.core_ (for `JsonProcessingException`)
