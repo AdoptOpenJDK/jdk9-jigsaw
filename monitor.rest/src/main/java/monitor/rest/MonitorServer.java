@@ -4,7 +4,6 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import monitor.statistics.Statistics;
 import spark.Spark;
-import sun.misc.BASE64Encoder;
 
 import javax.annotation.Nonnull;
 import javax.xml.bind.JAXBContext;
@@ -14,6 +13,7 @@ import java.io.StringWriter;
 import java.util.function.Supplier;
 
 import static java.util.Objects.requireNonNull;
+import static monitor.utils.Utils.toBase64;
 
 public class MonitorServer {
 
@@ -66,10 +66,6 @@ public class MonitorServer {
 			// don't do this in real live
 			return ex.toString();
 		}
-	}
-
-	private static String toBase64(String content) {
-		return new BASE64Encoder().encode(content.getBytes());
 	}
 
 	@Nonnull
