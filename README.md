@@ -33,6 +33,7 @@ In the project's root folder:
 * Common annotations are not present ~> add _java.xml.ws.annotations_
 * split package: `javax.annotation` between _java.xml.ws.annotations_ and _jsr-305_ ~> patch _java.xml.ws.annotations_
 * old version of Mockito causes warnings ~> update to newer version
+* application class loader is no longer a `URLClassLoader`
 
 ### Modularization
 

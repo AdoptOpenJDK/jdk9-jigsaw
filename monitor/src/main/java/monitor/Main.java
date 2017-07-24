@@ -9,6 +9,8 @@ import monitor.statistics.Statistician;
 import monitor.statistics.Statistics;
 import monitor.utils.Utils;
 
+import java.net.URL;
+import java.net.URLClassLoader;
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.Executors;
@@ -16,13 +18,16 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Stream;
 
+import static java.util.Arrays.stream;
+import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
 public class Main {
 
 	public static void main(String[] args) {
-		Monitor monitor = createMonitor();
+		logClassPathContent();
 
+		Monitor monitor = createMonitor();
 		MonitorServer server = MonitorServer
 				.create(monitor::currentStatistics)
 				.start();
@@ -35,6 +40,15 @@ public class Main {
 				},
 				10,
 				TimeUnit.SECONDS);
+	}
+
+	private static void logClassPathContent() {
+		URLClassLoader classLoader = (URLClassLoader) Main.class.getClassLoader();
+		String message = stream(classLoader.getURLs())
+				.map(URL::toString)
+				.map(url -> "\t" + url)
+				.collect(joining("\n", "Class path content:\n", "\n"));
+		System.out.println(message);
 	}
 
 	private static Monitor createMonitor() {
