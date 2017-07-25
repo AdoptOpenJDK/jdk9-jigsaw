@@ -1,8 +1,7 @@
 package monitor.utils;
 
-import sun.misc.BASE64Encoder;
-
 import java.util.Arrays;
+import java.util.Base64;
 import java.util.Optional;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
@@ -22,7 +21,7 @@ public class Utils {
 	}
 
 	public static String toBase64(String content) {
-		return new BASE64Encoder().encode(content.getBytes());
+		return Base64.getEncoder().encodeToString(content.getBytes());
 	}
 
 }

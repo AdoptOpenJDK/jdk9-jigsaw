@@ -25,7 +25,7 @@ import static java.util.stream.Collectors.toList;
 public class Main {
 
 	public static void main(String[] args) {
-		logClassPathContent();
+//		logClassPathContent();
 
 		Monitor monitor = createMonitor();
 		MonitorServer server = MonitorServer
