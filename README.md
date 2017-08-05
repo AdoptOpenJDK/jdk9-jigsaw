@@ -128,8 +128,11 @@ Please install the ```tree``` command before moving forward:
 
    - MacOSX
         ```
-        install tree - http://apple.stackexchange.com/questions/128876/whats-the-equivalent-of-the-unix-tree-command-on-osx
-        install wget - http://stackoverflow.com/questions/4572153/os-x-equivalent-of-linuxs-wget
+        brew install tree 
+        - http://apple.stackexchange.com/questions/128876/whats-the-equivalent-of-the-unix-tree-command-on-osx
+        
+        brew install wget 
+        - http://stackoverflow.com/questions/4572153/os-x-equivalent-of-linuxs-wget
         ```
         
    - Windows
