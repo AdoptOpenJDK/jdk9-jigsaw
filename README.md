@@ -33,7 +33,17 @@ Many of the examples here are directly from the Project Jigsaw: Module System Qu
          `[destination]` usually `/usr/lib/...` or related folder
     
     - MacOSX 
+      ``` 
+           NOTE: Some instructions use the brew command if you Mac doesn't have this command, you cuold install it follow the next steps: 
+      - Install XCode
+      - Execute this: ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+       
+      ```   
+      
        #### Manual way
+       
+
+       
        - Please refer to [this guide]( https://github.com/musinoli/guides/blob/master/setup_jigsaw.md) - thanks Nolita ([@musinoli](https://github.com/musinoli)) for your help
        - In case a `.dmg` file is available, download it and follow the installation steps, you will still have to update your `JAVA_HOME` and start script as mentioned in [this guide]( https://github.com/musinoli/guides/blob/master/setup_jigsaw.md).
        - update your `.bashrc` with `export PATH=$JAVA_HOME/bin:$PATH`
@@ -128,6 +138,15 @@ Please install the ```tree``` command before moving forward:
 
    - MacOSX
         ```
+        Option 1:
+        install tree
+        - http://apple.stackexchange.com/questions/128876/whats-the-equivalent-of-the-unix-tree-command-on-osx
+        
+        install wget 
+        - http://stackoverflow.com/questions/4572153/os-x-equivalent-of-linuxs-wget
+        ```
+        
+        Option 2 (With brew command)
         brew install tree 
         - http://apple.stackexchange.com/questions/128876/whats-the-equivalent-of-the-unix-tree-command-on-osx
         
