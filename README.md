@@ -4,6 +4,15 @@ Examples of some of the features of Jigsaw released in the Early Access build of
 
 Many of the examples here are directly from the Project Jigsaw: Module System Quick-Start Guide, see [http://openjdk.java.net/projects/jigsaw/quick-start](http://openjdk.java.net/projects/jigsaw/quick-start) but we have also contributions from the Java community.
 
+___
+
+
+####   Please note you are in the `solutions` branch which contains solved exercises and is mainly for beginners or if you have hit a roadblock while solving the exercises in the `master` branch. 
+
+####   Looking at the solutions can take away the challenge behind solving the exercises. Switch to the `master` branch in case you would like to continue solving the exercises and working through the challenges.
+
+___
+
 ## Setup (all platforms)
 
 #### Download and install latest version of the JDK 9 EA
