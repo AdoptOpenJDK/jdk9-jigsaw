@@ -33,12 +33,6 @@ Many of the examples here are directly from the Project Jigsaw: Module System Qu
          `[destination]` usually `/usr/lib/...` or related folder
     
     - MacOSX 
-      ``` 
-           NOTE: Some instructions use the brew command if you Mac doesn't have this command, you cuold install it follow the next steps: 
-      - Install XCode
-      - Execute this: ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-       
-      ```   
       
        #### Manual way
        
@@ -137,22 +131,31 @@ Please install the ```tree``` command before moving forward:
         ```
 
    - MacOSX
-        ```
-        Option 1:
-        install tree
-        - http://apple.stackexchange.com/questions/128876/whats-the-equivalent-of-the-unix-tree-command-on-osx
+       
+        - Option 1:
         
-        install wget 
-        - http://stackoverflow.com/questions/4572153/os-x-equivalent-of-linuxs-wget
-        ```
+          - install tree
+          
+          http://apple.stackexchange.com/questions/128876/whats-the-equivalent-of-the-unix-tree-command-on-osx
         
-        Option 2 (With brew command)
-        brew install tree 
-        - http://apple.stackexchange.com/questions/128876/whats-the-equivalent-of-the-unix-tree-command-on-osx
+          - install wget 
+          
+          http://stackoverflow.com/questions/4572153/os-x-equivalent-of-linuxs-wget
+       
+        - Option 2 (Via brew ):
+          
+            You will need the latest version of brew. If you don't have brew installed, execute the next instruction or go [here](https://brew.sh/) for more information. 
         
-        brew install wget 
-        - http://stackoverflow.com/questions/4572153/os-x-equivalent-of-linuxs-wget
-        ```
+            - ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+          
+          - brew install tree 
+        
+            http://apple.stackexchange.com/questions/128876/whats-the-equivalent-of-the-unix-tree-command-on-osx
+        
+          - brew install wget 
+          
+            http://stackoverflow.com/questions/4572153/os-x-equivalent-of-linuxs-wget
+        
         
    - Windows
         ```
