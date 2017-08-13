@@ -16,6 +16,8 @@ echo "${info} *** Running with the patch from within the mods folder. *** ${norm
 echo
 
 java --module-path mods \
-     --patch-module java.base=mypatches/java.base \
+     [parameter patch the existing module with the newly compiled one*] \
      --module com.greetings/com.greetings.Main
 
+# Hint: the clue is in one of the the parameters in javac command in the compile.sh (when you have resolved it)
+# think whats the patch directory called?
