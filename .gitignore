@@ -1,0 +1,33 @@
+#IDE settings
+.idea
+.settings
+.project
+.*
+*.iml
+
+!.gitignore
+
+### Java template
+*.class
+
+!/lib/oauth.net.jar
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.jimage
+*.jmod
+/target/
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# Created by .ignore support plugin (hsz.mobi)
+
+9_JLink/executable/
+
+# Do include library jars
+!**/lib/*.jar
