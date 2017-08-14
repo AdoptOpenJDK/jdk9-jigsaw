@@ -90,31 +90,15 @@ Many of the examples here are directly from the Project Jigsaw: Module System Qu
          
            `[destination]` usually `C:\Program Files\Java\...` or related folder  
 
-##### Verify JDK installation
+####   Please note you are in the `master` branch which contains exercises which need to be solved by looking at documentation or resources provided in this repo. Hints may be provided within the source or script files. If you hit a roadblock and really want to see a possible solution you can switch to the `exercise-solutions` branch for that. 
 
-Say you have downloaded and installed the JDK 9 EA (build 165) binary from the above step, try the below commands:
+####   Looking at the solutions can take away the challenge behind solving the exercises. Stay on the `master` branch in case you would like to continue to have fun solving the exercises and working through the challenges.
 
-```
-    $ java -version
-```
+___
 
-As output you should get something like this:
-```
-    java version "9-ea"
-    Java(TM) SE Runtime Environment (build 9-ea+165)
-    Java HotSpot(TM) 64-Bit Server VM (build 9-ea+165, mixed mode)
-```
+## Setup (all platforms)
 
-And
-
-```
-    $ javac -version
-```
-
-As output you should get something like this:
-```
-    javac 9-ea
-```
+See [Download, install and verify JDK](setupAndVerifyJDK.md).
          
 #### Download and install `git` or `git-bash`
 
@@ -201,6 +185,7 @@ In the worst case scenario, we would have to manually convert the `.sh` files in
    - Services [./session-1-jigsaw-intro/06_Services](./session-1-jigsaw-intro/06_Services)
    - javac --patch-module option [./session-1-jigsaw-intro/07_patch_module_option](session-1-jigsaw-intro/07_patch_module_option)
    - Modules export conflict [./session-1-jigsaw-intro/08_ModulesExportConflict](session-1-jigsaw-intro/08_ModulesExportConflict)
+   - Automatic modules [./session-1-jigsaw-intro/09_Automodules](session-1-jigsaw-intro/09_Automodules)
 
 - Session 2: JLink
    - JLink example [./session-2-jlink/01_JLink](session-2-jlink/01_JLink)
@@ -214,13 +199,15 @@ In the worst case scenario, we would have to manually convert the `.sh` files in
         
 Each example is enclosed in a folder of its own containing bash scripts to compile, package and run the respective examples. Use these scripts for each of the examples.
 
-## Must reads
+## Resources
+
+### Must reads
 - [The State of the Module System](http://openjdk.java.net/projects/jigsaw/spec/sotms/)
 - [JEP 261](http://openjdk.java.net/jeps/261)
 - [http://mail.openjdk.java.net/pipermail/adoption-discuss/2015-September/001053.html](http://mail.openjdk.java.net/pipermail/adoption-discuss/2015-September/001053.html) <br/>
 - [http://mail.openjdk.java.net/pipermail/adoption-discuss/2015-September/001056.html](http://mail.openjdk.java.net/pipermail/adoption-discuss/2015-September/001056.html)
 
-## Other resources
+### Other resources
 - [JDK 9 / Jigsaw Resources](./Java-9-Resources.md)
 - [Adopt OpenJDK homepage](https://adoptopenjdk.java.net/)
 - [Adopt OpenJDK: Getting Started Kit](http://bit.ly/1NUkPWw)

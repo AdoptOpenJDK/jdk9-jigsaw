@@ -63,7 +63,5 @@ public class ConcurrentHashMap<K, V> extends AbstractMap<K, V> implements Concur
         innerMap.putAll(map);
     }
 
-    public String toString() {
-        return "patched ConcurrentHashMap " + super.toString();
-    }
+    <-- customise your own toString() implementation for this class (be creative with the messages) -->
 }

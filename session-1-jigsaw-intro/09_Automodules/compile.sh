@@ -14,7 +14,7 @@ rm -rf ${MODS}
 
 echo ""
 echo "${info} *** Compiling main module in $COM_GREETINGS_MAIN_FOLDER *** ${normal}"
-javac --module-path lib \
+javac [specify the path to the automatic modules] \
       -d ${COM_GREETINGS_MAIN_FOLDER} \
       src/com.greetings/module-info.java \
       src/com.greetings/main/java/com/greetings/Greet.java \

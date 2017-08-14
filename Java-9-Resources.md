@@ -151,6 +151,7 @@ Other talks:
 - [Project Jigsaw in JDK 9: Modularity Comes To Java](https://www.youtube.com/watch?v=Ks7J_qQVR7Y) (Simon Ritter)
 - [The Java Module System In Action](https://www.youtube.com/watch?v=0M72pH2rXwA) (Nicolai Parlog)
 - [Java 9 Modularity in Action](https://www.youtube.com/watch?v=CoXueufCdtY) (Sander Mak, Paul Bakker)
+- [Refactoring your code to Java 9 modules](https://vimeo.com/221258737) (Rabea Gransberger)
 
 ### Articles
 
