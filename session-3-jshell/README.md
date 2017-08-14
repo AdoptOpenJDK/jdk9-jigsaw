@@ -116,6 +116,133 @@ Or
      
     jshell> [Ctrl][D]     
     (quietly exits)
+    
+Some more Java 9 improvements to try in JShell (thanks to @sjmaple for the contribution)
+
+    import java.time.*;
+    void printf(Object a) { System.out.println(a); }
+
+Collections of factory methods: 
+
+1-10 arguments + varargs: 
+
+    List.of(1, 2, 3, 4, 5)
+    Map.of("hello", "world", "status", "mad")
+    Set.of(1,2,4)
+    Set.of(1,2,4)      <=== look for the change in order of the elements
+    
+implementation classes 2 elements vs N elements:
+    
+    List.of(1).getClass()
+    List.of(1, 2).getClass()
+
+streams: 
+   * dropwhile/takewhile:
+   
+    IntStream.range(1, 10).dropWhile(x -> x < 5).forEach(System.out::println)
+
+   * iterate 
+
+    IntStream.iterate(0, x -> x + 1, x -> x < 10).forEach(System.out::println)
+  
+   * Stream from Optional: 
+    
+    Optional.of(1).stream().map(x -> x*3); 
+    Optional.empty().or(() -> Optional.of(“Hello”))
+    Optional.empty().ifPresent(null) 
+    Optional.empty().ifPresentOrElse(null, () -> printf(“hello“));
+     
+   * Date and time improvements:
+     
+    import java.time.*;
+    LocalDate.now()
+    $2.datesUntil(LocalDate.of(2017, 4, 1)).forEach(System.out::println)
+    
+Concurrency
+   * Completable future:
+     
+    new CompletableFuture<String>() future = new CompletableFuture<>()
+    future.copy()
+    $47.complete("Hello world“)
+    $47.get() <—true
+    future.isDone() <— false
+    future.completeOnTimeout("Isn't this amazing", 1, TimeUnit.SECONDS)
+        
+    delays / timeouts: 
+       *  orTimeout(1, TimeUnit.SECONDS)
+       *  completeOnTimeout(T value, long timeout, TimeUnit unit)
+     
+HttpClient
+
+    import jdk.incubator.http.*;
+    String body = HttpClient.newHttpClient().send(HttpRequest.newBuilder(URI.create("https://www.google.com")).GET().build(),HttpResponse.BodyHandler.asString()).body();
+    
+Try without http? What is the expected result? 
+    
+    java.lang.NullPointerException 
+
+Process API: 
+    
+    ProcessHandle currentProcess = ProcessHandle.current();
+    System.out.println("Current Process Id: = " + currentProcess.getPid());
+    ProcessHandle ph =  Process.toHandle()
+    Stream<ProcessHandle> children() / Stream<ProcessHandle> descendants()
+    CompletableFuture<Process> onExit() <- do something when the process is finished. No more tears and third party libs.
+    static Optional<ProcessHandle> of(long pid)
+    
+    ProcessHandle.Info info()
+        Optional<String[]> arguments()
+        Optional<String> command()
+        Optional<String> commandLine()
+        Optional<Instant> startInstant()
+        Optional<Duration> totalCpuDuration()
+        Optional<String> user()
+    
+   Find JShell process with jps
+   
+    ProcessHandle currentProcess = ProcessHandle.current();
+    currentProcess.getPid()
+    ProcessHandle.of(27468)
+    $22.get()
+    $23.info()
+
+StackWalker:
+    
+    StackWalker.getInstance().walk(s -> s.limit(5).collect(Collectors.toList()));
+    Stop doing new Exception when you need to inspect the stack. 
+     
+JDK structure changes
+    
+    no tools.jar 
+    could be a problem if you require classes from it 
+    
+   Semantic versioning: 
+   
+    Runtime.version()
+    $53.major()
+    $53.minor()
+    
+project Coin, language improvements continue:
+
+   _ is an invalid identifier (for lambdas)
+   
+       _ = 1
+       __ = 1
+    
+   private methods in interfaces:
+       
+       interface A { private int zero() { return 0;} default int one() { return zero() + 1;}}
+   
+   effectively final in try with resources:
+       
+       boolean a() throws Exception { Socket s = new Socket(); return s.isClosed(); }
+       boolean a() throws Exception { Socket s = new Socket(); try (s) { } return s.isClosed(); }
+
+utf-8 property files:
+
+    new PropertyResourceBundle(new FileInputStream("properties.properties"))
+                              .handleGetObject("name")    
+    
    
 Read all about the Java REPL at 
 - Project Kulla: https://adoptopenjdk.gitbooks.io/adoptopenjdk-getting-started-kit/content/en/openjdk-projects/kulla/kulla.html
