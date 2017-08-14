@@ -1,0 +1,30 @@
+#!/bin/bash
+
+set -eu
+
+source ../../common-functions.sh
+
+echo ""
+echo "${info} *** Removing any existing greetings.jmod *** ${normal}"
+rm -f greetings.jmod
+
+echo
+echo ""
+echo "${info} *** Creating a module (greetings.jmod) from multiple modules / packages / classes with jlink. *** ${normal}"
+if [[ "$OSTYPE" == "cygwin" ]] || [[ "$OSTYPE" == "msys" ]] ; then
+	jmod create \
+	     --class-path "mods\com.greetings;mods\org.astro" \
+	     greetings.jmod
+else
+	jmod create \
+	     --class-path mods/com.greetings:mods/org.astro \
+	     greetings.jmod
+fi
+
+echo ""
+echo "${info} *** Enlisting the contents of the module (greetings.jmod) *** ${normal}"
+jmod list greetings.jmod
+
+
+echo "${info} *** Currently JMOD files can be used at compile time and link time, but not at run time. *** ${normal}"
+echo "${info} *** Read further about JMod files at http://openjdk.java.net/jeps/261#Packaging:-JMOD-files *** ${normal}"
