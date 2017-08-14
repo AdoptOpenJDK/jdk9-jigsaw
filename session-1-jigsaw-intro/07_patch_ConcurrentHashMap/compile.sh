@@ -14,9 +14,18 @@ runTree "$SRC_FOLDER"
 
 echo ""
 echo "${info} *** Compiling a new version of ConcurrentHashMap *** ${normal}"
-javac --patch-module java.base=src \
-      -d mypatches/java.base \
-      src/java.base/java/util/concurrent/ConcurrentHashMap.java
+javac [param to patch a module*] \
+      -d [folder**] \
+      [new patch class file***]
+
+
+#
+# * long param, name of the JDK module and folder name containing the sources
+# ** destination folder where the compiled module will be placed
+# *** filename (with path) to the new class file to patch with (this file will replace the existing class file in the module defined above)
+#
+# look for documentation in the Java 9 Resource (https://github.com/AdoptOpenJDK/jdk9-jigsaw/blob/master/Java-9-Resources.md)
+#
 
 echo ""
 echo "${info} *** Compiling Main class*** ${normal}"

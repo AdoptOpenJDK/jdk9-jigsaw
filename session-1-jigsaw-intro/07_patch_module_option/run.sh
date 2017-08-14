@@ -16,6 +16,6 @@ echo "${info} *** Running with the patch from within the mods folder. *** ${norm
 echo
 
 java --module-path mods \
-     --patch-module java.base=mypatches/java.base \
+     [patch existing module with the one you just compiled] \
      --module com.greetings/com.greetings.Main
 

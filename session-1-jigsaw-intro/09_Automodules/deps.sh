@@ -11,7 +11,7 @@ echo
 jar -d --file=lib/junit-4.12.jar
 
 echo
-echo "${info} *** Dependency information for JUnit. *** ${normal}"
+echo "${info} *** Dependency summary information for JUnit. *** ${normal}"
 echo
 
 jdeps -s lib/junit-4.12.jar
@@ -29,7 +29,7 @@ echo
 jar -d --file=lib/hamcrest-core-1.3.jar
 
 echo
-echo "${info} *** Dependency information for Hamcrest. *** ${normal}"
+echo "${info} *** Dependency summary information for Hamcrest. *** ${normal}"
 echo
 
 jdeps -s lib/hamcrest-core-1.3.jar

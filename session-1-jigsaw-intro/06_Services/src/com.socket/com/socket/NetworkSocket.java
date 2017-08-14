@@ -1,10 +1,10 @@
 package com.socket;
 
+import com.socket.spi.NetworkSocketProvider;
+
 import java.io.Closeable;
 import java.util.Iterator;
 import java.util.ServiceLoader;
-
-import com.socket.spi.NetworkSocketProvider;
 
 public abstract class NetworkSocket implements Closeable {
     protected NetworkSocket() {}
