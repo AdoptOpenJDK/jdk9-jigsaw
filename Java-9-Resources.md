@@ -151,6 +151,7 @@ Other talks:
 - [Project Jigsaw in JDK 9: Modularity Comes To Java](https://www.youtube.com/watch?v=Ks7J_qQVR7Y) (Simon Ritter)
 - [The Java Module System In Action](https://www.youtube.com/watch?v=0M72pH2rXwA) (Nicolai Parlog)
 - [Java 9 Modularity in Action](https://www.youtube.com/watch?v=CoXueufCdtY) (Sander Mak, Paul Bakker)
+- [Refactoring your code to Java 9 modules](https://vimeo.com/221258737) (Rabea Gransberger)
 
 ### Articles
 
@@ -180,3 +181,6 @@ Downsides/hurdles of Java 9 modularity and Project Jigsaw:
 - [java9-modularity/java9-migration-demos](https://github.com/java9-modularity/java9-migration-demos) (Sander Mak, Paul Bakker)
 - [https://github.com/java9-modularity/easytext](https://github.com/java9-modularity/java9-migration-demos) (Sander Mak, Paul Bakker), sample application from [O'Reilly's Java 9 Modularity book](http://shop.oreilly.com/product/0636920049494.do)
 - [accso/java9-jigsaw-depvis](https://github.com/accso/java9-jigsaw-depvis) (Martin Lehmann, Kristine Schaal, Rüdiger Grammes)
+- [codetojoy/WarO_Java_9_Gradle](https://github.com/codetojoy/WarO_Java_9_Gradle) (Michael Easter), example using Gradle 4.1M1
+- [codetojoy/WarO_Java_9_Maven](https://github.com/codetojoy/WarO_Java_9_Maven) (Michael Easter), example using Maven 3.5.0
+- [codetojoy/easter_eggs_for_java_9](https://github.com/codetojoy/easter_eggs_for_java_9) (Michael Easter), various examples including jlink and patching
