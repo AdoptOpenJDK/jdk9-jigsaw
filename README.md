@@ -7,9 +7,9 @@ Many of the examples here are directly from the Project Jigsaw: Module System Qu
 ___
 
 
-####   Please note you are in the `exercise-solutions` branch which contains solved exercises and is mainly for beginners or if you have hit a roadblock while solving the exercises in the `master` branch. 
+####   Please note you are in the `master` branch which contains exercises which need to be solved by looking at documentation or resources provided in this repo. Hints may be provided within the source or script files. If you hit a roadblock and really want to see a possible solution you can switch to the `exercise-solutions` branch for that. 
 
-####   Looking at the solutions can take away the challenge behind solving the exercises. Switch to the `master` branch in case you would like to continue solving the exercises and working through the challenges.
+####   Looking at the solutions can take away the challenge behind solving the exercises. Stay on the `master` branch in case you would like to continue to have fun solving the exercises and working through the challenges.
 
 ___
 
