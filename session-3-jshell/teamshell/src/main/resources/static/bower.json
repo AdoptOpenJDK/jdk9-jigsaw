@@ -1,0 +1,21 @@
+{
+  "name": "todo-client-polymer",
+  "authors": [
+    "Hendrik Ebbers <hendrik.ebbers@web.de>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "iron-image": "PolymerElements/iron-image#1.2.x",
+    "iron-icon": "PolymerElements/iron-icon#1.0.x",
+    "iron-icons": "PolymerElements/iron-icons#1.0.x",
+    "paper-elements": "PolymerElements/paper-elements#1.0.x",
+    "dolphin-platform-polymer": "0.12.0"
+  }
+}

@@ -1,0 +1,4 @@
+int i = 100;
+int k = j + v;
+System.out.println("Value i is " + i);
+I'm an error! ;)
