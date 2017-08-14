@@ -81,6 +81,7 @@ In the worst case scenario, we would have to manually convert the `.sh` files in
    - Services [./session-1-jigsaw-intro/06_Services](./session-1-jigsaw-intro/06_Services)
    - javac --patch-module option [./session-1-jigsaw-intro/07_patch_module_option](session-1-jigsaw-intro/07_patch_module_option)
    - Modules export conflict [./session-1-jigsaw-intro/08_ModulesExportConflict](session-1-jigsaw-intro/08_ModulesExportConflict)
+   - Automatic modules [./session-1-jigsaw-intro/09_Automodules](session-1-jigsaw-intro/09_Automodules)
 
 - Session 2: JLink
    - JLink example [./session-2-jlink/01_JLink](session-2-jlink/01_JLink)
