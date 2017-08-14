@@ -23,11 +23,19 @@ javac --module-path lib \
 echo ""
 echo "${info} *** Compiling test module in $COM_GREETINGS_TEST_FOLDER *** ${normal}"
 # We have to compile the test code (including the tested code) again to have that separate from the production code.
-javac --module-path mods:lib \
-      -d ${COM_GREETINGS_TEST_FOLDER} \
-      src/com.greetings/module-info.java \
-      src/com.greetings/main/java/com/greetings/Greet.java \
-      src/com.greetings/test/java/com/greetings/GreetTest.java
+if [[ "$OSTYPE" == "cygwin" ]] || [[ "$OSTYPE" == "msys" ]] ; then
+    javac --module-path "mods;lib" \
+          -d ${COM_GREETINGS_TEST_FOLDER} \
+          src/com.greetings/module-info.java \
+          src/com.greetings/main/java/com/greetings/Greet.java \
+          src/com.greetings/test/java/com/greetings/GreetTest.java
+else
+    javac --module-path mods:lib \
+          -d ${COM_GREETINGS_TEST_FOLDER} \
+          src/com.greetings/module-info.java \
+          src/com.greetings/main/java/com/greetings/Greet.java \
+          src/com.greetings/test/java/com/greetings/GreetTest.java
+fi
 
 echo ""
 echo "${info} *** Displaying the contents (modules) of the '$MODS' folder *** ${normal}"

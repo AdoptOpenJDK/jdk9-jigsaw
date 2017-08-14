@@ -4,16 +4,30 @@ set -eu
 
 source ../../common-functions.sh
 
-DESTINATION_FOLDER="mods"
 
 echo ""
-echo "${info} *** Displaying the contents (source files) of the 'src' folder *** ${normal}"
-runTree src
+echo "${info} *** Displaying the contents (source files) of the 'org.astro' folder *** ${normal}"
+runTree org.astro/src/main/java
 
 echo ""
-echo "${info} *** Compiling both modules into the '$DESTINATION_FOLDER' folder *** ${normal}"
-javac -d $DESTINATION_FOLDER \
-      --module-source-path src $(find . -name "*.java")
+echo "${info} *** Displaying the contents (source files) of the 'com.greetings' folder *** ${normal}"
+runTree com.greetings/src/main/java
+
+echo ""
+echo "${info} *** Compiling both modules into the 'mods' folder *** ${normal}"
+
+
+if [[ "$OSTYPE" == "cygwin" ]] || [[ "$OSTYPE" == "msys" ]] ; then
+    SEP=";"
+else
+    SEP=":"
+fi
+
+javac -d mods \
+      --module-source-path "org.astro/src/main/java${SEP}com.greetings/src/main/java" \
+      $(find . -name *.java)
+
+      
 
 # *************************************************************************************
 #
@@ -24,6 +38,6 @@ javac -d $DESTINATION_FOLDER \
 
 echo ""
 echo "${info} *** Displaying the contents (modules) of the 'mods' folder *** ${normal}"
-runTree "$DESTINATION_FOLDER"
+runTree mods
 
 # See ../01_Greetings/compile.sh for explanations to above commands
