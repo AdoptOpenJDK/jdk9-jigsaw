@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="JDK9 Jigsaw" default="check">
+  <!-- check minimum ant version required to be 1.9.9 -->
+  <target name="check-ant-version">
+    <property name="ant.version.required" value="1.9.9"/>
+    <antversion property="ant.current.version" />
+    <fail message="The current ant version, ${ant.current.version}, is too old. Please use ${ant.version.required} or above.">
+        <condition>
+            <not>
+                <antversion atleast="${ant.version.required}"/>
+            </not>
+        </condition>
+    </fail>
+  </target>
+
+  <target name="check-java-version">
+    <!-- look for a Class that is available only in jdk1.8 or above -->
+    <!-- core/exposed API class is better than an implementation class -->
+    <available property="jdk1.9+" classname="jdk.dynalink.DynamicLinker"/>
+
+    <!-- need jdk1.8 or above -->
+    <fail message="Unsupported Java version: ${ant.java.version}. Please use Java version 1.9 or greater." unless="jdk1.9+">
+    </fail>
+  </target>
+  <target name="check" depends="check-ant-version,check-java-version"/>
+</project>

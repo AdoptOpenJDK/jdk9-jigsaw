@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="09_Automodules" basedir="." default="run">
+  <target name="init">
+    <property name="src.dir" value="src"/>
+    <property name="mods.dir" value="mods"/>
+    <property name="lib.dir" value="lib"/>
+    <property name="module.name" value="com.greetings"/>
+    <property name="module.dir" value="${src.dir}/${module.name}"/>
+    <property name="main.src.dir" value="${module.dir}/main/java"/>
+    <property name="test.src.dir" value="${module.dir}/test/java"/>
+    <property name="main.dist.dir" value="${mods.dir}/main/${module.name}"/>
+    <property name="test.dist.dir" value="${mods.dir}/test/${module.name}"/>
+    <property name="module.main" value="com.greetings.Main"/>
+    <property name="junit.jar" value="${lib.dir}/junit-4.12.jar"/>
+    <property name="hamcrest.jar" value="${lib.dir}/hamcrest-core-1.3.jar"/>
+    <property name="jvm.override.option" value="--add-modules ${module.name}"/>
+    <property name="junit.core" value="junit/org.junit.runner.JUnitCore"/>
+  </target>
+
+  <target name="prepare" depends="init">
+    <mkdir dir="${mods.dir}"/>
+    <mkdir dir="${main.dist.dir}"/>
+    <mkdir dir="${test.dist.dir}"/>
+  </target>
+
+  <target name="run-tree" depends="init">
+    <echo>*** Displaying the contents of the '${dir}' folder ***</echo>
+    <exec executable="tree">
+      <arg value="-fl"/>
+      <arg value="${dir}"/>
+    </exec>
+  </target>
+
+  <target name="compile" depends="prepare">
+    <antcall target="run-tree">
+      <param name="dir" value="${src.dir}"/>
+    </antcall>
+
+    <echo>
+      *** Compiling main module in ${main.src.dir} ***
+    </echo>
+
+    <javac destdir="${main.dist.dir}"
+      modulepath="${lib.dir}"
+      srcdir="${src.dir}"
+      includeantruntime="false">
+    </javac>
+    <echo>
+      *** Compiling test module in ${test.src.dir} ***
+    </echo>
+    <javac destdir="${test.dist.dir}"
+      modulepath="${lib.dir}:${mods.dir}"
+      srcdir="${src.dir}"
+      includeantruntime="false">
+    </javac>
+
+    <antcall target="run-tree">
+      <param name="dir" value="${mods.dir}"/>
+    </antcall>
+  </target>
+
+  <target name="run" depends="compile">
+    <echo>
+      *** Running from within the mods folder without arguments. ***
+    </echo>
+    <java
+      modulepath="${mods.dir}/main:${lib.dir}"
+      module="${module.name}/${module.main}"
+      fork="true">
+    </java>
+
+    <echo>
+      *** Running from within the mods folder with arguments. ***
+    </echo>
+    <java
+      modulepath="${mods.dir}/main:${lib.dir}"
+      module="${module.name}/${module.main}"
+      fork="true">
+      <arg line="Alice Bob Charlie"/>
+    </java>
+
+    <echo message="*** Running tests ***"/>
+    <java
+      modulepath="${mods.dir}/main:${lib.dir}"
+      module="${junit.core}"
+      fork="true">
+      <jvmarg line="${jvm.override.option}"/>
+      <arg value="com.greetings.GreetTest"/>
+    </java>
+  </target>
+
+  <target name="deps" depends="init">
+    <echo message="*** Module information for JUnit. ***"/>
+    <exec executable="jar">
+      <arg value="-d"/>
+      <arg line="--file=${junit.jar}"/>
+    </exec>
+    <echo message="*** Dependency information for JUnit. ***"/>
+    <exec executable="jdeps">
+      <arg value="-s"/>
+      <arg value="${junit.jar}"/>
+    </exec>
+
+    <echo message="*** Module information for Hamcrest. ***"/>
+    <exec executable="jar">
+      <arg value="-d"/>
+      <arg line="--file=${hamcrest.jar}"/>
+    </exec>
+    <echo message="*** Dependency information for Hamcrest. ***"/>
+    <exec executable="jdeps">
+      <arg value="-s"/>
+      <arg value="${hamcrest.jar}"/>
+    </exec>
+  </target>
+
+  <target name="clean" depends="init">
+    <delete dir="${mods.dir}"/>
+  </target>
+</project>

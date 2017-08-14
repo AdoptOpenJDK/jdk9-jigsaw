@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="03_MultiModuleCompilation" basedir="." default="run">
+  <target name="init">
+    <property name="src.dir" value="src"/>
+    <property name="mods.dir" value="mods"/>
+    <property name="module.name" value="com.greetings"/>
+    <property name="module.main" value="com.greetings.Main"/>
+  </target>
+
+  <target name="prepare" depends="init">
+    <mkdir dir="${mods.dir}"/>
+  </target>
+
+  <target name="run-tree" depends="init">
+    <echo>*** Displaying the contents of the '${dir}' folder ***</echo>
+    <exec executable="tree">
+      <arg value="-fl"/>
+      <arg value="${dir}"/>
+    </exec>
+  </target>
+
+  <target name="compile" depends="prepare">
+    <antcall target="run-tree">
+      <param name="dir" value="${src.dir}"/>
+    </antcall>
+
+    <javac destdir="${mods.dir}"
+      modulesourcepath="${src.dir}"
+      includeantruntime="false">
+    </javac>
+
+    <antcall target="run-tree">
+      <param name="dir" value="${mods.dir}"/>
+    </antcall>
+  </target>
+
+  <target name="run" depends="compile">
+    <echo>*** Running 'com.greetings.Main' inside the 'mods' folder.</echo>
+    <java
+      modulepath="${mods.dir}"
+      module="${module.name}/${module.main}"
+      fork="true">
+    </java>
+  </target>
+
+  <target name="clean" depends="init">
+    <delete dir="${mods.dir}"/>
+  </target>
+</project>
