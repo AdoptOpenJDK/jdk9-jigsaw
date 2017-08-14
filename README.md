@@ -7,9 +7,7 @@ Many of the examples here are directly from the Project Jigsaw: Module System Qu
 ___
 
 
-####   Please note you are in the `exercise-solutions` branch which contains solved exercises and is mainly for beginners or if you have hit a roadblock while solving the exercises in the `master` branch. 
-
-####   Looking at the solutions can take away the challenge behind solving the exercises. Switch to the `master` branch in case you would like to continue solving the exercises and working through the challenges.
+####   Please note you are in the `ant-version` branch which is the (near) mirror of the `exercise-solutions` branch but implemented using ant (each exercise folder contains a `build.xml` file). 
 
 ___
 
