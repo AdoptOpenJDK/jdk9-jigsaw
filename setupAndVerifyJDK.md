@@ -35,7 +35,7 @@
        #### Via Brew and jenv
        You will need the latest version of brew with cask support (1.1.13 at the time of writing). If you don't have brew installed, go [here](https://brew.sh/) first.
        - `brew install jenv`
-       - `brew cask install java9-beta`
+       - `brew install caskroom/versions/java9-beta`
 
        You will need to make sure jenv is evaluated in every terminal session. Add `eval "$(jenv init -)"` to your shell's .rc file
 
