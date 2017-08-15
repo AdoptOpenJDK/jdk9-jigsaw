@@ -11,7 +11,7 @@
   
   - Install using a script
 
-    **Linux and MacOSX users only:** the bash script ```getJDK.sh``` in the root directory of this repo, helps download the latest Jigsaw JDK from Oracle. Please run this once the repo is cloned. 
+    **Linux and MacOSX users only:** the bash script ```getJDK9.sh``` in the root directory of this repo, helps download the latest Jigsaw JDK from Oracle. Please run this once the repo is cloned. 
 
     **Windows users:** please feel free to run this script and if there are any tweaks to get it to work successfully, please let us know via a pull request.
 
@@ -35,7 +35,7 @@
        #### Via Brew and jenv
        You will need the latest version of brew with cask support (1.1.13 at the time of writing). If you don't have brew installed, go [here](https://brew.sh/) first.
        - `brew install jenv`
-       - `brew cask install java9-beta`
+       - `brew install caskroom/versions/java9-beta`
 
        You will need to make sure jenv is evaluated in every terminal session. Add `eval "$(jenv init -)"` to your shell's .rc file
 
