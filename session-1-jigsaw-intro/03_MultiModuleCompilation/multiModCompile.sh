@@ -16,7 +16,7 @@ javac -d $DESTINATION_FOLDER \
       [parameter to point to the folder with source files in a module] src $(find . -name "*.java")
 
 #
-# * look for documentation in the Java 9 Resource (https://github.com/AdoptOpenJDK/jdk9-jigsaw/blob/master/Java-9-Resources.md).
+# * look for tool references, quick started guides, and other documentation in the Java 9 Resource (https://github.com/AdoptOpenJDK/jdk9-jigsaw/blob/master/Java-9-Resources.md).
 #
 
 # *************************************************************************************
