@@ -11,6 +11,7 @@
 - [Migration Guide](https://docs.oracle.com/javase/9/migrate/toc.htm#JSMIG-GUID-7744EF96-5899-4FB2-B34E-86D49B2E89B6)
 - [JavaDoc](http://download.java.net/java/jdk9/docs/api/overview-summary.html) (API documentation)
 - [Project Jigsaw Quick Start Guide](http://openjdk.java.net/projects/jigsaw/quick-start)
+- [Java Platform Module System](./Java-9-Resources.md#java-platform-module-system)
 - [JDK 9 Outreach](https://wiki.openjdk.java.net/display/Adoption/JDK+9+Outreach) and [Quality Outreach](https://wiki.openjdk.java.net/display/quality/Quality+Outreach) (we could use your help here)
 - [List of all JEPs](http://openjdk.java.net/jeps/0)
 
@@ -115,6 +116,7 @@ Talks and Interviews:
 - [JSR 376](https://jcp.org/en/jsr/detail?id=376): Java Platform Module System - specified some of the below JEPs
 - [Jigsaw Project Page](http://openjdk.java.net/projects/jigsaw/)
 - [Jigsaw Specification](http://openjdk.java.net/projects/jigsaw/spec/)
+- [The State of The Module System](http://openjdk.java.net/projects/jigsaw/spec/sotms/)
 
 ### JEPs
 
