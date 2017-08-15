@@ -32,10 +32,33 @@ Please install the ```tree``` command before moving forward:
         ```
 
    - MacOSX
-        ```
-        install tree - http://apple.stackexchange.com/questions/128876/whats-the-equivalent-of-the-unix-tree-command-on-osx
-        install wget - http://stackoverflow.com/questions/4572153/os-x-equivalent-of-linuxs-wget
-        ```
+       
+        - Option 1:
+        
+          - install tree
+          
+          http://apple.stackexchange.com/questions/128876/whats-the-equivalent-of-the-unix-tree-command-on-osx
+        
+          - install wget 
+          
+          http://stackoverflow.com/questions/4572153/os-x-equivalent-of-linuxs-wget
+       
+        - Option 2 (Via brew):
+            
+            `Comment from @Hilmerc as to why we are doing the below: Using MacOS Sierra 10.12.6, but we are not sure in which Mac version the brew command started to be necessary for the process.`
+          
+            You will need the latest version of brew. If you don't have brew installed, execute the next instruction or go [here](https://brew.sh/) for more information. 
+        
+            - `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+          
+          - `brew install tree` 
+        
+            http://apple.stackexchange.com/questions/128876/whats-the-equivalent-of-the-unix-tree-command-on-osx
+        
+          - `brew install wget` 
+          
+            http://stackoverflow.com/questions/4572153/os-x-equivalent-of-linuxs-wget
+        
         
    - Windows
         ```
