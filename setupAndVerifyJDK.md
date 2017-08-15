@@ -108,6 +108,8 @@ As output you should get something like this:
 
 ##### Alternative to keep JAVA\_HOME and PATH
 
+*NOTE*: Only for Linux and MacOSX users. 
+
 If you don't like changing ```JAVA_HOME``` and ```PATH``` and you want to have an easy way to change your local Java version:
 
 - Keep your unzipped files in a single directory. For example:
