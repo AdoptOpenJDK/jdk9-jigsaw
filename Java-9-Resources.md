@@ -1,6 +1,6 @@
 # Java/JDK 9 Resources
 
-- [Early Access Download](http://jdk.java.net/9/); or [with latest Jigsaw changes](http://jdk.java.net/jigsaw)
+- [Early Access Download](http://jdk.java.net/9/); ~~or [with latest Jigsaw changes](http://jdk.java.net/jigsaw)~~
 - [Installation Guide](https://docs.oracle.com/javase/9/install/overview-jdk-9-and-jre-9-installation.htm#JSJIG-GUID-8677A77F-231A-40F7-98B9-1FD0B48C346A)
 
 ## Oracle/OpenJDK Resources on Java 9
