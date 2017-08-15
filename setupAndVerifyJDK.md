@@ -105,3 +105,37 @@ As output you should get something like this:
 ```
     javac 9-ea
 ```
+
+##### Alternative to keep JAVA\_HOME and PATH
+
+If you don't like changing ```JAVA_HOME``` and ```PATH``` and you want to have an easy way to change your local Java version:
+
+- Keep your unzipped files in a single directory. For example:
+
+```
+    $ pwd
+    /usr/local/java
+    
+    $ ls -og
+    total 12
+    drwxr-xr-x 8 4096 sep 23  2016 jdk1.8.0_111
+    drwxr-xr-x 8 4096 dic 13  2016 jdk1.8.0_121
+    drwxr-xr-x 8 4096 ago 15 12:10 jdk-9+181 
+```
+
+- Create a symbolic link ```jdk``` to desired JDK: 
+
+```
+    $ ln -s jdk-9+181 jdk 
+
+    $ ls -og
+    total 12
+    lrwxrwxrwx 1   12 abr 17 17:16 jdk -> jdk-9+181
+    drwxr-xr-x 8 4096 sep 23  2016 jdk1.8.0_111
+    drwxr-xr-x 8 4096 dic 13  2016 jdk1.8.0_121
+    drwxr-xr-x 8 4096 ago 15 12:10 jdk-9+181 
+```
+
+```JAVA_HOME``` and ```PATH``` will use ```/usr/local/java/jdk``` forever.
+
+To change your local Java version, you only need to change the symbolic link.
