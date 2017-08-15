@@ -1,6 +1,6 @@
 # Java/JDK 9 Resources
 
-- [Early Access Download](http://jdk.java.net/9/); or [with latest Jigsaw changes](http://jdk.java.net/jigsaw)
+- [Early Access Download](http://jdk.java.net/9/); ~~or [with latest Jigsaw changes](http://jdk.java.net/jigsaw)~~
 - [Installation Guide](https://docs.oracle.com/javase/9/install/overview-jdk-9-and-jre-9-installation.htm#JSJIG-GUID-8677A77F-231A-40F7-98B9-1FD0B48C346A)
 
 ## Oracle/OpenJDK Resources on Java 9
@@ -32,6 +32,7 @@ Community resources:
 - [Java 9 New Features](http://www.baeldung.com/new-java-9) (Baeldung)
 - [Java 9 series: the JVM](https://www.voxxed.com/blog/2016/10/java-9-series-jvm/) (Katharine Beaumont)
 - [9 new features in Java 9](https://www.pluralsight.com/blog/software-development/java-9-new-features) (Sander Mak)
+- [A practical guide to Java 9 - compile, jar, run](https://sites.google.com/a/athaydes.com/renato-athaydes/posts/guidetojava9-compilejarrun) (Renato Athaydes)
 
 Talks and Interviews:
 

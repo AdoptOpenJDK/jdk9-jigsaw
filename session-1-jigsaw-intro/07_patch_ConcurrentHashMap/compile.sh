@@ -24,7 +24,7 @@ javac [param to patch a module*] \
 # ** destination folder where the compiled module will be placed
 # *** filename (with path) to the new class file to patch with (this file will replace the existing class file in the module defined above)
 #
-# look for documentation in the Java 9 Resource (https://github.com/AdoptOpenJDK/jdk9-jigsaw/blob/master/Java-9-Resources.md)
+# look for tool references, quick started guides, and other documentation in the Java 9 Resource (https://github.com/AdoptOpenJDK/jdk9-jigsaw/blob/master/Java-9-Resources.md)
 #
 
 echo ""

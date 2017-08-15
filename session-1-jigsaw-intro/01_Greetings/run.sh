@@ -18,7 +18,7 @@ java --module-path mods \
 
 #
 # * parameter can be either long or short form, with module name and fully qualified class name
-# look for documentation in the Java 9 Resource (https://github.com/AdoptOpenJDK/jdk9-jigsaw/blob/master/Java-9-Resources.md).
+# look for tool references, quick started guides, and other documentation in the Java 9 Resource (https://github.com/AdoptOpenJDK/jdk9-jigsaw/blob/master/Java-9-Resources.md).
 #
 # *************************************************************************************
 #

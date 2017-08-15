@@ -26,7 +26,7 @@ javac [param to specify path to the module*] mods \
       src/com.greetings/com/greetings/Main.java
 
 #
-# * can be either long or short form, look for documentation in the Java 9 Resource (https://github.com/AdoptOpenJDK/jdk9-jigsaw/blob/master/Java-9-Resources.md).
+# * can be either long or short form, look for tool references, quick started guides, and other documentation in the Java 9 Resource (https://github.com/AdoptOpenJDK/jdk9-jigsaw/blob/master/Java-9-Resources.md).
 #
 # ** can you environment variable containing the module path or literal path to the module
 # *******************************************************************************************************************************
