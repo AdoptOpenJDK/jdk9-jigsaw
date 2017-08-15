@@ -4,91 +4,8 @@ Examples of some of the features of Jigsaw released in the Early Access build of
 
 Many of the examples here are directly from the Project Jigsaw: Module System Quick-Start Guide, see [http://openjdk.java.net/projects/jigsaw/quick-start](http://openjdk.java.net/projects/jigsaw/quick-start) but we have also contributions from the Java community.
 
-## Setup (all platforms)
+___
 
-#### Download and install latest version of the JDK 9 EA
-
-- Download JDK 9 EA
-  
-  - Early Access build of JDK9 is available at [http://jdk.java.net/9/](http://jdk.java.net/9/)
-  - Early Access build of JDK9 with Project Jigsaw is available at [http://jdk.java.net/jigsaw/](http://jdk.java.net/jigsaw/)
-
-- Install JDK 9 EA
-  
-  - Install using a script
-
-    **Linux and MacOSX users only:** the bash script ```getJigsawJDK.sh``` in the root directory of this repo, helps download the latest Jigsaw JDK from Oracle. Please run this once the repo is cloned. 
-
-    **Windows users:** please feel free to run this script and if there are any tweaks to get it to work successfully, please let us know via a pull request.
-
-  - Install manually
-
-    - Linux
-       - `tar -xvf jigsaw-jdk-9*.tar`
-       - `mv -f jdk-9 [destination]`  (might need to use `sudo` here)
-       - update your `.bashrc` with `export JAVA_HOME=[jdk destination]`
-       - update your `.bashrc` with `export PATH=$JAVA_HOME/bin:$PATH`
-       - `source ~/.bashrc` 
-    
-         `[destination]` usually `/usr/lib/...` or related folder
-    
-    - MacOSX 
-      
-       #### Manual way
-       
-
-       
-       - Please refer to [this guide]( https://github.com/musinoli/guides/blob/master/setup_jigsaw.md) - thanks Nolita ([@musinoli](https://github.com/musinoli)) for your help
-       - In case a `.dmg` file is available, download it and follow the installation steps, you will still have to update your `JAVA_HOME` and start script as mentioned in [this guide]( https://github.com/musinoli/guides/blob/master/setup_jigsaw.md).
-       - update your `.bashrc` with `export PATH=$JAVA_HOME/bin:$PATH`
-
-       #### Via Brew and jenv
-       You will need the latest version of brew with cask support (1.1.13 at the time of writing). If you don't have brew installed, go [here](https://brew.sh/) first.
-       - `brew install jenv`
-       - `brew cask install java9-beta`
-
-       You will need to make sure jenv is evaluated in every terminal session. Add `eval "$(jenv init -)"` to your shell's .rc file
-
-       Now run `jenv versions`. The output might differ (if you have other JDK's installed) but in general you should see something like this:
-       ```
-       ➜  ~ jenv versions
-         system
-       * 1.8 (set by /Users/ioannis/.jenv/version)
-         1.8.0.121
-         9-ea
-         oracle64-1.8.0.121
-         oracle64-9-ea
-       ```
-       If `9-ea` or `oracle64-9-ea` does not appear, add it manually
-
-       `jenv add /Library/Java/JavaVirtualMachines/jdk-9.jdk/Contents/Home`
-
-       If you want to limit use of JDK 9 to source in a specific directory, switch to that directory and do:
-
-       `jenv local 9-ea`
-
-       e.g.
-       ```
-       ➜  ~ cd test
-       ➜  test: jenv local 9-ea
-       ➜  test: jenv version
-       9-ea (set by /Users/ioannis/test/.java-version)
-       ➜  test: java -version
-       java version "9-ea"
-       Java(TM) SE Runtime Environment (build 9-ea+163)
-       Java HotSpot(TM) 64-Bit Server VM (build 9-ea+163, mixed mode)
-       ```
-        
-    - Windows
-       - the file format has changed over time, so you might have downloaded either an `.exe` or a `.zip`.
-         - If you have an executable file, then run it and follow the instructions
-         - If you have a zip file, then just unzip it
-       - Make a note of the destination 
-       - Edit the `JAVA_HOME` and `PATH` environment variables via the `My Computer` > `Properties` option
-         - `JAVA_HOME`: `JAVA_HOME=[jdk destination]`
-         - `PATH`: `PATH=%JAVA_HOME%/bin;%PATH%`
-         
-           `[destination]` usually `C:\Program Files\Java\...` or related folder  
 
 ####   Please note you are in the `master` branch which contains exercises which need to be solved by looking at documentation or resources provided in this repo. Hints may be provided within the source or script files. If you hit a roadblock and really want to see a possible solution you can switch to the `exercise-solutions` branch for that. 
 
@@ -126,17 +43,19 @@ Please install the ```tree``` command before moving forward:
           
           http://stackoverflow.com/questions/4572153/os-x-equivalent-of-linuxs-wget
        
-        - Option 2 (Via brew ):
+        - Option 2 (Via brew):
+            
+            `Comment from @Hilmerc as to why we are doing the below: Using MacOS Sierra 10.12.6, but we are not sure in which Mac version the brew command started to be necessary for the process.`
           
             You will need the latest version of brew. If you don't have brew installed, execute the next instruction or go [here](https://brew.sh/) for more information. 
         
-            - ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+            - `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
           
-          - brew install tree 
+          - `brew install tree` 
         
             http://apple.stackexchange.com/questions/128876/whats-the-equivalent-of-the-unix-tree-command-on-osx
         
-          - brew install wget 
+          - `brew install wget` 
           
             http://stackoverflow.com/questions/4572153/os-x-equivalent-of-linuxs-wget
         
