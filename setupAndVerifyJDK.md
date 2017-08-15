@@ -11,7 +11,7 @@
   
   - Install using a script
 
-    **Linux and MacOSX users only:** the bash script ```getJDK.sh``` in the root directory of this repo, helps download the latest Jigsaw JDK from Oracle. Please run this once the repo is cloned. 
+    **Linux and MacOSX users only:** the bash script ```getJDK9.sh``` in the root directory of this repo, helps download the latest Jigsaw JDK from Oracle. Please run this once the repo is cloned. 
 
     **Windows users:** please feel free to run this script and if there are any tweaks to get it to work successfully, please let us know via a pull request.
 
