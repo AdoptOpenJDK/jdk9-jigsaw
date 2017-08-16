@@ -246,7 +246,7 @@ Make 50 `http` `GET` calls to http://www.google.com via the REPL.
 
 Process management API: 
     
-   Reload jshell using the usual CLI invocation:
+   Reload `jshell` using the usual CLI invocation:
    
     $ jshell
     
@@ -267,7 +267,7 @@ Process management API:
     jshell> currentProcess.info()
     $5 ==> [user: Optional[username], cmd: /usr/lib/jvm/jdk-9/bin/java, args: [-agentlib:jdwp=transport=dt_socket,address=localhost:40499, jdk.jshell.execution.RemoteExecutionControl, 41667], startTime: Optional[2017-08-15T17:36:30.240Z], totalTime: Optional[PT0.88S]]
  
-   * Find JShell process with jps
+   * pid, info, children processes, destroy processes: 
    
     jshell> ProcessHandle currentProcess = ProcessHandle.current();
     currentProcess ==> 10420
@@ -284,7 +284,32 @@ Process management API:
     jshell> $10.info()
     $11 ==> [user: Optional[username], cmd: /usr/lib/jvm/jdk-9/bin/java, args: [-agentlib:jdwp=transport=dt_socket,address=localhost:40499, jdk.jshell.execution.RemoteExecutionControl, 41667], startTime: Optional[2017-08-15T17:36:30.240Z], totalTime: Optional[PT1.09S]]
 
+    jshell> Stream<ProcessHandle> childProc = ProcessHandle.current().children();
+    childProc ==> java.util.stream.ReferencePipeline$2@21213b92
 
+    jshell> Process process = Runtime.getRuntime().exec ("/bin/bash");
+    process ==> Process[pid=709, exitValue="not exited"]
+    
+    jshell> childProc.count()
+    $47 ==> 1
+    
+    jshell> Stream<ProcessHandle>  childProc = ProcessHandle.current().children();
+    childProc ==> java.util.stream.ReferencePipeline$2@10d59286
+
+    jshell> childProc.forEach(procHandle -> { System.out.println(procHandle.destroy() ? "Could not kill process " + procHandle.pid() : "Terminated " + procHandle.pid()); });
+    Could not kill process 709
+    
+    or
+    
+    Terminated 709
+        
+    or
+    
+    |  java.lang.IllegalStateException thrown: stream has already been operated upon or closed
+    |        at AbstractPipeline.evaluate (AbstractPipeline.java:229)
+    |        at ReferencePipeline.forEach (ReferencePipeline.java:430)
+    |        at (#62:1)
+    
 StackWalker:
     
     jshell> StackWalker.getInstance().walk(s -> s.limit(5).collect(Collectors.toList()));
