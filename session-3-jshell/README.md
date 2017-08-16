@@ -4,8 +4,33 @@ Java REPL (Read-Eval-Print-Loop): previously called Kulla.
 
 The JShell API can be used via applications as well.
 
-Look for the the JShell REPL in the `JAVA_HOME/bin` folder:
+Windows Users
 
+    Look for the the JShell REPL in the `JAVA_HOME\bin` folder:
+
+    c:\... dir /W %JAVA_HOME%\bin\js*
+    
+    Directory de C:\Program Files\Java\jdk-9\bin
+
+    jshell.exe     jsound.dll     jsoundds.dll   jstack.exe     jstat.exe
+    jstatd.exe
+
+    c:\... echo %JAVA_HOME%
+    "c:\Program Files\Java\jdk-9\"
+
+    c:\... echo %PATH%
+    c:\Program Files\Java\jdk-9\bin\;....
+     
+    Note: If JAVA_HOME is not setting on you PC (Or it's no a Java 9 version) or PATH doesn't show the bin folder for JDK-9, You should set the correct value following next steps: Invoke the Control Panel, and then System. Click Advanced and then Environment Variables. Add the location of the JDK-9 folder to the JAVA_HOME, and add or edit the location of the bin folder of the JDK installation to PATH variable in System Variables. You should set the JAVA_HOME value between quotation mark.
+       
+    Once JAVA_HOME and PATH are setting you must close and then open a new Windows Console and now you are ready for start the jshell with the next command
+
+    c:\... jshell
+     
+MacOs / Linux Users
+
+    Look for the the JShell REPL in the `JAVA_HOME/bin` folder:
+    
     $ ls $JAVA_HOME/bin/
 
     appletviewer  java     javapackager  jdb        jinfo  jps         jstatd        policytool   serialver   wsimport
@@ -18,15 +43,18 @@ And locate the command from the above list. Ensure `JAVA_HOME/bin` is in your `P
 
     $ echo $PATH
     /usr/lib/jvm/jdk-9/bin/:....
+
+    Note: If JAVA_HOME is not setting on you Mac or Linux (Or it's no a Java 9 version) or PATH doesn't show the bin folder for JDK-9, You should set the correct value following next steps:(For Mac Users the JDK 9 could be on a path as /Library/Java/JavaVirtualMachines/jdk9/Contents/Home)
+
+    $ export JAVA_HOME=/usr/lib/jvm/jdk-9/
+    $ export PATH=/usr/lib/jvm/jdk-9/bin:$PATH
+
+    Once JAVA_HOME and PATH are setting you can start the jshell with the next command
     
-    or 
-    
-    $ echo %PATH%
-    c:\Program Files/jdk-9/bin\;....
-        
     $ jshell
+
     
-And you get taken to the JShell prompt:
+After you start the jshell (Windows, MacOs and Linux Users) you get taken to the JShell prompt:
     
     |  Welcome to JShell -- Version 9-ea
     |  For an introduction type: /help intro
