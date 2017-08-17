@@ -87,3 +87,7 @@ Each example is enclosed in a folder of its own containing bash scripts to compi
 - [JDK 9 / Jigsaw Resources](./Java-9-Resources.md)
 - [Adopt OpenJDK homepage](https://adoptopenjdk.java.net/)
 - [Adopt OpenJDK: Getting Started Kit](http://bit.ly/1NUkPWw)
+
+---
+
+![I need you for Java SE 9 development](I-need-you-for-Java-SE-9-development.png "I need you for Java SE 9 development")
