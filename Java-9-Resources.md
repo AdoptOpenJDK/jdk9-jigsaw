@@ -19,12 +19,10 @@
 
 ## Java 9
 
-Official resources:
-
 - [JDK 9 Project Page](http://openjdk.java.net/projects/jdk9/); includes a list of JEPs targeted for Java 9
 - [JSR 379](https://jcp.org/en/jsr/detail?id=379): Java SE 9 Release Contents - umbrella JSR for Java 9
 
-Community resources:
+### Community resources
 
 - [Java 9 resources](https://blog.codefx.org/java/java-9-resources-talks-articles-blogs-books-courses/) (Nicolai Parlog)
 - [Ultimate Guide To Java 9](https://www.sitepoint.com/ultimate-guide-to-java-9/) (Nicolai Parlog)
@@ -35,7 +33,7 @@ Community resources:
 - [9 new features in Java 9](https://www.pluralsight.com/blog/software-development/java-9-new-features) (Sander Mak)
 - [A practical guide to Java 9 - compile, jar, run](https://sites.google.com/a/athaydes.com/renato-athaydes/posts/guidetojava9-compilejarrun) (Renato Athaydes)
 
-Talks and Interviews:
+### Talks and Interviews
 
 - [Java 9 is coming!](https://www.voxxed.com/blog/interview/java-9-coming-nicolai-parlog/) (Voxxed with Nicolai Parlog)
 - [Getting Ready for Java 9](https://www.voxxed.com/blog/2016/03/13285/) (Voxxed with Simon Ritter)
@@ -43,67 +41,60 @@ Talks and Interviews:
 - [Preparing for JDK 9 with Zulu and OpenJDK](https://www.youtube.com/watch?v=i9bnV0KKyAA) (Simon Ritter)
 - [Prepare for JDK 9](https://www.youtube.com/watch?v=S91fn0dFTTY) (Haocheng)
 
-### Language Improvements
+### JEPs and Articles
 
-[JEP 213](http://openjdk.java.net/jeps/213): Milling Project Coin
+Language Improvements:
 
+- [JEP 213](http://openjdk.java.net/jeps/213): Milling Project Coin
 - [A New Try-with-resources Improvement in JDK 9](https://www.voxxed.com/blog/2015/01/new-try-resources-improvement-jdk-9/) (Mite Mitreski)
 
-### Collection Factories
+Collection Factories:
 
-[JEP 269](http://openjdk.java.net/jeps/269): Convenience Factory Methods for Collections
-
+- [JEP 269](http://openjdk.java.net/jeps/269): Convenience Factory Methods for Collections
 - [Java 9 series: Convenience Factory Methods for Collections](https://www.voxxed.com/blog/2017/01/java-9-series-factory-methods-collections/) (Katharine Beaumont)
 
-### Stream/Optional Improvements
+Stream/Optional Improvements:
 
-* [Java 9 Additions To Stream](https://blog.codefx.org/java/java-9-stream/) (Nicolai Parlog)
-* [Java 9 Additions To Optional](http://blog.codefx.org/java/java-9-option) (Nicolai Parlog)
+- [Java 9 Additions To Stream](https://blog.codefx.org/java/java-9-stream/) (Nicolai Parlog)
+- [Java 9 Additions To Optional](http://blog.codefx.org/java/java-9-option) (Nicolai Parlog)
 
-### JShell
+JShell:
 
-[JEP 222](http://openjdk.java.net/jeps/222): jshell - The Java Shell (Read-Eval-Print Loop)
-
+- [JEP 222](http://openjdk.java.net/jeps/222): jshell - The Java Shell (Read-Eval-Print Loop)
 - [What REPL will Mean for Java People](https://www.voxxed.com/blog/2015/04/what-the-upcoming-repl-will-mean-for-java-people/) (Lucy Carey)
 - [Java 9 series: JShell](https://www.voxxed.com/blog/2016/09/java-9-series-jshell/) (Katharine Beaumont)
 
-### Multi-Release JARs
+Multi-Release JARs:
 
-[JEP 238](http://openjdk.java.net/jeps/238): Multi-Release JAR Files
-
+- [JEP 238](http://openjdk.java.net/jeps/238): Multi-Release JAR Files
 - [Java 9 series: Multi-Release JAR Files](https://www.voxxed.com/blog/2016/11/java-9-series-multi-release-jar-files/) (Katharine Beaumont)
 
-### Reactive Streams aka Flow API And Other Concurrency Updates
+Reactive Streams aka Flow API And Other Concurrency Updates:
 
-[JEP 266](http://openjdk.java.net/jeps/266): More Concurrency Updates
-
+- [JEP 266](http://openjdk.java.net/jeps/266): More Concurrency Updates
 - [Java 9 series: Concurrency Updates](https://www.voxxed.com/blog/2016/10/java-9-series-concurrency-updates/) (Katharine Beaumont)
 
-### Variable Handles
+Variable Handles:
 
-[JEP 193](http://openjdk.java.net/jeps/193): Variable Handles
-
+- [JEP 193](http://openjdk.java.net/jeps/193): Variable Handles
 - [Java 9 series: Variable Handles](https://www.voxxed.com/blog/2016/11/java-9-series-variable-handles/) (Katharine Beaumont)
 
-### HTTP/2 Client
+HTTP/2 Client:
 
-[JEP 110](http://openjdk.java.net/jeps/110): HTTP/2 Client (Incubator)
-
+- [JEP 110](http://openjdk.java.net/jeps/110): HTTP/2 Client (Incubator)
 - [Java 9 series: HTTP/2 Client](https://www.voxxed.com/blog/2016/10/java-9-series-http2-client/) (Katharine Beaumont)
 
-### Segmented Code Cache
+Segmented Code Cache:
 
-[JEP 197](http://openjdk.java.net/jeps/197): Segmented Code Cache
-
+- [JEP 197](http://openjdk.java.net/jeps/197): Segmented Code Cache
 - [Java 9 series: Segmented Code Cache](https://www.voxxed.com/blog/2016/11/java-9-series-segmented-code-cache/) (Katharine Beaumont)
 
-### Ahead-of-Time Compilation
+Ahead-of-Time Compilation:
 
-[JEP 295](http://openjdk.java.net/jeps/295): Ahead-of-Time Compilation
-
+- [JEP 295](http://openjdk.java.net/jeps/295): Ahead-of-Time Compilation
 - [Native Ahead-of-Time Compilation in Java](https://www.voxxed.com/blog/2016/10/native-ahead-time-compilation-java/) (Mite Mitreski)
 
-### Misc
+Misc:
 
 - [JEP 158](http://openjdk.java.net/jeps/158): Unified JVM Logging
 - G1 related JEPs (3 of them)
