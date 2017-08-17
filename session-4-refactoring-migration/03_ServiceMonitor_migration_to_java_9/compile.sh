@@ -1,10 +1,18 @@
 #!/bin/bash
 
+echo "--- Checking for Java 9 ---"
+source ././../../common-functions.sh
+echo "--- Java 9 found ---"
+java -version
+
+echo ""
+echo "--- COMPILATION & PACKAGING ---"
+
+echo " > adding symbolic links to Java command(s) ---"
+
 ln -f -s $(which java) java9
 ln -f -s $(which javac) javac9
 ln -f -s $(which jar) jar9
-
-echo "--- COMPILATION & PACKAGING ---"
 
 echo " > creating clean directories"
 rm -rf build
