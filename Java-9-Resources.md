@@ -33,13 +33,18 @@
 - [9 new features in Java 9](https://www.pluralsight.com/blog/software-development/java-9-new-features) (Sander Mak)
 - [A practical guide to Java 9 - compile, jar, run](https://sites.google.com/a/athaydes.com/renato-athaydes/posts/guidetojava9-compilejarrun) (Renato Athaydes)
 
-### Talks and Interviews
+### Talks
+
+- [Java 9 is coming!](https://www.youtube.com/watch?v=vOdFuvIyN0E)
+- [Preparing for JDK 9 with Zulu and OpenJDK](https://www.youtube.com/watch?v=i9bnV0KKyAA) (Simon Ritter)
+- [Prepare for JDK 9](https://www.youtube.com/watch?v=S91fn0dFTTY) (Haocheng)
+- [55 New Features In JDK 9](https://www.youtube.com/watch?v=9EiLRD95zDg) (Simon Ritter)
+
+### Interviews
 
 - [Java 9 is coming!](https://www.voxxed.com/blog/interview/java-9-coming-nicolai-parlog/) (Voxxed with Nicolai Parlog)
 - [Getting Ready for Java 9](https://www.voxxed.com/blog/2016/03/13285/) (Voxxed with Simon Ritter)
 - [Java 9 and Streams API](https://www.voxxed.com/blog/2017/02/java-9-streams-api/) (Voxxed with Simon Ritter)
-- [Preparing for JDK 9 with Zulu and OpenJDK](https://www.youtube.com/watch?v=i9bnV0KKyAA) (Simon Ritter)
-- [Prepare for JDK 9](https://www.youtube.com/watch?v=S91fn0dFTTY) (Haocheng)
 
 ### JEPs and Articles
 
@@ -101,6 +106,17 @@ Misc:
 - JEPs related to a number of security improvements
 - JEPs related to a number of platform improvements
 
+### Books
+
+* [Mastering Java 9](https://www.packtpub.com/application-development/mastering-java-9) (Packt; Martin Toshev)
+* [Java 9 with JShell](https://www.packtpub.com/application-development/java-9-jshell) (Packt; Gastón C. Hillar)
+
+### Repositories
+
+* [CodeFX-org/demo-java-9](https://github.com/CodeFX-org/demo-java-9) (Nicolai Parlog)
+* [CodeFX-org/java-9-wtf](https://github.com/CodeFX-org/java-9-wtf) (Nicolai Parlog)
+
+
 ***
 
 ## Java Platform Module System
@@ -144,6 +160,7 @@ Other talks:
 
 - [Project Jigsaw in JDK 9: Modularity Comes To Java](https://www.youtube.com/watch?v=Ks7J_qQVR7Y) (Simon Ritter)
 - [The Java Module System In Action](https://www.youtube.com/watch?v=0M72pH2rXwA) (Nicolai Parlog)
+- [To JAR Hell And Back - A Live Migration to the Java 9 Module System ](https://www.youtube.com/watch?v=NKY2FYTCo7I) (Nicolai Parlog)
 - [Java 9 Modularity in Action](https://www.youtube.com/watch?v=CoXueufCdtY) (Sander Mak, Paul Bakker)
 - [Refactoring your code to Java 9 modules](https://vimeo.com/221258737) (Rabea Gransberger)
 
@@ -168,13 +185,33 @@ Downsides/hurdles of Java 9 modularity and Project Jigsaw:
 - [Issues with the Module System](https://www.voxxed.com/blog/2016/11/issues-with-the-module-system/) (Katharine Beaumont)
 - [Concerns Regarding Jigsaw(JSR-376, Java Platform Module System)](https://developer.jboss.org/blogs/scott.stark/2017/04/14/critical-deficiencies-in-jigsawjsr-376-java-platform-module-system-ec-member-concerns?_sscc=t) (JBoss Developer; [a reply](https://blog.plan99.net/is-jigsaw-good-or-is-it-wack-ec634d36dd6f))
 - [Response to the JCP vote: Yet Another Jigsaw Opinion Piece](http://mydailyjava.blogspot.nl/2017/05/yet-another-jigsaw-opinion-piece.html) (Rafael Winterhalter)
+- [Java 9 Migration Guide: The Seven Most Common Challenges](https://blog.codefx.org/java/java-9-migration-guide/) (Nicolai Parlog)
+- [Planning Your Java 9 Update](https://blog.codefx.org/java/planning-your-java-9-update/) (Nicolai Parlog)
+
+### Books
+
+* [Java 9 Module System](https://www.manning.com/books/the-java-9-module-system?a_aid=nipa&a_bid=869915cb) (Manning; Nicolai Parlog)
+* [Java 9 Modularity](http://shop.oreilly.com/product/0636920049494.do) (O’Reilly; Sander Mak and Paul Bakker)
+* [Java 9 Modularity - Project Jigsaw and Scalable Java Applications](http://www.apress.com/de/book/9781484227121) (Apress; Alexandru Jecan)
+* [Modular Programming in Java 9](https://www.packtpub.com/application-development/modular-programming-java-9) (Packt; Koushik Kothagal)
 
 ### Repositories
 
+#### Modular examples
+
+- [java9-modularity/easytext](https://github.com/java9-modularity/easytext) (Sander Mak, Paul Bakker; sample app from [_Java 9 Modularity_](http://shop.oreilly.com/product/0636920049494.do)
+- [CodeFX-org/demo-jigsaw-advent-calendar](https://github.com/CodeFX-org/demo-jigsaw-advent-calendar) (Nicolai Parlog)
+- [CodeFX-org/demo-jpms-monitor](https://github.com/CodeFX-org/demo-jpms-monitor) (Nicolai Parlog, sample app from _[Java 9 Module System](https://www.manning.com/books/the-java-9-module-system?a_aid=nipa&a_bid=869915cb)_)
+
+#### Migrations / Refactorings
+
 - [rgra/java9-module-refactoring](https://github.com/rgra/java9-module-refactoring) (Rabea Gransberger)
 - [java9-modularity/java9-migration-demos](https://github.com/java9-modularity/java9-migration-demos) (Sander Mak, Paul Bakker)
-- [https://github.com/java9-modularity/easytext](https://github.com/java9-modularity/easytext) (Sander Mak, Paul Bakker), sample application from [O'Reilly's Java 9 Modularity book](http://shop.oreilly.com/product/0636920049494.do)
+- [CodeFX-org/demo-java-9-migration](https://github.com/CodeFX-org/demo-java-9-migration) (Nicolai Parlog)
+
+#### Misc
+
 - [accso/java9-jigsaw-depvis](https://github.com/accso/java9-jigsaw-depvis) (Martin Lehmann, Kristine Schaal, Rüdiger Grammes)
-- [codetojoy/WarO_Java_9_Gradle](https://github.com/codetojoy/WarO_Java_9_Gradle) (Michael Easter), example using Gradle 4.1M1
-- [codetojoy/WarO_Java_9_Maven](https://github.com/codetojoy/WarO_Java_9_Maven) (Michael Easter), example using Maven 3.5.0
-- [codetojoy/easter_eggs_for_java_9](https://github.com/codetojoy/easter_eggs_for_java_9) (Michael Easter), various examples including jlink and patching
+- [codetojoy/WarO_Java_9_Gradle](https://github.com/codetojoy/WarO_Java_9_Gradle) (Michael Easter; example using Gradle 4.1M1)
+- [codetojoy/WarO_Java_9_Maven](https://github.com/codetojoy/WarO_Java_9_Maven) (Michael Easter; example using Maven 3.5.0)
+- [codetojoy/easter_eggs_for_java_9](https://github.com/codetojoy/easter_eggs_for_java_9) (Michael Easter; various examples including jlink and patching)
