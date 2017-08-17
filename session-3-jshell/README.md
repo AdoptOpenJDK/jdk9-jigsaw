@@ -6,12 +6,12 @@ The JShell API can be used via applications as well.
 
 Windows Users
 
-Check if JAVA_HOME is set on you machine
+Check if `JAVA_HOME` is set on your machine
 
     c:\... echo %JAVA_HOME%
     "c:\Program Files\Java\jdk-9\"
 
-Look for the JShell REPL in the JAVA_HOME\bin folder:
+Look for the JShell REPL in the `JAVA_HOME\bin` folder:
     
     c:\... dir /W %JAVA_HOME%\bin\js*
     
@@ -20,27 +20,27 @@ Look for the JShell REPL in the JAVA_HOME\bin folder:
     jshell.exe     jsound.dll     jsoundds.dll   jstack.exe     jstat.exe
     jstatd.exe
     
-And locate the command from the above list. Ensure JAVA_HOME\bin is in your PATH.
+And locate the command from the above list. Ensure `JAVA_HOME\bin` is in your PATH.
 
     c:\... echo %PATH%
     c:\Program Files\Java\jdk-9\bin\;....
      
-If JAVA_HOME is not set on your Windows machine (or it's not set to Java 9) or PATH doesn't show the bin folder for JDK-9, You should set the correct value following next steps:
+If `JAVA_HOME` is not set on your Windows machine (or it's not set to Java 9) or `PATH` doesn't show the bin folder for JDK-9, You should set the correct value by following these steps:
 
 - Invoke the Control Panel, and then System.
 - Click Advanced and then Environment Variables.
-- Add the location of the JDK-9 folder to the JAVA_HOME,
-- and add or edit the location of the bin folder of the JDK installation to PATH variable in System Variables.
+- Add the location of the JDK-9 folder to the `JAVA_HOME`,
+- and add or edit the location of the bin folder of the JDK installation to `PATH` variable in System Variables.
 
-You should set the JAVA_HOME value between quotation mark.
+You should set the `JAVA_HOME` value between quotation marks.
        
-Once JAVA_HOME and PATH are set, you must close the current console and then open a new Windows Console. Now you are ready to start JShell with the following command:
+Once `JAVA_HOME` and `PATH` are set, you must close the current console and then open a new Windows Console. Now you are ready to start JShell with the following command:
 
     c:\... jshell
      
 MacOs / Linux Users
 
-Look for the JShell REPL in the JAVA_HOME/bin folder:
+Look for the JShell REPL in the `JAVA_HOME/bin` folder:
     
     $ ls $JAVA_HOME/bin/
 
@@ -50,18 +50,18 @@ Look for the JShell REPL in the JAVA_HOME/bin folder:
     jar           javah    jconsole      jhsdb      jmap   jstack      orbd          rmiregistry  unpack200
     jarsigner     javap    jcontrol      jimage     jmod   jstat       pack200       schemagen    wsgen
     
-And locate the command from the above list. Ensure JAVA_HOME/bin is in your PATH.
+And locate the command from the above list. Ensure `JAVA_HOME/bin` is in your `PATH`.
 
     $ echo $PATH
     /usr/lib/jvm/jdk-9/bin/:....
 
-If JAVA_HOME is not set on your Mac or Linux machine (or it's not set to Java 9) or PATH doesn't show the bin folder for JDK-9, You should set the correct values following the next steps:
+If `JAVA_HOME` is not set on your Mac or Linux machine (or it's not set to Java 9) or `PATH` doesn't show the bin folder for JDK-9, You should set the correct values by following the next steps:
 (For Mac Users the JDK 9 path could be /Library/Java/JavaVirtualMachines/jdk9/Contents/Home)
 
     $ export JAVA_HOME=/usr/lib/jvm/jdk-9/
     $ export PATH=/usr/lib/jvm/jdk-9/bin:$PATH
 
-Once JAVA_HOME and PATH are set you can start jshell with the next command
+Once `JAVA_HOME` and `PATH` are set you can start JShell with the next command
     
     $ jshell
 
