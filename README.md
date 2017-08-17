@@ -68,6 +68,10 @@ In the worst case scenario, we would have to manually convert the `.sh` files in
    - JShell examples [./session-3-jshell/JShell-Examples](./session-3-jshell/JShell-Examples)
    - shellFX [./session-3-jshell/shellFX/](./session-3-jshell/shellFX/)
    - teamshell [./session-3-jshell/teamshell/](./session-3-jshell/teamshell/)
+   
+- Refactoring/migration sessions
+   - Junit 5 migration to Java 9 modules [./session-4-refactoring-migration/01_junit5_to_java_9](session-4-refactoring-migration/01_junit5_to_java_9)
+   - Building Java 9 Modules using Gradle (from monolith to modular) [./session-4-refactoring-migration/02_monolith_to_modular_using_gradle](session-4-refactoring-migration/02_monolith_to_modular_using_gradle)
         
 Each example is enclosed in a folder of its own containing bash scripts to compile, package and run the respective examples. Use these scripts for each of the examples.
 
@@ -83,3 +87,7 @@ Each example is enclosed in a folder of its own containing bash scripts to compi
 - [JDK 9 / Jigsaw Resources](./Java-9-Resources.md)
 - [Adopt OpenJDK homepage](https://adoptopenjdk.java.net/)
 - [Adopt OpenJDK: Getting Started Kit](http://bit.ly/1NUkPWw)
+
+---
+
+![I need you for Java SE 9 development](I-need-you-for-Java-SE-9-development.png "I need you for Java SE 9 development")
