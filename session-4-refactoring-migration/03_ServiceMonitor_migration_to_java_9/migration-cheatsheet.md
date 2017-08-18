@@ -25,7 +25,7 @@ The application is a Java 8 app, try the following:
    
         java -cp 'monitor/target/libs/*':'monitor/target/main-1.0-SNAPSHOT.jar' monitor.Main
     
-Migration steps:
+## Migration steps:
 
 - Switch maven to use Java 9
     - create a file called `.mavenrc` in the `$HOME` directory 
