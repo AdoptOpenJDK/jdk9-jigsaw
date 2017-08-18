@@ -16,7 +16,7 @@ echo " > run monitor"
 echo ""
 
 # the classpath is needed for Spark's dependencies
-../03_ServiceMonitor_migration_to_java_9/java9 \
+java9 \
 	--class-path 'build/class-path/*' \
 	--module-path build/module-path \
 	--add-modules monitor.observer.alpha,monitor.observer.beta \
