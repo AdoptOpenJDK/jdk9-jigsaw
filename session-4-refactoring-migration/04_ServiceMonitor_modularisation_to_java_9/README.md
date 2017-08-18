@@ -23,6 +23,10 @@ In the project's root folder:
 	* `curl http://localhost:4567/stats/json`
 	* `curl http://localhost:4567/stats/json64 | base64 -d`
 	* `curl http://localhost:4567/stats/xml`
+	
+* scripts have also been provided (try them out in the end when it works):
+    * compile.sh
+    * run.sh
 
 ## Troubles
 
