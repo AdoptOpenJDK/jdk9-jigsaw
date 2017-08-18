@@ -16,7 +16,8 @@ ln -f -s $(which jar) jar9
 
 echo " > creating clean directories"
 rm -rf build
-mkdir build    
+
+mkdir build
 mkdir build/classes
 mkdir build/jars
 mkdir build/class-path
@@ -43,6 +44,7 @@ javac9 \
 	--module-path build/module-path \
 	-d build/classes/monitor.observer \
 	$(find monitor.observer/src/main/java -name '*.java')
+
 jar9 --create \
 	--file build/jars/monitor.observer.jar \
 	-C build/classes/monitor.observer .
