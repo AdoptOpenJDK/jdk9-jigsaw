@@ -35,8 +35,8 @@ In the project's root folder:
 * old version of Mockito causes warnings ~> update to newer version
 * application class loader is no longer a `URLClassLoader`
 
-### Modularization
+## Cheatsheet
 
-* unexpressed transitive dependencies:
-	* _monitor_ ~> _monitor.statistics_ (for `Statistics` et al)
-	* _monitor.rest_ ~> _jackson.core_ (for `JsonProcessingException`)
+To help and give a bit more hints during the refactoring process refer to our [migration cheatsheet](migration-cheatsheet.md).
+
+Warning: but this might just take away all the fun learning.

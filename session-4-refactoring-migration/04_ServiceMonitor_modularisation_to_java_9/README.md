@@ -30,17 +30,14 @@ In the project's root folder:
 
 ## Troubles
 
-### Migration
-
-* internal `BASE64Encoder` is gone ~> use `Base64.getEncoder` instead
-* JAXB API is not present ~> add _java.xml.bind_
-* Common annotations are not present ~> add _java.xml.ws.annotations_
-* split package: `javax.annotation` between _java.xml.ws.annotations_ and _jsr-305_ ~> patch _java.xml.ws.annotations_
-* old version of Mockito causes warnings ~> update to newer version
-* application class loader is no longer a `URLClassLoader`
-
 ### Modularization
 
 * unexpressed transitive dependencies:
 	* _monitor_ ~> _monitor.statistics_ (for `Statistics` et al)
 	* _monitor.rest_ ~> _jackson.core_ (for `JsonProcessingException`)
+	
+## Cheatsheet
+
+To help and give a bit more hints during the refactoring process refer to our [modularisation cheatsheet](./modularisation-cheatsheet.md).
+
+Warning: but this might just take away all the fun learning.

@@ -94,4 +94,17 @@
 		</plugins>
 	</build>
 
+	<profiles>
+		<profile>
+			<id>jdk-9</id>
+			<activation>
+				<jdk>9</jdk>
+			</activation>
+			<properties>
+				<maven.compiler.source>9</maven.compiler.source>
+				<maven.compiler.target>9</maven.compiler.target>
+			</properties>
+		</profile>
+	</profiles>
+
 </project>
