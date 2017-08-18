@@ -1,0 +1,20 @@
+digraph "summary" {
+  "observer.alpha"                  -> "observer";
+  "persistence"                     -> "statistics";
+  "observer.beta"                   -> "observer";
+  "rest"                            -> "jackson-core-2.8.9.jar";
+  "rest"                            -> "jackson-databind-2.8.9.jar";
+  "rest"                            -> "java.xml.bind (java.xml.bind)";
+  "rest"                            -> "not found";
+  "rest"                            -> "spark-core-2.6.0.jar";
+  "rest"                            -> "statistics";
+  "rest"                            -> "utils";
+  "statistics"                      -> "observer";
+  "main"                            -> "observer";
+  "main"                            -> "observer.alpha";
+  "main"                            -> "observer.beta";
+  "main"                            -> "persistence";
+  "main"                            -> "rest";
+  "main"                            -> "statistics";
+  "main"                            -> "utils";
+}
