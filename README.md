@@ -69,7 +69,7 @@ In the worst case scenario, we would have to manually convert the `.sh` files in
    - shellFX [./session-3-jshell/shellFX/](./session-3-jshell/shellFX/)
    - teamshell [./session-3-jshell/teamshell/](./session-3-jshell/teamshell/)
    
-- Refactoring/migration sessions
+- Session 4: Refactoring/migration sessions
    - Junit 5 migration to Java 9 modules [./session-4-refactoring-migration/01_junit5_to_java_9](session-4-refactoring-migration/01_junit5_to_java_9)
    - Building Java 9 Modules using Gradle (from monolith to modular) [./session-4-refactoring-migration/02_monolith_to_modular_using_gradle](session-4-refactoring-migration/02_monolith_to_modular_using_gradle)
         
