@@ -6,6 +6,12 @@
 
 ---
 
+---
+
+### Thanks to Nicolai Parlog for this exercise, among many other things, author of [Java 9 Module System](https://www.manning.com/books/the-java-9-module-system?a_aid=nipa&a_bid=869915cb). 
+
+---
+
 An example application for my book [_The Java 9 Module System_](https://www.manning.com/books/the-java-9-module-system?a_aid=nipa&a_bid=869915cb).
 The _Service Monitor_ is an application that observes a hypothetical network of microservices by
 
