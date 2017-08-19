@@ -15,7 +15,7 @@ ___
 
 ## Setup (all platforms)
 
-See [Download, install and verify JDK](setupAndVerifyJDK.md).
+See [Download, install and verify JDK](setupAndVerifyJDK.md) and return to this page to continue with the rest of the steps.
          
 #### Download and install `git` or `git-bash`
 
@@ -23,7 +23,7 @@ See [Download, install and verify JDK](setupAndVerifyJDK.md).
 
 #### Download and install the `tree` and `wget` command
 
-See [Download and install tree and wget](setupTreeAndWget.md).
+See [Download and install tree and wget](setupTreeAndWget.md) and return to this page to continue with the rest of the steps.
 
 #### Vagrant box
 
@@ -86,6 +86,7 @@ Each example is enclosed in a folder of its own containing bash scripts to compi
 - [http://mail.openjdk.java.net/pipermail/adoption-discuss/2015-September/001056.html](http://mail.openjdk.java.net/pipermail/adoption-discuss/2015-September/001056.html)
 
 ### Other resources
+- [Module System JSR (376)](https://www.jcp.org/en/jsr/detail?id=376)
 - [JDK 9 / Jigsaw Resources](./Java-9-Resources.md)
 - [Adopt OpenJDK homepage](https://adoptopenjdk.java.net/)
 - [Adopt OpenJDK: Getting Started Kit](http://bit.ly/1NUkPWw)
