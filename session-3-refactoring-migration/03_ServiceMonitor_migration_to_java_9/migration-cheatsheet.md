@@ -103,7 +103,7 @@ Notes/hints:
           monitor/rest/StatisticsEntity.java:[6,23] error: cannot find symbol
           [ERROR]   symbol:   class Generated
           [ERROR]   location: package javax.annotation
-          [ERROR] /home/satyasai/git-repos/jdk9-jigsaw/session-4-refactoring-migration/03_ServiceMonitor_migration_to_java_9/monitor.rest/src/main/java/monitor/rest/StatisticsEntity.java:[7,21] error: package javax.xml.bind.annotation is not visible
+          [ERROR]   .../jdk9-jigsaw/session-3-refactoring-migration/03_ServiceMonitor_migration_to_java_9/monitor.rest/src/main/java/monitor/rest/StatisticsEntity.java:[7,21] error: package javax.xml.bind.annotation is not visible
         
    - Missing Java EE modules have to be added manually at compile time (hint: maven compiler ...) - fixes the compiler error on `javax.xml.bind`
 
