@@ -30,7 +30,7 @@ Check the contents of both these script files (use the `cat` command or a text e
 
 Please do not get confused with the naming conventions of modules with that of packages, here's how they go:
 
-Modules in Java follow the the below convention, the name is the literal name of the folder itself:
+Modules in Java follow the below convention, the name is the literal name of the folder itself:
 
 | Module name         | File system naming*   |
 |---------------------|-----------------------|
