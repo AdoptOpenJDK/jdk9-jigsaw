@@ -86,6 +86,7 @@ Each example is enclosed in a folder of its own containing bash scripts to compi
 - [http://mail.openjdk.java.net/pipermail/adoption-discuss/2015-September/001056.html](http://mail.openjdk.java.net/pipermail/adoption-discuss/2015-September/001056.html)
 
 ### Other resources
+- [Module System JSR (376)](https://www.jcp.org/en/jsr/detail?id=376)
 - [JDK 9 / Jigsaw Resources](./Java-9-Resources.md)
 - [Adopt OpenJDK homepage](https://adoptopenjdk.java.net/)
 - [Adopt OpenJDK: Getting Started Kit](http://bit.ly/1NUkPWw)
