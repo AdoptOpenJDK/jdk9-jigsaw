@@ -15,7 +15,7 @@ ___
 
 ## Setup (all platforms)
 
-See [Download, install and verify JDK](setupAndVerifyJDK.md).
+See [Download, install and verify JDK](setupAndVerifyJDK.md) and return to this page to continue with the rest of the steps.
          
 #### Download and install `git` or `git-bash`
 
@@ -23,7 +23,7 @@ See [Download, install and verify JDK](setupAndVerifyJDK.md).
 
 #### Download and install the `tree` and `wget` command
 
-See [Download and install tree and wget](setupTreeAndWget.md).
+See [Download and install tree and wget](setupTreeAndWget.md) and return to this page to continue with the rest of the steps.
 
 #### Vagrant box
 
