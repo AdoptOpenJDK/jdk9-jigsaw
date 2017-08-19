@@ -1,8 +1,8 @@
-# ServiceMonitor - Migration
+# ServiceMonitor - Modularisation
 
 ---
 
-### Thanks to [Nicolai Parlog](https://blog.codefx.org/about-nicolai-parlog/) for this exercise, among many other things, author of [Java 9 Module System](https://www.manning.com/books/the-java-9-module-system?a_aid=nipa&a_bid=869915cb). 
+### Thanks to [Nicolai Parlog](https://blog.codefx.org/about-nicolai-parlog/) for letting us use his [original migration example](https://github.com/CodeFX-org/demo-java-9-migration) into this exercise, among many other good things, also author of the book [Java 9 Module System](https://www.manning.com/books/the-java-9-module-system?a_aid=nipa&a_bid=869915cb).  
 
 ---
 
@@ -29,20 +29,21 @@ In the project's root folder:
 	* `curl http://localhost:4567/stats/json`
 	* `curl http://localhost:4567/stats/json64 | base64 -d`
 	* `curl http://localhost:4567/stats/xml`
+	
+* scripts have also been provided (try them out in the end when it works):
+    * compile.sh
+    * run.sh
 
 ## Troubles
 
-### Migration
+### Modularization
 
-* internal `BASE64Encoder` is gone ~> use `Base64.getEncoder` instead
-* JAXB API is not present ~> add _java.xml.bind_
-* Common annotations are not present ~> add _java.xml.ws.annotations_
-* split package: `javax.annotation` between _java.xml.ws.annotations_ and _jsr-305_ ~> patch _java.xml.ws.annotations_
-* old version of Mockito causes warnings ~> update to newer version
-* application class loader is no longer a `URLClassLoader`
-
+* unexpressed transitive dependencies:
+	* _monitor_ ~> _monitor.statistics_ (for `Statistics` et al)
+	* _monitor.rest_ ~> _jackson.core_ (for `JsonProcessingException`)
+	
 ## Cheatsheet
 
-To help and give a bit more hints during the refactoring process refer to our [migration cheatsheet](migration-cheatsheet.md).
+To help and give a bit more hints during the refactoring process refer to our [modularisation cheatsheet](./modularisation-cheatsheet.md).
 
 Warning: but this might just take away all the fun learning.
