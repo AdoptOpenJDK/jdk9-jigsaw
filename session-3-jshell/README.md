@@ -399,6 +399,8 @@ Read all about the Java REPL at
 Follow Hendrik's hands-on presentation on JShell to learn about intermediate and advanced features:
 https://youtu.be/y868lMk6NtY?t=13156
 
+Watch this interesting [tutorial](http://thejavaspecialists.com/tutorials/008-JShell-new-Java-9-REPL-for-Interactive-Hacking.html) from [Heinz Kabutz](https://twitter.com/heinzkabutz).
+
 Try some more JShell examples:
 - https://zeroturnaround.com/rebellabs/the-best-java-9-language-and-api-improvements/
 - http://jakubdziworski.github.io/java/2016/07/31/jshell-getting-started-examples.html
