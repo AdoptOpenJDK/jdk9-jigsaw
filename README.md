@@ -45,7 +45,7 @@ For Windows users, if you use `git-bash` (recommended) or `cgywin` they should w
 
 In the worst case scenario, we would have to manually convert the `.sh` files into `.bat`, with minor tweaks should also work there. Happy to received a pull request for it.
 
-## Examples covered
+## Exercises / examples covered
 
 - Session 1: Jigsaw Introduction
    - Greetings [./session-1-jigsaw-intro/01_Greetings](./session-1-jigsaw-intro/01_Greetings)
