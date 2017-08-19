@@ -2,7 +2,7 @@
 
 ---
 
-### Thanks to [Nicolai Parlog](https://blog.codefx.org/about-nicolai-parlog/) for this exercise, among many other things, author of [Java 9 Module System](https://www.manning.com/books/the-java-9-module-system?a_aid=nipa&a_bid=869915cb). 
+### Thanks to [Nicolai Parlog](https://blog.codefx.org/about-nicolai-parlog/) for letting us use his [original migration example](https://github.com/CodeFX-org/demo-java-9-migration) into this exercise, among many other good things, also author of the book [Java 9 Module System](https://www.manning.com/books/the-java-9-module-system?a_aid=nipa&a_bid=869915cb).  
 
 ---
 
