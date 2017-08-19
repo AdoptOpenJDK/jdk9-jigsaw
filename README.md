@@ -45,7 +45,7 @@ For Windows users, if you use `git-bash` (recommended) or `cgywin` they should w
 
 In the worst case scenario, we would have to manually convert the `.sh` files into `.bat`, with minor tweaks should also work there. Happy to received a pull request for it.
 
-## Examples covered
+## Exercises / examples covered
 
 - Session 1: Jigsaw Introduction
    - Greetings [./session-1-jigsaw-intro/01_Greetings](./session-1-jigsaw-intro/01_Greetings)
@@ -69,9 +69,11 @@ In the worst case scenario, we would have to manually convert the `.sh` files in
    - shellFX [./session-3-jshell/shellFX/](./session-3-jshell/shellFX/)
    - teamshell [./session-3-jshell/teamshell/](./session-3-jshell/teamshell/)
    
-- Refactoring/migration sessions
-   - Junit 5 migration to Java 9 modules [./session-4-refactoring-migration/01_junit5_to_java_9](session-4-refactoring-migration/01_junit5_to_java_9)
-   - Building Java 9 Modules using Gradle (from monolith to modular) [./session-4-refactoring-migration/02_monolith_to_modular_using_gradle](session-4-refactoring-migration/02_monolith_to_modular_using_gradle)
+- Session 3: Refactoring/migration sessions
+   - Junit 5 migration to Java 9 modules [./session-3-refactoring-migration/01_junit5_to_java_9](session-3-refactoring-migration/01_junit5_to_java_9)
+   - Building Java 9 Modules using Gradle (from monolith to modular) [./session-3-refactoring-migration/02_monolith_to_modular_using_gradle](session-3-refactoring-migration/02_monolith_to_modular_using_gradle)
+   - ServiceMonitor - Migration from Java 8 to Java 9 [./session-3-refactoring-migration/03_ServiceMonitor_migration_to_java_9](session-3-refactoring-migration/03_ServiceMonitor_migration_to_java_9)
+   - ServiceMonitor - Modularisation to Java 9 Modules (Maven project) [./session-3-refactoring-migration/04_ServiceMonitor_modularisation_to_java_9](session-3-refactoring-migration/04_ServiceMonitor_modularisation_to_java_9)
         
 Each example is enclosed in a folder of its own containing bash scripts to compile, package and run the respective examples. Use these scripts for each of the examples.
 
