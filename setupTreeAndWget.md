@@ -49,3 +49,4 @@ Please install the ```tree``` command before moving forward:
 
         Thanks Richard Kolb ([@rjdkolb](http://github.com/rjdkolb)) for your continued support in this area.
 
+Now return to the [Download and install tree and wget](./README.md#download-and-install-the-tree-and-wget-command) section in the main [README.md](./README.md) file and continue with the rest of the steps.
