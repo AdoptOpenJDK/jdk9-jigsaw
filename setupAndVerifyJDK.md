@@ -141,3 +141,5 @@ If you don't like changing ```JAVA_HOME``` and ```PATH``` and you want to have a
 ```JAVA_HOME``` and ```PATH``` will use ```/usr/local/java/jdk``` forever.
 
 To change your local Java version, you only need to change the symbolic link.
+
+Now return to the [Download, install and verify JDK](./README.md#setup-all-platforms) section in the main [README.md](./README.md) file and continue with the rest of the steps.
