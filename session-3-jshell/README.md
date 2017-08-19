@@ -134,10 +134,21 @@ Now try some more REPL commands, at the `jshell` prompt:
 
 As mentioned earlier, Java 9 provides a JShell API that we can access from within our application:
 
-```java
-    JShell shell = JShell.create();
-    shell.eval("int x = 5;");
-    Stream<VarSnippet> vars = shell.variables();
+```
+   $ jshell --add-modules jdk.jshell
+```
+
+```
+    jshell> import jdk.jshell.*;
+    
+    jshell> JShell shell = JShell.create();
+    shell ==> jdk.jshell.JShell@3b2c72c2
+    
+    jshell> shell.eval("int x = 5;");
+    $3 ==> [SnippetEvent(snippet=Snippet:VariableKey(x)#1-int x = 5;,previousStatus=NONEXISTENT,status=VALID,isSignatureChange=true,causeSnippetnullvalue=5)]
+    
+    jshell> Stream<VarSnippet> vars = shell.variables();
+    vars ==> java.util.stream.ReferencePipeline$3@7674b62c
 ```
 
 The above block is not for the REPL.
