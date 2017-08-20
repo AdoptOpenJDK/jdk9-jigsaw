@@ -32,6 +32,7 @@
 - [Java 9 series: the JVM](https://www.voxxed.com/blog/2016/10/java-9-series-jvm/) (Katharine Beaumont)
 - [9 new features in Java 9](https://www.pluralsight.com/blog/software-development/java-9-new-features) (Sander Mak)
 - [A practical guide to Java 9 - compile, jar, run](https://sites.google.com/a/athaydes.com/renato-athaydes/posts/guidetojava9-compilejarrun) (Renato Athaydes)
+- [Java 9 tutorial](http://javasampleapproach.com/java-9-tutorial)
 
 ### Talks
 
@@ -110,6 +111,9 @@ Misc:
 
 * [Mastering Java 9](https://www.packtpub.com/application-development/mastering-java-9) (Packt; Martin Toshev)
 * [Java 9 with JShell](https://www.packtpub.com/application-development/java-9-jshell) (Packt; Gastón C. Hillar)
+* [Java 9 Programming By Example](https://www.amazon.co.uk/Java-Programming-Example-Peter-Verhas/dp/178646828X) (Packt; Peter Verhas) - available on [Safari Books online](https://www.safaribooksonline.com/library/view/java-9-programming/9781786468284/)
+* [Java 9 Revealed](http://www.springer.com/gb/book/9781484225912?wt_mc=PPC.Google%20AdWords.3.EPR436.GoogleShopping_Product_UK&gclid=EAIaIQobChMItLHMoK3e1QIVSLHtCh0v8QnCEAQYASABEgIEpfD_BwE) (Springer; Kishori Sharan)
+* [Java 8 & 9 in Action, 2nd Edition](https://www.manning.com/books/java-8-and-9-in-action) (Manning; Raoul-Gabriel Urma, Mario Fusco, Alan Mycroft)
 
 ### Repositories
 
@@ -194,13 +198,10 @@ Downsides/hurdles of Java 9 modularity and Project Jigsaw:
 * [Java 9 Modularity](http://shop.oreilly.com/product/0636920049494.do) (O’Reilly; Sander Mak and Paul Bakker)
 * [Java 9 Modularity Revealed - Project Jigsaw and Scalable Java Applications](http://www.apress.com/de/book/9781484227121) (Apress; Alexandru Jecan)
 * [Modular Programming in Java 9](https://www.packtpub.com/application-development/modular-programming-java-9) (Packt; Koushik Kothagal)
-* [Java 9 Cookbook](https://www.manning.com/books/the-java-9-module-system) (Packt; Mohamed Sanaulla, Nick Samoylov)
+* [Java 9 Cookbook](https://www.packtpub.com/application-development/java-9-cookbook) (Packt; Mohamed Sanaulla, Nick Samoylov)
 * [Mastering Java 9](https://www.packtpub.com/application-development/mastering-java-9) (Packt; Dr. Edward Lavieri, Peter Verhas)
-* [Java 9 Programming By Example](https://www.amazon.co.uk/Java-Programming-Example-Peter-Verhas/dp/178646828X) (Packt; Peter Verhas) - available on [Safari Books online](https://www.safaribooksonline.com/library/view/java-9-programming/9781786468284/)
-* [Java 9 Revealed](http://www.springer.com/gb/book/9781484225912?wt_mc=PPC.Google%20AdWords.3.EPR436.GoogleShopping_Product_UK&gclid=EAIaIQobChMItLHMoK3e1QIVSLHtCh0v8QnCEAQYASABEgIEpfD_BwE) (Springer; Kishori Sharan)
 * [Java 9 Recipes](http://www.springer.com/gb/book/9781484219751?wt_mc=PPC.Google%20AdWords.3.EPR436.GoogleShopping_Product_UK&gclid=EAIaIQobChMItLHMoK3e1QIVSLHtCh0v8QnCEAQYAiABEgJGJPD_BwE) (Springer; Josh Juneau)
 * [Java 9 for Programmers](https://wordery.com/java-9-for-programmers-paul-deitel-9780134777566?currency=GBP&gtrck=L2JHY3F6WWsrbDhZUjI1cDU5MDgzZXQyVlVJSzVZdEx1RHhVc212V3NxNlA3a0VXYlU1cEJMLzNsMHErQnNiaTNZTHFvWEVjOGdEMjFaRXMyTkloWXc9PQ&gclid=EAIaIQobChMItLHMoK3e1QIVSLHtCh0v8QnCEAQYAyABEgJ0MfD_BwE) (Pearson Education (US); Paul Deitel)
-* [Java 8 & 9 in Action, 2nd Edition](https://www.manning.com/books/java-8-and-9-in-action) (Manning; Raoul-Gabriel Urma, Mario Fusco, Alan Mycroft)
 * [Java 9 and beyond](https://www.infoq.com/minibooks/emag-java-9) (InfoQ)
 
 ### Courses
@@ -214,6 +215,7 @@ Downsides/hurdles of Java 9 modularity and Project Jigsaw:
 - [java9-modularity/easytext](https://github.com/java9-modularity/easytext) (Sander Mak, Paul Bakker; sample app from [_Java 9 Modularity_](http://shop.oreilly.com/product/0636920049494.do)
 - [CodeFX-org/demo-jigsaw-advent-calendar](https://github.com/CodeFX-org/demo-jigsaw-advent-calendar) (Nicolai Parlog)
 - [CodeFX-org/demo-jpms-monitor](https://github.com/CodeFX-org/demo-jpms-monitor) (Nicolai Parlog, sample app from _[Java 9 Module System](https://www.manning.com/books/the-java-9-module-system?a_aid=nipa&a_bid=869915cb)_)
+- [jigsaw-sample](https://github.com/sjmaple/jigsaw-sample) (Simon Maple)
 
 #### Migrations / Refactorings
 
