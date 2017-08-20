@@ -196,13 +196,17 @@ Downsides/hurdles of Java 9 modularity and Project Jigsaw:
 
 * [Java 9 Module System](https://www.manning.com/books/the-java-9-module-system?a_aid=nipa&a_bid=869915cb) (Manning; Nicolai Parlog)
 * [Java 9 Modularity](http://shop.oreilly.com/product/0636920049494.do) (O’Reilly; Sander Mak and Paul Bakker)
-* [Java 9 Modularity - Project Jigsaw and Scalable Java Applications](http://www.apress.com/de/book/9781484227121) (Apress; Alexandru Jecan)
+* [Java 9 Modularity Revealed - Project Jigsaw and Scalable Java Applications](http://www.apress.com/de/book/9781484227121) (Apress; Alexandru Jecan)
 * [Modular Programming in Java 9](https://www.packtpub.com/application-development/modular-programming-java-9) (Packt; Koushik Kothagal)
 * [Java 9 Cookbook](https://www.packtpub.com/application-development/java-9-cookbook) (Packt; Mohamed Sanaulla, Nick Samoylov)
 * [Mastering Java 9](https://www.packtpub.com/application-development/mastering-java-9) (Packt; Dr. Edward Lavieri, Peter Verhas)
 * [Java 9 Recipes](http://www.springer.com/gb/book/9781484219751?wt_mc=PPC.Google%20AdWords.3.EPR436.GoogleShopping_Product_UK&gclid=EAIaIQobChMItLHMoK3e1QIVSLHtCh0v8QnCEAQYAiABEgJGJPD_BwE) (Springer; Josh Juneau)
 * [Java 9 for Programmers](https://wordery.com/java-9-for-programmers-paul-deitel-9780134777566?currency=GBP&gtrck=L2JHY3F6WWsrbDhZUjI1cDU5MDgzZXQyVlVJSzVZdEx1RHhVc212V3NxNlA3a0VXYlU1cEJMLzNsMHErQnNiaTNZTHFvWEVjOGdEMjFaRXMyTkloWXc9PQ&gclid=EAIaIQobChMItLHMoK3e1QIVSLHtCh0v8QnCEAQYAyABEgJ0MfD_BwE) (Pearson Education (US); Paul Deitel)
 * [Java 9 and beyond](https://www.infoq.com/minibooks/emag-java-9) (InfoQ)
+
+### Courses
+
+* [Java 9 Modularity: First Look](https://www.pluralsight.com/courses/java-9-modularity-first-look) (Pluralsight; subscription required, trial available)
 
 ### Repositories
 
