@@ -8,12 +8,14 @@
 /*
  * Source (compile) `Build_Session_1_JigsawIntro_03_MultiModuleCompilation.java` into this jshell session.
  */
-/open session-1-jigsaw-intro/Build_Session_1_JigsawIntro_03_MultiModuleCompilation.java
+
+// TODO Source (compile) `Build_Session_1_JigsawIntro_03_MultiModuleCompilation.java` into this jshell session.
 
 /*
  * Invoke the static `main(String...)` method on our build class w/o any argument.
  */
-Build_Session_1_JigsawIntro_03_MultiModuleCompilation.main()
+
+// TODO Invoke the static `main(String...)` method on our build class w/o any argument.
 
 /*
  * Close this jshell session.

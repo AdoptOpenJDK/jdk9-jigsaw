@@ -36,25 +36,25 @@ class Build_Session_1_JigsawIntro_03_MultiModuleCompilation {
      *   option values. See command dump below.
      *
      *
-     * - javac.moduleSourcePath = List.of(source);
+     * - javac.moduleSourcePath = // TODO
      *
      *   Define single Path instance (`source`) as the module path. This is
      *   where `javac` finds input source files for multiple modules. It is
      *   used by the terminal `run()` method, too.
      *
      *
-     * - javac.destinationPath = modules;
+     * - javac.destinationPath = // TODO
      *
      *   Set destination directory for compiled modules files.
      *
      *
-     * - javac.run();
+     * - // TODO
      *
      *   Execute `javac` with configured options applied and all .java files
      *   found by walking `javac.moduleSourcePath` recursively added.
      *
      *
-     * Command dump:
+     * Expected command dump:
      *  .
      *  | javac
      *  | -deprecation
@@ -73,14 +73,14 @@ class Build_Session_1_JigsawIntro_03_MultiModuleCompilation {
      *  '
      */
     JdkTool.Javac javac = new JdkTool.Javac();
-    javac.moduleSourcePath = List.of(source);
-    javac.destinationPath = modules;
-    javac.run();
+
+    // TODO assign properties to the `javac` instance fields
+    // TODO launch `javac`
 
     /*
      * Start the module.
      *
-     * Command dump:
+     * Expected command dump:
      *  .
      *  | java
      *  | -p
@@ -89,6 +89,9 @@ class Build_Session_1_JigsawIntro_03_MultiModuleCompilation {
      *  |   com.greetings/com.greetings.Main
      *  '
      */
-    JdkTool.run("java", "-p", modules, "-m", "com.greetings/com.greetings.Main");
+
+    // TODO Launch the compiled module using either by invoking the static `run` method of `JdkTool`
+    // or by creating, configuring and running a `JdkTool.Java` instance.
+
   }
 }

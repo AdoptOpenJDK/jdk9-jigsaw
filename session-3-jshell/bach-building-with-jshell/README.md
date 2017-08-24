@@ -9,9 +9,9 @@ See https://github.com/sormuras/bach for details.
 
 Note: you should first work through the exercises and comments of the originating `session-1-jigsaw-intro` session.
 
-## How to use it
+## Learn to use it
 
-The following examples demonstrate how to convert/port files like `compile.sh` or `run.sh` into jshell scripts (`.jsh`) or even into 100% Java classes (`.java`) that can be executed from within your IDE of choice.
+The following guide helps you how to convert/port files like `compile.sh` or `run.sh` into jshell scripts (`.jsh`) or even into 100% Java classes (`.java`) that can be executed from within your IDE of choice.
 
 ### Example I
 
