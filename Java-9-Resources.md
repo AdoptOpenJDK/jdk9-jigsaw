@@ -234,4 +234,5 @@ Downsides/hurdles of Java 9 modularity and Project Jigsaw:
 - [codetojoy/WarO_Java_9_Maven](https://github.com/codetojoy/WarO_Java_9_Maven) (Michael Easter; example using Maven 3.5.0)
 - [codetojoy/easter_eggs_for_java_9](https://github.com/codetojoy/easter_eggs_for_java_9) (Michael Easter; various examples including jlink and patching)
 - [jdkapidiff](https://github.com/gunnarmorling/jdkapidiff) (Gunnar Morling; generator for customizable reports of all API changes between JDK 8 and 9)
-
+- [Visualizaiton: Java 9 - JDK Module Dependencies](https://wildcraft.github.io/2017/08/16/jdk-module-dependencies/) (Narendran Solai Sridharan)
+- [Visualizaiton: Java Module Configuration - Rail Road Diagram](https://wildcraft.github.io/2017/08/13/java-module-configuration/) (Narendran Solai Sridharan)
