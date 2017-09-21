@@ -79,6 +79,14 @@ In the worst case scenario, we would have to manually convert the `.sh` files in
         
 Each example is enclosed in a folder of its own containing bash scripts to compile, package and run the respective examples. Use these scripts for each of the examples.
 
+## Community contributions
+
+See [guidelines on how to contribute](CONTRIBUTING.md).
+
+## License
+
+See [License](LICENSE) document to find out about the licensing terms and conditions.
+
 ## Resources
 
 ### Must reads

@@ -45,4 +45,6 @@ Furthermore, please ensure your pull request follows the following guidelines:
 
 Thank you for your suggestions!
 
+See [License](LICENSE) document to find out about the licensing terms and conditions.
+
 **Let this repo be a brain-dump of every way to do things in JDK 9 and Jigsaw, please this repo with everyone in your dev. communities and local user groups**
