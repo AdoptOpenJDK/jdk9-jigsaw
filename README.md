@@ -33,6 +33,8 @@ See [Download and install tree and wget](setupTreeAndWget.md) and return to this
 
 - Install the latest IDE (IntelliJ, Eclipse, NetBeans - paid or community version) that supports JDK 9 EA, once installed configure the IDE to pickup the JDK 9 EA installed in the previous steps.
 
+See [Download, install and configure Eclipse Oxygen for JDK9](setupEclipseOxygen.md).
+
 #### Other preparations
 
 - Get familiar with the command-line a bit as we will be using much of it during the weekend
