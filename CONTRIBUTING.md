@@ -2,17 +2,14 @@
 
 _Exercises  / examples_
 
-Please add as many exercises and examples to this repo, the `master` branch is the place to put your exercises that need to be solved. Or examples that have comments on what it is doing, or how to use a JDK9 features or how it has been used across the whole project.
+Please add as many exercises and examples to this repo, the `master` branch is the place to put your exercises that need to be solved. Or examples that have comments on what it is doing, or how to use a JDK9 features or how it has been used across the whole project. Have a look at how we have already created some of the exercises under the [Session 3: Refactoring/migration sessions](https://github.com/AdoptOpenJDK/jdk9-jigsaw/tree/master/session-3-refactoring-migration).
+If you know of a feature or cool trick in JDK 9, then this is the place to put it.
+
+#### Pull Requests 
 
 Ensure solutions to exercises are placed in the `exercise-solutions` branch. Typically examples can be (and should) be placed in both `master` and `exercise-solutions` branches.
 
-If you know of a feature or cool trick in JDK 9, then this is the place to put it.
-
-Have a look at how we have already created some of the exercises under the [Session 3: Refactoring/migration sessions](https://github.com/AdoptOpenJDK/jdk9-jigsaw/tree/master/session-3-refactoring-migration).
-
 We also have branches called `ant-version`, and `maven-branch` which is a near-literal translation of the exercises in the `master` branch into the respective build systems. 
-
-**Let this repo be a brain-dump of every way to do things in JDK 9 and Jigsaw.**
 
 _[Java 9 Resources file](https://github.com/AdoptOpenJDK/jdk9-jigsaw/blob/master/Java-9-Resources.md)_
 
@@ -39,11 +36,15 @@ Self-promotion is not encouraged, but your suggestion will of course be approved
 
 Furthermore, please ensure your pull request follows the following guidelines:
 
-* Please search previous suggestions before making a new one, as yours may be a duplicate.
-* Please make an individual pull request for each suggestion.
-* Use the following format for sharing resources in : \[RESOURCE\]\(LINK\) - DESCRIPTION.
-* New categories or improvements to the existing categorization are welcome.
-* Check your spelling and grammar.
-* Make sure your text editor is set to remove trailing whitespace.
+* Please search previous suggestions before making a new one, as yours may be a duplicate
+* Please make an individual pull request for each suggestion
+* Use the format that exists in the [Java 9 Resources file](https://github.com/AdoptOpenJDK/jdk9-jigsaw/blob/master/Java-9-Resources.md) file, at the moment 
+* New categories or improvements to the existing categorization are welcome
+* Check your spelling and grammar
+* Make sure your text editor is set to remove trailing whitespace
 
 Thank you for your suggestions!
+
+See [License](LICENSE) document to find out about the licensing terms and conditions.
+
+**Let this repo be a brain-dump of every way to do things in JDK 9 and Jigsaw, please this repo with everyone in your dev. communities and local user groups**
