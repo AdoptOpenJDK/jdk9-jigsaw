@@ -46,6 +46,7 @@ See [Download, install and configure Eclipse Oxygen for JDK9](setupEclipseOxygen
 For Windows users, if you use `git-bash` (recommended) or `cgywin` they should work for you. 
 
 In the worst case scenario, we would have to manually convert the `.sh` files into `.bat`, with minor tweaks should also work there. Happy to received a pull request for it.
+Or you could use **bach**, a platform independent Java Shell Builder. It's usage is explained in session-3-jshell.
 
 ## Exercises / examples covered
 
@@ -70,6 +71,7 @@ In the worst case scenario, we would have to manually convert the `.sh` files in
    - JShell examples [./session-3-jshell/JShell-Examples](./session-3-jshell/JShell-Examples)
    - shellFX [./session-3-jshell/shellFX/](./session-3-jshell/shellFX/)
    - teamshell [./session-3-jshell/teamshell/](./session-3-jshell/teamshell/)
+   - bach - Java Shell Builder [./session-3-jshell/bach-building-with-jshell](./session-3-jshell/bach-building-with-jshell)
    
 - Session 3: Refactoring/migration sessions
    - Junit 5 migration to Java 9 modules [./session-3-refactoring-migration/01_junit5_to_java_9](session-3-refactoring-migration/01_junit5_to_java_9)
