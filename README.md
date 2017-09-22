@@ -81,6 +81,14 @@ Or you could use **bach**, a platform independent Java Shell Builder. It's usage
         
 Each example is enclosed in a folder of its own containing bash scripts to compile, package and run the respective examples. Use these scripts for each of the examples.
 
+## Community contributions
+
+See [guidelines on how to contribute](CONTRIBUTING.md).
+
+## License
+
+See [License](LICENSE) document to find out about the licensing terms and conditions.
+
 ## Resources
 
 ### Must reads
