@@ -45,6 +45,19 @@ Furthermore, please ensure your pull request follows the following guidelines:
 
 Thank you for your suggestions!
 
+#### License
+
 See [License](LICENSE) document to find out about the licensing terms and conditions.
 
-**Let this repo be a brain-dump of every way to do things in JDK 9 and Jigsaw, please this repo with everyone in your dev. communities and local user groups**
+#### Social media
+
+Please share this repo with everyone in your social network, dev. communities and local user groups. 
+
+Some of the actions to do when you have landed here:
+- [Watch the project](https://github.com/AdoptOpenJDK/jdk9-jigsaw/subscription)
+- [Stargazers of the project](https://github.com/AdoptOpenJDK/jdk9-jigsaw/stargazers)
+- [Fork the project](https://github.com/AdoptOpenJDK/jdk9-jigsaw/graphs/contributors#fork-destination-box)
+- [Checkout the project activity radiator](https://github.com/AdoptOpenJDK/jdk9-jigsaw/pulse)
+- [Stats and graphs on our star contributors](https://github.com/AdoptOpenJDK/jdk9-jigsaw/graphs/contributors)  
+
+**Let this repo be a brain-dump of every way to do things in JDK 9 and Jigsaw**
