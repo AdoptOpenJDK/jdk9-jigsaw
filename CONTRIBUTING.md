@@ -5,6 +5,14 @@ _Exercises  / examples_
 Please add as many exercises and examples to this repo, the `master` branch is the place to put your exercises that need to be solved. Or examples that have comments on what it is doing, or how to use a JDK9 features or how it has been used across the whole project. Have a look at how we have already created some of the exercises under the [Session 3: Refactoring/migration sessions](https://github.com/AdoptOpenJDK/jdk9-jigsaw/tree/master/session-3-refactoring-migration).
 If you know of a feature or cool trick in JDK 9, then this is the place to put it.
 
+##### Testing
+
+Test your work under the respective platforms i.e. Linux, Mac and Windows, if not, please specify in your pull request which platforms need testing and what to do.
+
+##### Platform coverage
+
+Try to always provide exercises / examples / solutions for all three platforms, otherwise please let us know the platforms which are not covered. 
+
 #### Pull Requests 
 
 Ensure solutions to exercises are placed in the `exercise-solutions` branch. Typically examples can be (and should) be placed in both `master` and `exercise-solutions` branches.
