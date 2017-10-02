@@ -43,12 +43,23 @@ See [Download, install and configure Eclipse Oxygen for JDK9](setupEclipseOxygen
 
 **Note:** the bash files provided should work on Linux and in theory on the MacOS as well.
 
-For Windows users, if you use `git-bash` (recommended) or `cgywin` they should work for you. 
+##### Windows users
 
-In the worst case scenario, we would have to manually convert the `.sh` files into `.bat`, with minor tweaks should also work there. Happy to received a pull request for it.
-Or you could use **bach**, a platform independent Java Shell Builder. It's usage is explained in session-3-jshell.
+ - if you use `git-bash` (recommended) or `cgywin` should work for you - run the `.sh` scripts in one of the the environments. In the worst case scenario, we would have to manually convert the `.sh` files into `.bat`, with minor tweaks should also work there. Happy to receive a pull request for it. Or you could use **bach**, a platform independent Java Shell Builder. It's usage is explained in `session-3-jshell`.
+ - check if the literal JDK path (or `%JAVA_HOME%`) has been added to the `PATH` environment variable or add it manually
+ - ensure the JDK is installed in a folder where the name does not have a space in it 
+ - in case folder name looks something `C:\Program files...`, ensure that (name does not contain spaces):
+    - the path to the JDK in `JAVA_HOME` has `C:\Program~1` instead of `C:\Program files...`
+    - the environment variable `PATH` refers to the `JAVA_HOME` environment variable
+    - the environment variable `CLASSPATH` refers to the `JAVA_HOME` environment variable
+ - in some instances `jlink` was not yet available when JDK is installed via the `.exe` file, even after the above path settings were applied (please verify beforehand)
+
+##### MacOSX users
+ - `jlink` is not yet available when JDK is installed via the `.dmg` file (please verify beforehand)
 
 ## Exercises / examples covered
+
+Please ensure you have verified that the necessary JDK programs work in your environment with the help of the [Download, install and verify JDK](setupAndVerifyJDK.md) resource. 
 
 - Session 1: Jigsaw Introduction
    - Greetings [./session-1-jigsaw-intro/01_Greetings](./session-1-jigsaw-intro/01_Greetings)
