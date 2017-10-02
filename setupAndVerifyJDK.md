@@ -82,6 +82,8 @@
 
 ##### Verify JDK installation
 
+###### java
+
 Say you have downloaded and installed the JDK 9 EA (build 165) binary from the above step, try the below commands:
 
 ```
@@ -89,22 +91,81 @@ Say you have downloaded and installed the JDK 9 EA (build 165) binary from the a
 ```
 
 As output you should get something like this:
+
 ```
     java version "9-ea"
     Java(TM) SE Runtime Environment (build 9-ea+165)
     Java HotSpot(TM) 64-Bit Server VM (build 9-ea+165, mixed mode)
 ```
 
-And
+###### javac
 
 ```
     $ javac -version
 ```
 
 As output you should get something like this:
+
 ```
     javac 9-ea
 ```
+
+###### jlink
+
+Verify if `jlink` is available in your current environment:
+
+```
+    $ jlink --version
+```
+
+As output you should get something like this:
+
+```
+    9
+```
+
+###### jshell
+
+Verify if `jshell` is available in your current environment:
+
+```
+    $ jshell --version
+```
+
+As output you should get something like this:
+
+```
+    jshell 9
+```
+
+###### jdeps
+
+Verify if `jdeps` is available in your current environment:
+
+```
+    $ jdeps --version
+```
+
+As output you should get something like this:
+
+```
+    9
+```
+
+###### jmod
+
+Verify if `jmod` is available in your current environment:
+
+```
+    $ jmod --version
+```
+
+As output you should get something like this:
+
+```
+    9
+```
+
 
 ##### Alternative to keep JAVA\_HOME and PATH
 
