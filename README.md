@@ -82,6 +82,7 @@ Please ensure you have verified that the necessary JDK programs work in your env
    - JShell examples [./session-3-jshell/JShell-Examples](./session-3-jshell/JShell-Examples)
    - shellFX [./session-3-jshell/shellFX/](./session-3-jshell/shellFX/)
    - teamshell [./session-3-jshell/teamshell/](./session-3-jshell/teamshell/)
+   - bach - Java Shell Builder [./session-3-jshell/bach-building-with-jshell](./session-3-jshell/bach-building-with-jshell)
    
 - Session 3: Refactoring/migration sessions
    - Junit 5 migration to Java 9 modules [./session-3-refactoring-migration/01_junit5_to_java_9](session-3-refactoring-migration/01_junit5_to_java_9)
