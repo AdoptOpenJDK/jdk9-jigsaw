@@ -69,3 +69,7 @@ Some of the actions to do when you have landed here:
 - [Stats and graphs on our star contributors](https://github.com/AdoptOpenJDK/jdk9-jigsaw/graphs/contributors)  
 
 **Let this repo be a brain-dump of every way to do things in JDK 9 and Jigsaw**
+
+---
+
+![I need you for Java SE 9 development](I-need-you-for-Java-SE-9-development.png "I need you for Java SE 9 development")
