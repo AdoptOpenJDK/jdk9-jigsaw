@@ -58,6 +58,7 @@ Collection Factories:
 
 - [JEP 269](http://openjdk.java.net/jeps/269): Convenience Factory Methods for Collections
 - [Java 9 series: Convenience Factory Methods for Collections](https://www.voxxed.com/blog/2017/01/java-9-series-factory-methods-collections/) (Katharine Beaumont)
+- [Immutable Collections in Java 9](http://www.javaspecialists.eu/archive/Issue248.html) (Heinz Kabutz)
 
 Stream/Optional Improvements:
 
@@ -100,12 +101,18 @@ Ahead-of-Time Compilation:
 - [JEP 295](http://openjdk.java.net/jeps/295): Ahead-of-Time Compilation
 - [Native Ahead-of-Time Compilation in Java](https://www.voxxed.com/blog/2016/10/native-ahead-time-compilation-java/) (Mite Mitreski)
 
+@Contended:
+
+- [JEP 143](http://openjdk.java.net/jeps/143): Improve Contended Locking
+- [@Contended @since 9](http://www.javaspecialists.eu/archive/Issue249.html) (Heinz Kabutz)
+
 Misc:
 
 - [JEP 158](http://openjdk.java.net/jeps/158): Unified JVM Logging
 - G1 related JEPs (3 of them)
 - JEPs related to a number of security improvements
 - JEPs related to a number of platform improvements
+- [Interfacing with Messy Humans](http://www.javaspecialists.eu/archive/Issue240.html) (Heinz Kabutz)
 
 ### Books
 
