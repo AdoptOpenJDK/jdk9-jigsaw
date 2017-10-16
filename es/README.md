@@ -2,22 +2,22 @@
 
 Ejemplos de algunas de las nuevas caracteristicas de Jigsaw liberadas en el la versión Early Access build de JDK9.
 
-Many of the examples here are directly from the Project Jigsaw: Module System Quick-Start Guide, see [http://openjdk.java.net/projects/jigsaw/quick-start](http://openjdk.java.net/projects/jigsaw/quick-start) but we have also contributions from the Java community.
+Algunos de los ejemplos son tomados del Projecto Jigsaw: Module System Quick-Start Guide, para más información visita [http://openjdk.java.net/projects/jigsaw/quick-start](http://openjdk.java.net/projects/jigsaw/quick-start) también tenemos contribuiciones de la comunidad Java.
 
 ___
 
 
-####   Please note you are in the `master` branch which contains exercises which need to be solved by looking at documentation or resources provided in this repo. Hints may be provided within the source or script files. If you hit a roadblock and really want to see a possible solution you can switch to the `exercise-solutions` branch for that. 
+####   Por favor  tenga presente que usted esta en el `master` branch el cual contiene ejercicios que necesitan ser resueltos consultando la documentación o los recursos proveidos en este repositorio. Pistas pueden ser proveidas dentro del código fuente o en los archivos de scripts. Si no encuentras la solución y quieres ver una posible solución puede cambiar al branch `exercise-solutions`. 
 
-####   Looking at the solutions can take away the challenge behind solving the exercises. Stay on the `master` branch in case you would like to continue to have fun solving the exercises and working through the challenges.
+####   Ver directamente la solución lo aleja del reto de resolver los ejercicios. Mantengase en el `master` branch en el caso de que quiera continuar y divertise solucionando los  ejercicios y trabajando en este reto.
 
 ___
 
-## Setup (all platforms)
+## Configuracion (todas las plataformas)
 
-See [Download, install and verify JDK](setupAndVerifyJDK.md) and return to this page to continue with the rest of the steps.
+Ver [Download, install and verify JDK](setupAndVerifyJDK.md) y regrese a esta página para continuar con el resto de pasos.
          
-#### Download and install `git` or `git-bash`
+#### Descarga e installa `git` o `git-bash`
 
 - Ensure you have a `git` client installed on your local machine/VM/vagrant box, for Windows users `git-bash` is recommended 
 
