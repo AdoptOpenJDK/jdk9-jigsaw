@@ -15,15 +15,15 @@ ___
 
 ## Configuracion (todas las plataformas)
 
-Ver [Descarga, installa y verifica verify JDK](setupAndVerifyJDK.md) y regrese a esta página para continuar con el resto de pasos.
+Ver [Descargue e instale y verifique JDK](setupAndVerifyJDK.md) y regrese a esta página para continuar con el resto de pasos.
          
-#### Descarga e instala `git` o `git-bash`
+#### Descargue e instale `git` o `git-bash`
 
 - Asegurese de tener un cliente `git` instalado en su máquina local machine/VM/vagrant box, para usuarios Windows `git-bash` es recomendado 
 
-#### Descarga e instala los comandos `tree` y `wget`
+#### Descargue e instale los comandos `tree` y `wget`
 
-Ver [Descarga e instala tree y wget](setupTreeAndWget.md) y regrese a esta página para continuar con el resto de los pasos.
+Ver [Descargue e instale tree y wget](setupTreeAndWget.md) y regrese a esta página para continuar con el resto de los pasos.
 
 #### Vagrant box
 
@@ -59,7 +59,7 @@ Ver [Descargar, instalar y configurar Eclipse Oxygen para JDK9](../setupEclipseO
 
 ## Ejercicios / ejemplos cubiertos
 
-Por favor asegurese de haber verificado que lo el JDK funcionen en su ambiente con la ayuda del documento [Descarga, instala y verifica JDK](setupAndVerifyJDK.md). 
+Por favor asegurese de haber verificado que lo el JDK funcionen en su ambiente con la ayuda del documento [Descargue e instale y verifique JDK](setupAndVerifyJDK.md). 
 
 - Sesión 1: Jigsaw Introduction
    - Greetings [./session-1-jigsaw-intro/01_Greetings](.././session-1-jigsaw-intro/01_Greetings)
