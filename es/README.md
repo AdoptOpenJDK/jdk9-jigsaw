@@ -116,4 +116,4 @@ Vea [Licencia](LICENSE) documento para leer los términos y condiciones de uso.
 
 ---
 
-![Yo te necesito para el desarrollo de Java SE 9](I-need-you-for-Java-SE-9-development.png "Yo te necesito para el desarrollo de Java SE 9")
+![Yo te necesito para el desarrollo de Java SE 9](../I-need-you-for-Java-SE-9-development.png "Yo te necesito para el desarrollo de Java SE 9")
