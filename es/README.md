@@ -33,7 +33,7 @@ Ver [Descarga e instala tree y wget](setupTreeAndWget.md) y regrese a esta pági
 
 - Instale la última version de su IDE preferido (IntelliJ, Eclipse, NetBeans - paid or community version) que soporte JDK 9 EA, una vez instalado configure el IDE para que utilice el JDK 9 EA instalado en los pasos anteriores.
 
-Ver [Descargar, instalar y configurar Eclipse Oxygen para JDK9](setupEclipseOxygen.md).
+Ver [Descargar, instalar y configurar Eclipse Oxygen para JDK9](../setupEclipseOxygen.md).
 
 #### Otras preparaciones
 
@@ -62,43 +62,43 @@ Ver [Descargar, instalar y configurar Eclipse Oxygen para JDK9](setupEclipseOxyg
 Por favor asegurese de haber verificado que lo el JDK funcionen en su ambiente con la ayuda del documento [Descarga, instala y verifica JDK](setupAndVerifyJDK.md). 
 
 - Sesión 1: Jigsaw Introduction
-   - Greetings [./session-1-jigsaw-intro/01_Greetings](./session-1-jigsaw-intro/01_Greetings)
-   - Greetings world [./session-1-jigsaw-intro/02_GreetingsWorld](./session-1-jigsaw-intro/02_GreetingsWorld)
-   - Multi-module compilation [./session-1-jigsaw-intro/03_MultiModuleCompilation](./session-1-jigsaw-intro/03_MultiModuleCompilation)
-   - Packaging [./session-1-jigsaw-intro/04_Packaging](./session-1-jigsaw-intro/04_Packaging)
-   - Missing requires [./session-1-jigsaw-intro/05_Missing_requires](./session-1-jigsaw-intro/05_Missing_requires)
-   - Missing exports [./session-1-jigsaw-intro/05_Missing_exports](./session-1-jigsaw-intro/05_Missing_exports)
-   - Services [./session-1-jigsaw-intro/06_Services](./session-1-jigsaw-intro/06_Services)
-   - javac --patch-module option [./session-1-jigsaw-intro/07_patch_module_option](session-1-jigsaw-intro/07_patch_module_option)
-   - Modules export conflict [./session-1-jigsaw-intro/08_ModulesExportConflict](session-1-jigsaw-intro/08_ModulesExportConflict)
-   - Automatic modules [./session-1-jigsaw-intro/09_Automodules](session-1-jigsaw-intro/09_Automodules)
+   - Greetings [./session-1-jigsaw-intro/01_Greetings](.././session-1-jigsaw-intro/01_Greetings)
+   - Greetings world [./session-1-jigsaw-intro/02_GreetingsWorld](.././session-1-jigsaw-intro/02_GreetingsWorld)
+   - Multi-module compilation [./session-1-jigsaw-intro/03_MultiModuleCompilation](.././session-1-jigsaw-intro/03_MultiModuleCompilation)
+   - Packaging [./session-1-jigsaw-intro/04_Packaging](.././session-1-jigsaw-intro/04_Packaging)
+   - Missing requires [./session-1-jigsaw-intro/05_Missing_requires](.././session-1-jigsaw-intro/05_Missing_requires)
+   - Missing exports [./session-1-jigsaw-intro/05_Missing_exports](.././session-1-jigsaw-intro/05_Missing_exports)
+   - Services [./session-1-jigsaw-intro/06_Services](.././session-1-jigsaw-intro/06_Services)
+   - javac --patch-module option [./session-1-jigsaw-intro/07_patch_module_option](../session-1-jigsaw-intro/07_patch_module_option)
+   - Modules export conflict [./session-1-jigsaw-intro/08_ModulesExportConflict](../session-1-jigsaw-intro/08_ModulesExportConflict)
+   - Automatic modules [./session-1-jigsaw-intro/09_Automodules](../session-1-jigsaw-intro/09_Automodules)
 
 - Sesión 2: JLink
-   - JLink example [./session-2-jlink/01_JLink](session-2-jlink/01_JLink)
-   - JMod example [./session-2-jlink/02_JMod](session-2-jlink/02_JMod) 
+   - JLink example [./session-2-jlink/01_JLink](../session-2-jlink/01_JLink)
+   - JMod example [./session-2-jlink/02_JMod](../session-2-jlink/02_JMod) 
 
 - Sesión 3: JShell
-   - JShell quick tutorial [./session-3-jshell/](./session-3-jshell/)
-   - JShell examples [./session-3-jshell/JShell-Examples](./session-3-jshell/JShell-Examples)
-   - shellFX [./session-3-jshell/shellFX/](./session-3-jshell/shellFX/)
-   - teamshell [./session-3-jshell/teamshell/](./session-3-jshell/teamshell/)
-   - bach - Java Shell Builder [./session-3-jshell/bach-building-with-jshell](./session-3-jshell/bach-building-with-jshell)
+   - JShell quick tutorial [./session-3-jshell/](.././session-3-jshell/)
+   - JShell examples [./session-3-jshell/JShell-Examples](.././session-3-jshell/JShell-Examples)
+   - shellFX [./session-3-jshell/shellFX/](.././session-3-jshell/shellFX/)
+   - teamshell [./session-3-jshell/teamshell/](.././session-3-jshell/teamshell/)
+   - bach - Java Shell Builder [./session-3-jshell/bach-building-with-jshell](.././session-3-jshell/bach-building-with-jshell)
    
 - Sesión 3: Refactoring/migration sessions
-   - Junit 5 migration to Java 9 modules [./session-3-refactoring-migration/01_junit5_to_java_9](session-3-refactoring-migration/01_junit5_to_java_9)
-   - Building Java 9 Modules using Gradle (from monolith to modular) [./session-3-refactoring-migration/02_monolith_to_modular_using_gradle](session-3-refactoring-migration/02_monolith_to_modular_using_gradle)
-   - ServiceMonitor - Migration from Java 8 to Java 9 [./session-3-refactoring-migration/03_ServiceMonitor_migration_to_java_9](session-3-refactoring-migration/03_ServiceMonitor_migration_to_java_9)
-   - ServiceMonitor - Modularisation to Java 9 Modules (Maven project) [./session-3-refactoring-migration/04_ServiceMonitor_modularisation_to_java_9](session-3-refactoring-migration/04_ServiceMonitor_modularisation_to_java_9)
+   - Junit 5 migration to Java 9 modules [./session-3-refactoring-migration/01_junit5_to_java_9](../session-3-refactoring-migration/01_junit5_to_java_9)
+   - Building Java 9 Modules using Gradle (from monolith to modular) [./session-3-refactoring-migration/02_monolith_to_modular_using_gradle](../session-3-refactoring-migration/02_monolith_to_modular_using_gradle)
+   - ServiceMonitor - Migration from Java 8 to Java 9 [./session-3-refactoring-migration/03_ServiceMonitor_migration_to_java_9](../session-3-refactoring-migration/03_ServiceMonitor_migration_to_java_9)
+   - ServiceMonitor - Modularisation to Java 9 Modules (Maven project) [./session-3-refactoring-migration/04_ServiceMonitor_modularisation_to_java_9](../session-3-refactoring-migration/04_ServiceMonitor_modularisation_to_java_9)
         
 Cada ejemplo esta empaquetado en un directorio el cual contiene sus propios scripts bash para compilar, empaquetar y ejecutar los respectivos ejemplos. Use el respectivo scripts para cada uno de los ejemplos.
 
 ## Contribuciones de la Comunidad
 
-Vea [Guías de como contribuir](CONTRIBUTING.md).
+Vea [Guías de como contribuir](../CONTRIBUTING.md).
 
 ## Licencia
 
-Vea [Licencia](LICENSE) documento para leer los términos y condiciones de uso.
+Vea [Licencia](../LICENSE) documento para leer los términos y condiciones de uso.
 
 ## Recursos
 
