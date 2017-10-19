@@ -1,6 +1,6 @@
-### Download and install the `tree` and `wget` command
+### Descargue e instale los comandos `tree` y `wget`
 
-Please install the ```tree``` command before moving forward:
+Por favor instale el comando ```tree``` antes de continuar:
 
    - Linux
         ```
@@ -10,7 +10,7 @@ Please install the ```tree``` command before moving forward:
 
    - MacOSX
        
-        - Option 1:
+        - Opción 1:
         
           - install tree
           
@@ -20,11 +20,11 @@ Please install the ```tree``` command before moving forward:
           
           http://stackoverflow.com/questions/4572153/os-x-equivalent-of-linuxs-wget
        
-        - Option 2 (Via brew):
+        - Opción 2 (Via brew):
             
-            `Comment from @Hilmerc as to why we are doing the below: Using MacOS Sierra 10.12.6, but we are not sure in which Mac version the brew command started to be necessary for the process.`
+            `Comentario de @Hilmerc lo siguiente funcionó en MacOS Sierra 10.12.6, no estamos seguros si en otras versiones el comando brew es necesario para realizar este proceso`
           
-            You will need the latest version of brew. If you don't have brew installed, execute the next instruction or go [here](https://brew.sh/) for more information. 
+            Usted necesitará la última versión de brew. Si no tiene brew instalado, ejecute la siguiente instrucción o clic [aca](https://brew.sh/) para mas información. 
         
             - `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
           
@@ -39,14 +39,14 @@ Please install the ```tree``` command before moving forward:
         
    - Windows
         ```
-        install `git-bash` (recommended) or `cgywin`
+        instale `git-bash` (recommended) o `cgywin`
         ```
         
-        The `tree` command is built into Windows. From within `git-bash` or `cygwin`.
-        In case a script is invoking the `tree` command and failing, please replace the `tree -fl` keywords with `cmd //c "tree /f /a"`. If that does not work either use `ls -R` instead, except you won't see the output in a tree format.
+        El comando `tree` viene con Windows. Desde `git-bash` o `cygwin`.
+        En caso que un script que invoque el comando `tree` y falle, por favor reemplace `tree -fl` por `cmd //c "tree /f /a"`. Si esto no funciona puede usar la insruccion `ls -R`, usted no verá la salida en formato de árbol.
         
-        Or manually convert the `.sh` files into `.bat`, with minor tweaks should also work there.
+        O manualmente convierta los archivos `.sh` a `.bat`, con algunos ajustes menores logrará que funcione.
 
-        Thanks Richard Kolb ([@rjdkolb](http://github.com/rjdkolb)) for your continued support in this area.
+        Gracias Richard Kolb ([@rjdkolb](http://github.com/rjdkolb)) por su constante soporte en esta área.
 
-Now return to the [Download and install tree and wget](./README.md#download-and-install-the-tree-and-wget-command) section in the main [README.md](./README.md) file and continue with the rest of the steps.
+Ahora regrese a la seccion [Descargue e instale](./README.md#download-and-install-the-tree-and-wget-command) en el documento [README.md](./README.md) y con continúe con el resto de los pasos.
