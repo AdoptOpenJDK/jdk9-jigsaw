@@ -1,45 +1,45 @@
-## Download, install and verify JDK
+## Descargue, instale y verifique JDK
 
-#### Download and install latest version of the JDK 9 EA
+#### Descargue e instale la útima versión JDK 9 EA
 
-- Download JDK 9 EA
+- Descargue JDK 9 EA
   
-  - Early Access build of JDK9 is available at [http://jdk.java.net/9/](http://jdk.java.net/9/)
-  - ~~Early Access build of JDK9 with Project Jigsaw is available at [http://jdk.java.net/jigsaw/](http://jdk.java.net/jigsaw/)~~ (not maintained separately anymore)
+  - Early Access build de JDK9 esta disponible en [http://jdk.java.net/9/](http://jdk.java.net/9/)
+  - ~~Early Access build of JDK9 with Project Jigsaw is available at [http://jdk.java.net/jigsaw/](http://jdk.java.net/jigsaw/)~~ (no se encuentra mantenida de manera separada nucca más)
 
-- Install JDK 9 EA
+- Instale JDK 9 EA
   
-  - Install using a script
+  - Instale utilizando un script
 
-    **Linux and MacOSX users only:** the bash script ```getJDK9.sh``` in the root directory of this repo, helps download the latest Jigsaw JDK from Oracle. Please run this once the repo is cloned. 
+    **Usuarios Linux y MacOSX unicamente:** el bash script ```getJDK9.sh``` en el directorio raíz de este repositorio, ayuda con la descarga de la última versión Jigsaw JDK desde Oracle. Por favor ejecute ese script una vez el repositorio sea clonado. 
 
-    **Windows users:** please feel free to run this script and if there are any tweaks to get it to work successfully, please let us know via a pull request.
+    **Usuarios Windows:** por favor sientese libre de ejecutar ese script si hay algunos inconvenientes ejecutando ese script , por favor haganos saber por medio de un pull request.
 
-  - Install manually
+  - Instalacion manual
 
     - Linux
        - `tar -xvf jigsaw-jdk-9*.tar`
-       - `mv -f jdk-9 [destination]`  (might need to use `sudo` here)
-       - update your `.bashrc` with `export JAVA_HOME=[jdk destination]`
-       - update your `.bashrc` with `export PATH=$JAVA_HOME/bin:$PATH`
+       - `mv -f jdk-9 [destination]`  (puede ser necesario usar `sudo` )
+       - actualice su `.bashrc` con `export JAVA_HOME=[jdk destination]`
+       - actualice su `.bashrc` con `export PATH=$JAVA_HOME/bin:$PATH`
        - `source ~/.bashrc` 
     
-         `[destination]` usually `/usr/lib/...` or related folder
+         `[destination]` usualmente `/usr/lib/...` o un directorio relacionado
     
     - MacOSX 
-       #### Manual way
-       - Please refer to [this guide]( https://github.com/musinoli/guides/blob/master/setup_jigsaw.md) - thanks Nolita ([@musinoli](https://github.com/musinoli)) for your help
-       - In case a `.dmg` file is available, download it and follow the installation steps, you will still have to update your `JAVA_HOME` and start script as mentioned in [this guide]( https://github.com/musinoli/guides/blob/master/setup_jigsaw.md).
-       - update your `.bashrc` with `export PATH=$JAVA_HOME/bin:$PATH`
+       #### Proceso manual
+       - Por favor refierase a [esta guia]( https://github.com/musinoli/guides/blob/master/setup_jigsaw.md) - gracias a Nolita ([@musinoli](https://github.com/musinoli)) por su ayuda
+       - En caso de que un archivo `.dmg` este disponible, descárguelo y sigua los pasos de instalación, puede ser necesario actualizar su `JAVA_HOME` e iniciar los scripts como esta mencionado en [esta guía]( https://github.com/musinoli/guides/blob/master/setup_jigsaw.md).
+       - actualice su `.bashrc` con `export PATH=$JAVA_HOME/bin:$PATH`
 
-       #### Via Brew and jenv
-       You will need the latest version of brew with cask support (1.1.13 at the time of writing). If you don't have brew installed, go [here](https://brew.sh/) first.
+       #### Vía Brew y jenv
+       Necesitará la última version de brew con cask support (1.1.13 al momento de escribir este documento). Si no tiene brew instalado, consulta [aqui](https://brew.sh/) primero.
        - `brew install jenv`
        - `brew install caskroom/versions/java9-beta`
 
-       You will need to make sure jenv is evaluated in every terminal session. Add `eval "$(jenv init -)"` to your shell's .rc file
+       Necesita asegurarse que jenv esta disponible en cada sesion de terminal. Adicione `eval "$(jenv init -)"` en su archivo shell's .rc 
 
-       Now run `jenv versions`. The output might differ (if you have other JDK's installed) but in general you should see something like this:
+       Ahora ejecute `jenv versions`. La salida puede diferir (si tiene otros JDK's instalados) pero en general usted deberia ver algo como:
        ```
        ➜  ~ jenv versions
          system
@@ -49,11 +49,11 @@
          oracle64-1.8.0.121
          oracle64-9-ea
        ```
-       If `9-ea` or `oracle64-9-ea` does not appear, add it manually
+       Si `9-ea` o `oracle64-9-ea` no aparece, adicionelo manualmente
 
        `jenv add /Library/Java/JavaVirtualMachines/jdk-9.jdk/Contents/Home`
 
-       If you want to limit use of JDK 9 to source in a specific directory, switch to that directory and do:
+       Si usted quiere limitar el uso de JDK 9 para códigos en un directorio específico, vaya hasta ese directorio y ejecute:
 
        `jenv local 9-ea`
 
@@ -70,27 +70,27 @@
        ```
         
     - Windows
-       - the file format has changed over time, so you might have downloaded either an `.exe` or a `.zip`.
-         - If you have an executable file, then run it and follow the instructions
-         - If you have a zip file, then just unzip it
-       - Make a note of the destination 
-       - Edit the `JAVA_HOME` and `PATH` environment variables via the `My Computer` > `Properties` option
-         - `JAVA_HOME`: `JAVA_HOME=[jdk destination]`
+       - el formato de archivo ha cambido a través del tiempo, puede que usted descargue un archivo `.exe` o `.zip`.
+         - Si usted tiene un archivo ejecutable, ejecútelo y siga las instruciones
+         - Si usted tiene un archivo zip, descomprímalo
+       - Recuerde el directorio destino 
+       - Edite las variables de entorno `JAVA_HOME` y `PATH` a traves de `My Computador` > `Propiedades` opción
+         - `JAVA_HOME`: `JAVA_HOME=[jdk destination]`
          - `PATH`: `PATH=%JAVA_HOME%/bin;%PATH%`
          
-           `[destination]` usually `C:\Program Files\Java\...` or related folder  
+           `[destination]` usualmente `C:\Program Files\Java\...` o un directorio relacionado  
 
-##### Verify JDK installation
+##### Verifique la instalaccion de JDK
 
 ###### java
 
-Say you have downloaded and installed the JDK 9 EA (build 165) binary from the above step, try the below commands:
+Luego de descargar e instalar JDK 9 EA (build 165) binary con los pasos anteriores, intente los siguientes comandos:
 
 ```
     $ java -version
 ```
 
-As output you should get something like this:
+Como salida usted debe obtener algo similar a:
 
 ```
     java version "9-ea"
@@ -104,7 +104,7 @@ As output you should get something like this:
     $ javac -version
 ```
 
-As output you should get something like this:
+Como salida usted debe obtener algo similar a:
 
 ```
     javac 9-ea
@@ -112,13 +112,13 @@ As output you should get something like this:
 
 ###### jlink
 
-Verify if `jlink` is available in your current environment:
+Verifique si `jlink` esta disponible en su actual ambiente:
 
 ```
     $ jlink --version
 ```
 
-As output you should get something like this:
+Como salida usted debe obtener algo similar a:
 
 ```
     9
@@ -126,13 +126,13 @@ As output you should get something like this:
 
 ###### jshell
 
-Verify if `jshell` is available in your current environment:
+Verifique si `jshell` esta disponible en su actual ambiente:
 
 ```
     $ jshell --version
 ```
 
-As output you should get something like this:
+Como salida usted debe obtener algo similar a:
 
 ```
     jshell 9
@@ -140,13 +140,13 @@ As output you should get something like this:
 
 ###### jdeps
 
-Verify if `jdeps` is available in your current environment:
+Verifique si `jdeps` esta disponible en su actual ambiente:
 
 ```
     $ jdeps --version
 ```
 
-As output you should get something like this:
+Como salida usted debe obtener algo similar a:
 
 ```
     9
@@ -154,26 +154,26 @@ As output you should get something like this:
 
 ###### jmod
 
-Verify if `jmod` is available in your current environment:
+Verifique si `jmod` esta disponible en su actual ambiente:
 
 ```
     $ jmod --version
 ```
 
-As output you should get something like this:
+Como salida usted debe obtener algo similar a:
 
 ```
     9
 ```
 
 
-##### Alternative to keep JAVA\_HOME and PATH
+##### Alternativa para mantener su JAVA\_HOME y PATH
 
-*NOTE*: Only for Linux and MacOSX users. 
+*NOTA*: Unicamente para usuarios Linux y MacOSX. 
 
-If you don't like changing ```JAVA_HOME``` and ```PATH``` and you want to have an easy way to change your local Java version:
+Si usted no quiere cambiar ```JAVA_HOME``` and ```PATH``` y quiere tener una forma fácil de cambiar su version local de Java:
 
-- Keep your unzipped files in a single directory. For example:
+- Mantenga sus archivos descomprimidos en un directorio. Por ejemplo:
 
 ```
     $ pwd
@@ -186,7 +186,7 @@ If you don't like changing ```JAVA_HOME``` and ```PATH``` and you want to have a
     drwxr-xr-x 8 4096 ago 15 12:10 jdk-9+181 
 ```
 
-- Create a symbolic link ```jdk``` to desired JDK: 
+- Cree un symbolic link ```jdk``` para acceder a JDK: 
 
 ```
     $ ln -s jdk-9+181 jdk 
@@ -199,8 +199,8 @@ If you don't like changing ```JAVA_HOME``` and ```PATH``` and you want to have a
     drwxr-xr-x 8 4096 ago 15 12:10 jdk-9+181 
 ```
 
-```JAVA_HOME``` and ```PATH``` will use ```/usr/local/java/jdk``` forever.
+```JAVA_HOME``` y ```PATH``` usaran ```/usr/local/java/jdk``` por siempre.
 
-To change your local Java version, you only need to change the symbolic link.
+Para cambiar su version local de Java, únicamente necesita cambiar el symbolic link.
 
-Now return to the [Download, install and verify JDK](./README.md#setup-all-platforms) section in the main [README.md](./README.md) file and continue with the rest of the steps.
+Ahora regrese a [Descargue, instale y verifique JDK](./README.md#setup-all-platforms) en el archivo [README.md](./README.md) y continue con el resto de los pasos.
