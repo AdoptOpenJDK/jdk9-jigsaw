@@ -1,39 +1,39 @@
-### Greetings world example
+### Ejemplo Greetings world
 
-This second example updates the module declaration to declare a dependency on module `org.astro`. Module `org.astro` exports the API package `org.astro`. 
+El segundo ejemplo actualiza la declaracion del módulo para declarar una dependencia con el módulo `org.astro`. El módulo `org.astro` exporta el API del paquete `org.astro`. 
 
-**Note:** in case one of the below `.sh` script fails due to the `tree` command, please take a look at [Download and install the `tree` and `wget` command](../../README.md) section in the README.md file and apply the appropriate solution.
+**Nota:** en caso de que alguno de los anteriores scripts `.sh` falle debido al comando `tree`, por favor vea la seccion [Descargue en instale los comandos `tree` y `wget`](../../es/README.md) en el documento README.md y aplique la solución apropiada.
 
-Perform the below commands to see the contents of the respective sources contained in the `src` folder:
+Ejecute los siguientes comandos para ver el contenido de los códigos fuente contenidos en el directorio `src`:
     
     $ tree -fl src
 
-    or 
+    o
 
-    $ cmd //c "tree /f /a src"    (for Windows users)
+    $ cmd //c "tree /f /a src"    (para usuaerios Windows)
 
-Perform the below commands to see the contents of the respective Java classes contained in the `src` folder:
+Ejecute los siguientes comandos para ver el contenido de cada clase Java contenida en el directorio `src`:
 
     $ cat src/org.astro/module-info.java
 
     $ cat src/org.astro/org/astro/World.java
 
-Module `org.astro` exports the package `org.astro` (see `src/org.astro/module-info.java` for more details).
+El módulo `org.astro` exporta el paquete `org.astro` (vea `src/org.astro/module-info.java` para más detalles).
 
     $ cat src/com.greetings/module-info.java
 
     $ cat src/com.greetings/com/greetings/Main.java
 
-Module `com.greetings` imports the package `org.astro` (see `src/com.greetings/module-info.java` for more details).
+El módulo `com.greetings` importa el paquete `org.astro` (vea `src/com.greetings/module-info.java` para más detalles).
 
-The sources are compiled into the folders `mods/org.astro` and `mods/com.greetings` with the following commands:
+Los códigos son compilados en el directorio `mods/org.astro` y `mods/com.greetings` con el siguiente comando:
 
     $ ./compile.sh
     
-And we run the example with the following command:
+Y el ejemplo puede ser ejecutado con el siguiente comando:
     
     $ ./run.sh
     
-Check the contents of both these script files (use the `cat` command or a text editor) to see what they are doing and why - interesting instructions and information in there.
+Revise el contenido the los dos scripts (use el comando `cat` o un editor de texto) para ver que hacen y porque - instrucciones interesantes e información encontrará en cada uno.
 
-See [../01_Greetings/README.md](../01_Greetings/README.md) to learn more about package and module naming conventions and how to avoid confusions between them.
+Vea [../01_Greetings/es/README.md](../01_Greetings/es/README.md) para aprender mas acerca de la convención de nombres de paquete y módulos y como evitar confusiones.
