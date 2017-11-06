@@ -1,50 +1,50 @@
-### Greetings example
+### Greetings ejemplo
 
-This first example is a module named `com.greetings` that simply prints "Greetings!". 
+Este primer ejemplo es un módulo (module) llamado `com.greetings` que simplemente imprime la palabra "Greetings!". 
 
-The module consists of two source files: 
-the module declaration (`module-info.java`) and the `Main` class.
+El módulo del ejemplo consiste en dos archivos: 
+La declaración del módulo (`module-info.java`) y la clase `Main`.
 
-Java naming conventions for modules and packages: the `src` folder contains a module `com.greetings` (file-system: `com.greetings`) which in this case is also the name of the module.
-This module contains a package called `com.greetings` (file-system: `com/greetings`).
+Convenciones Java para el nombre de módulos y paquetes: el directorio `src` contiene un módulo `com.greetings` (file-system: `com.greetings`) el cual para este caso es también el nombre del módulo.
+Este módulo contiene un paquete (package) llamado `com.greetings` (file-system: `com/greetings`).
 
-Perform the below commands to see the contents of the respective Java classes contained in the `src` folder:
+Ejecute los siguientes comandos para ver el contenido de cada clase Java contenida en el directorio `src`:
 
     $ cat src/com.greetings/module-info.java
 
     $ cat src/com.greetings/com/greetings/Main.java
 
-**Note:** in case one of the below `.sh` script fails due to the `tree` command, please take a look at [Download and install the `tree` and `wget` command](../../README.md) section in the README.md file and apply the appropriate solution.
+**Nota:** en caso de que alguno de los anteriores scripts `.sh` falle debido al comando `tree`, por favor vea la seccion [Download and install the `tree` and `wget` command](../../es/README.md) en el documento the README.md y aplique la solución apropiada.
 
-The source code is compiled into the directory `mods/com.greetings` with the following commands:
+El código es compilado en el directorio `mods/com.greetings` con los siguientes comandos:
 
     $ ./compile.sh
     
-And we run the example with the following command:
+Y ejecutamos el ejemplo con el siguiente comando:
     
     $ ./run.sh
     
-Check the contents of both these script files (use the `cat` command or a text editor) to see what they are doing and why - interesting instructions and information in there.
+Revise el contenido the los dos scripts (use el comando `cat` o un editor de texto) para ver que hacen y porque - instrucciones interesantes e información encontrará en cada uno.
 
-##### Minor confusion alert!
+##### Alerta de confusión!
 
-Please do not get confused with the naming conventions of modules with that of packages, here's how they go:
+Por favor no se confunda con la convención de nombres de módulos y paquetes, a continuación la aclaración:
 
-Modules in Java follow the below convention, the name is the literal name of the folder itself:
+Módulos en Java siguen la siguiente convención, el nombre es literalmente el mismo del directorio:
 
-| Module name         | File system naming*   |
+| Nombre del Módulo   | Estructura en disco*  |
 |---------------------|-----------------------|
 | com.greetings.hello |  com.greetings.hello  |
 | com.greetings       |  com.greetings        |
 | com                 |  com                  |
 
 
-Packages in Java follow the usual convention:
+Paquetes en Java siguen la usual convención:
 
-| Package name        | File system naming*   |
+| Nombre del paquete  | Estructura en disco*  |
 |---------------------|-----------------------|
 | com.greetings.hello | com/greetings/hello   |
 | com.greetings       | com/greetings         |
 | abc                 | abc                   |
 
-*by `File system naming`, we mean the `directory structure` created as a result of a module or package
+* `Estructura en disco*`, significa la `estructura de directorio - archivo` creada como resultado del módulo o el paquete. Para el caso del Módulo com.greetings.hello existe en disco un único directorio llamado `com.greetings.hello`, para el caso del paquete com.greetings.hello existira en disco un directorio llamado `com` dentro de este un llamado `greetings` y dentro de este uno llamado `hello`
