@@ -1,8 +1,8 @@
-### Modules exports conflict example
+### Modules exports conflict ejemplo
 
-In this example we mistakenly export the same package `org.astro` from two different modules (`org.astro` & `org.astro2`) via our module declaration (in `module-info.java`).
+En este ejemplo por error exportamos el mismo paquete `org.astro` en dos diferentes módulos (`org.astro` & `org.astro2`) en nuestra declaración del módulo (en `module-info.java`).
    
-Perform the below commands to see the contents of the respective sources contained in the `src` folder:
+Ejecute los siguientes comandos para ver el contenido de cada clase Java contenida en el directorio `src`:
 
     $ cat src/com.greetings/module-info.java
     $ cat src/com.greetings/com/greetings/Main.java
@@ -13,17 +13,17 @@ Perform the below commands to see the contents of the respective sources contain
     $ cat src/org.astro2/module-info.java
     $ cat src/org.astro2/org/astro/World.java
                 
-**Note:** in case one of the below `.sh` script fails due to the `tree` command, please take a look at [Download and install the `tree` and `wget` command](../../README.md) section in the README.md file and apply the appropriate solution.
+**Nota:** en caso de que alguno de los anteriores scripts `.sh` falle debido al comando `tree`, por favor vea la sección [Descargue e instale los comandos `tree` y `wget`](../../../es/README.md) en el documento README.md y aplique la solución apropiada.
 
-Try to compile the modules using the below command:
+Intente compilar los módulos utilizando el comando a continuación:
 
     $ ./compile.sh
     
-And we run the example with the following command:
+Y ejecute el ejemplo con el siguiente comando:
     
     $ ./run.sh
     
-We should get a similar run-time error:
+Obtendra un  (run-time error) error de ejecución similar al siguiente:
 
 ```
     Error occurred during initialization of VM
@@ -52,6 +52,6 @@ We should get a similar run-time error:
 
 ```
     
-Check the contents of this script file (use the `cat` command or a text editor) to see what they are doing and why - interesting instructions and information in there.
+Revise el contenido the los scripts (use el comando `cat` o un editor de texto) para ver que hacen y porque - instrucciones interesantes e información encontrará en cada uno.
 
-See [../01_Greetings/README.md](../01_Greetings/README.md) to learn more about package and module naming conventions and how to avoid confusions between them.
+Vea [../../01_Greetings/es/README.md](../../01_Greetings/es/README.md) para aprender mas acerca de la convención de nombres de paquete y módulos y como evitar confusiones.
