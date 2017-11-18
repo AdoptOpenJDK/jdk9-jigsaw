@@ -1,8 +1,8 @@
-### External libraries example
+### External libraries ejemplo
 
-In this example we include external libraries, which haven't been modularized so far.
-These jar files can be translated into so called *[automatic modules](The State of the Module System)* by `javac`.
-To get an idea of how those modules will look and which dependencies they will require you can use the `jar` tool:
+En este ejemplo incluimos librerias externas, las cuales no han sido aún modularizadas.
+Estos archivos jar (jar files) pueden ser convertidos en lo que se llama *[módulos automáticos](*[automatic modules](The State of the Module System) The State of the Module System))* por `javac`.
+Para tener una idea de como estos módulos lucirán y cuales dependencias ellos van a requerir usted puede utilizar la herramienta `jar`:
 
     $ jar -d --file=lib/junit-4.12.jar
     No module descriptor found. Derived automatic module.
@@ -16,18 +16,18 @@ To get an idea of how those modules will look and which dependencies they will r
        contains org.junit
        ...
 
-This output tells us, that the automatic module will be called `junit` and will have the version number 4.12.
-It sadly doesn't tell us, that JUnit depends on Hamcrest.
-We can get a hint towards that using `jdeps` however:
+Esta salida nos dice, que el módulo automático será llamado `junit`  y va a tener el número de versión 4.12.
+Desafortunadamente no nos dice, que JUnit depende de Hamcrest.
+Nosotros podemos obtener mas informacion utilizando `jdeps`:
 
     $ jdeps -s lib/junit-4.12.jar 
     junit-4.12.jar -> java.base
     junit-4.12.jar -> java.management
     junit-4.12.jar -> not found
 
-That last `not found` entry tells us that there is some unknown dependency.
-The `-s` option requests that only the summary is printed.
-So to take a closer look, let's omit that:
+La última entrada `not found` nos dice que hay una dependencia desconocida.
+La opción `-s` en la instrucción anterior solicita que solo sea mostrado el resumen.
+Para ver mas detalles, vamos a omitir la opción `-s` así:
 
     $ jdeps lib/junit-4.12.jar | grep "not found"
     junit-4.12.jar -> not found
@@ -40,7 +40,7 @@ So to take a closer look, let's omit that:
        org.junit.rules                                    -> org.hamcrest                                       not found
 
 
-Aha! Hamcrest it is. And we also see, that there are no other unknown dependencies from JUnit. Let's just check Hamcrest to be sure:
+Aha! Hamcrest es mostrado. Y también  se ve, que no hay otras dependencias desconocidas de Junit. Vamos a verificar Hamcrest para estar seguros:
 
     $ jar -d --file=lib/hamcrest-core-1.3.jar
     o module descriptor found. Derived automatic module.
@@ -51,40 +51,40 @@ Aha! Hamcrest it is. And we also see, that there are no other unknown dependenci
       contains org.hamcrest.core
       contains org.hamcrest.internal
 
-And
+y
 
     $ jdeps -s lib/hamcrest-core-1.3.jar
     hamcrest-core-1.3.jar -> java.base
 
-So, Hamcrest has no further dependencies.
+Bien, Hamcrest no tiene más dependencias.
 
-Perform the below commands to see the contents of the respective sources contained in the `src` folder:
+Ejecute los siguientes comandos para ver el contenido de los códigos fuente contenidos en el directorio `src` :
 
     $ cat src/com.greetings/module-info.java
     $ cat src/com.greetings/main/java/com/greetings/Main.java
     $ cat src/com.greetings/main/java/com/greetings/Greet.java
     $ cat src/com.greetings/test/java/com/greetings/GreetTest.java 
 
-As you can see in the `module-info.java`, we have added a dependency to JUnit using the module name retrieved with the above commands.
-Hamcrest is a transitive dependency and as such does not have to be added separately.
-Also, since JUnit will have to access our classes to run tests, we export `com.greetings` to the JUnit module.
+Como usted puede ver en el `module-info.java`, hemos adicionado una dependencia para JUnit utilizando el nombre de módulo devuelto en los comandos ejecutados con anterioridad.
+Hamcrest es una dependencia transitiva (transitive dependency) y no tiene que ser adicionada de manera separada.
+También, desde JUnit tendremos acceso a nuestras clases para ejecutar pruebas, nosotros exportamos`com.greetings` para el módulo JUnit.
 
 
-**Note:** in case one of the below `.sh` script fails due to the `tree` command, please take a look at [Download and install the `tree` and `wget` command](../../README.md) section in the README.md file and apply the appropriate solution.
+**Nota:** en caso de que alguno de los anteriores scripts `.sh` falle debido al comando `tree`, por favor vea la sección [Descargue e instale los comandos `tree` y `wget`](../../../es/README.md) en el documento README.md y aplique la solución apropiada.
 
-You can see the dependency information by running the command:
+Usted puede ver la información de dependencias ejeuctando el comando:
 
     $ ./deps.sh
 
-Try to compile the modules using the below command:
+Intente compilar los módulos utilizando el siguiente comando:
 
     $ ./compile.sh
     
-And we run the example with the following command:
+Y ejecute los ejemplos con el siguiente comando:
     
     $ ./run.sh
     
-We should get the following output:
+Deberiamos obtener la siguiente salida:
 
 ```
      *** Running from within the mods folder without arguments. *** 
@@ -107,6 +107,6 @@ We should get the following output:
 
 ```
     
-Check the contents of this script file (use the `cat` command or a text editor) to see what they are doing and why - interesting instructions and information in there.
+Revise el contenido the los scripts (use el comando `cat` o un editor de texto) para ver que hacen y porque - instrucciones interesantes e información encontrará en cada uno.
 
-See [../01_Greetings/README.md](../01_Greetings/README.md) to learn more about package and module naming conventions and how to avoid confusions between them.
+Vea [../../01_Greetings/es/README.md](../../01_Greetings/es/README.md) para aprender mas acerca de la convención de nombres de paquete y módulos y como evitar confusiones.
