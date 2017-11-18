@@ -1,16 +1,16 @@
-### Missing exports example
+### Missing exports ejemplo
 
-In this example we mistakenly omit the `exports` from the `com.astro` module declaration (in `module-info.java`).
+En este ejemplo por error omitimos el `exports` en la declaración del módulo `com.astro` (en `module-info.java`).
 
     $ cat src/org.astro/module-info.java
     
-**Note:** in case one of the below `.sh` script fails due to the `tree` command, please take a look at [Download and install the `tree` and `wget` command](../../README.md) section in the README.md file and apply the appropriate solution.
+**Nota:** en caso de que alguno de los anteriores scripts `.sh` falle debido al comando `tree`, por favor vea la sección [Descargue e instale los comandos `tree` y `wget`](../../../es/README.md) en el documento README.md y aplique la solución apropiada.
     
-Try to compile the modules using the below command:
+Intente compilar los módulos utilizando el comando a continuación:
 
     $ ./compile.sh
     
-Compilation fails with the below error:
+La compilación falla con el siguiente error:
 
 ```
     src/com.greetings/com/greetings/Main.java:3: error: package org.astro is not visible
@@ -19,7 +19,7 @@ Compilation fails with the below error:
       (package org.astro is declared in module org.astro, which does not export it)
     1 error
 ```
-    
-Check the contents of this script file (use the `cat` command or a text editor) to see what they are doing and why - interesting instructions and information in there.
 
-See [../01_Greetings/README.md](../01_Greetings/README.md) to learn more about package and module naming conventions and how to avoid confusions between them.
+Revise el contenido the los scripts (use el comando `cat` o un editor de texto) para ver que hacen y porque - instrucciones interesantes e información encontrará en cada uno.
+
+Vea [../../01_Greetings/es/README.md](../../01_Greetings/es/README.md) para aprender mas acerca de la convención de nombres de paquete y módulos y como evitar confusiones.
