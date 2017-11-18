@@ -1,41 +1,41 @@
-### Packaging example
+### Packaging ejemplo
 
-In the examples so far then the contents of the compiled modules were exploded on the file system. For transportation and deployment purposes then it is usually more convenient to package a module as a modular JAR. 
+En los anteriores los contenido de los módulos compliados fueron creados en el sistema de archivos. Para transporte y despliegue usualmente es mas conveniente empaquetar los módulos como un JAR modular. 
 
-A modular JAR is a regular JAR file that has a `module-info.class` in its top-level directory, it creates `org.astro@1.0.jar` and `com.greetings.jar` in directory `mlib`.
+Un JAR modular es un archivo JAR regular que tiene un `module-info.class` en su directorio raíz, el ejemplo crea `org.astro@1.0.jar` y `com.greetings.jar` en el directorio `mlib`.
 
-**Note:** in case one of the below `.sh` script fails due to the `tree` command, please take a look at [Download and install the `tree` and `wget` command](../../README.md) section in the README.md file and apply the appropriate solution.
+**Nota:** en caso de que alguno de los anteriores scripts `.sh` falle debido al comando `tree`, por favor vea la sección [Descargue e instale los comandos `tree` y `wget`](../../../es/README.md) en el documento README.md y aplique la solución apropiada.
 
-Perform the below commands to see the contents of the respective sources contained in the `src` folder:
+Ejecute los siguientes comandos para ver el contenido de los códigos fuente contenidos en el directorio `src`:
     
     $ tree -fl src
 
-    or 
+    o
 
-    $ cmd //c "tree /f /a src"    (for Windows users)
+    $ cmd //c "tree /f /a src"    (para usuarios Windows)
 
-The modules are compiled from the sources into the folder `mods` with the following commands:
+Los códigos son compilados en el directorio `mods` con el siguiente comando:
 
     $ ./compile.sh
 
-Now create the packages (jar files) with the below command:
+Ahora crea el paquete (jar files) con el siguiente comando:
 
     $ ./packaging.sh
 
-Perform the below command to see the packages (jar files) created via the above script:
+Ejecute los siguientes comandos para ver los paquetes (jar files) creados por el script anterior:
 
     $ tree -fl mlib
 
-    or 
+    o 
 
-    $ cmd //c "tree /f /a mlib"    (for Windows users)
+    $ cmd //c "tree /f /a mlib"    (para usuarios Windows)
     
-You will notice that the module `org.astro` is packaged to indicate that its version is `1.0`. Module `com.greetings` has been packaged to indicate that its main class is `com.greetings.Main`. Module `com.greetings` can be executed without needing to specify its main class (`Main.class`).
+Usted verá que el módulo `org.astro` es empaquetado para indicar que su version es la `1.0`. El módulo `com.greetings` ha sido empaquetado para indicar que su main class es `com.greetings.Main`. El módulo `com.greetings` puede ser ejecutado sin necesidad de especificar cual es su main class (`Main.class`).
     
-And we run the example with the following command:
+Y el ejemplo puede ser ejecutado con el siguiente comando:
     
     $ ./run.sh
     
-Check the contents of all of these script files (use the `cat` command or a text editor) to see what they are doing and why - interesting instructions and information in there.
+Revise el contenido the los scripts (use el comando `cat` o un editor de texto) para ver que hacen y porque - instrucciones interesantes e información encontrará en cada uno.
 
-See [../01_Greetings/README.md](../01_Greetings/README.md) to learn more about package and module naming conventions and how to avoid confusions between them.
+Vea [../../01_Greetings/es/README.md](../../01_Greetings/es/README.md) para aprender mas acerca de la convención de nombres de paquete y módulos y como evitar confusiones.
