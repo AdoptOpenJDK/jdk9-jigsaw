@@ -4,18 +4,18 @@ Servicios permiten bajo acoplamiento entre módulos de servicios consumidores y 
 
 Este ejemplo tiene un módulo de servicio consumidor y un módulo de servicio proveedor:
 
-- module `com.socket` exporta un API para acceso a sockets de red (network sockets). 
+- módulo `com.socket` exporta un API para acceso a sockets de red (network sockets). 
   El API esta en el paquete `com.socket` por esto este paquete es exportado. 
   El API es plug-able para permitir implementaciones alternativas. 
   La clase del tipo de servicio esta `com.socket.spi.NetworkSocketProvider` en el mismo módulo y por esto el paquete `com.socket.spi` también es exportado.
 
-- module `org.fastsocket` es un módulo de servicio proveedor. 
+- módulo `org.fastsocket` es un módulo de servicio proveedor. 
   Este provee una implementación de `com.socket.spi.NetworkSocketProvider`. 
   No exporta paquetes. 
   
 Ejecute los siguientes comandos para ver el contenido de los códigos fuente contenidos en el directorio `src`:
 
-- module `com.socket`
+- módulo `com.socket`
     
     ```
     $ cat src/com.socket/module-info.java
@@ -23,7 +23,7 @@ Ejecute los siguientes comandos para ver el contenido de los códigos fuente con
     $ cat src/com.socket/com/socket/spi/NetworkSocketProvider.java
     ```
     
-- module `org.fastsocket`
+- módulo `org.fastsocket`
 
     ```
     $ cat src/org.fastsocket/module-info.java
@@ -31,7 +31,7 @@ Ejecute los siguientes comandos para ver el contenido de los códigos fuente con
     $ cat src/org.fastsocket/org/fastsocket/FastNetworkSocket.java
     ```
     
-- module `com.greetings`
+- módulo `com.greetings`
     ```
     $ cat src/com.greetings/module-info.java
     $ cat src/com.greetings/com/greetings/Main.java
