@@ -63,17 +63,17 @@ Ver [Descargar, instalar y configurar Eclipse Oxygen para JDK9](../setupEclipseO
 
 Por favor asegurese de haber verificado que lo el JDK funcionen en su ambiente con la ayuda del documento [Descargue e instale y verifique JDK](setupAndVerifyJDK.md). 
 
-- Sesión 1: Jigsaw Introduction
-   - Greetings [./session-1-jigsaw-intro/01_Greetings](.././session-1-jigsaw-intro/01_Greetings)
-   - Greetings world [./session-1-jigsaw-intro/02_GreetingsWorld](.././session-1-jigsaw-intro/02_GreetingsWorld)
-   - Multi-module compilation [./session-1-jigsaw-intro/03_MultiModuleCompilation](.././session-1-jigsaw-intro/03_MultiModuleCompilation)
-   - Packaging [./session-1-jigsaw-intro/04_Packaging](.././session-1-jigsaw-intro/04_Packaging)
-   - Missing requires [./session-1-jigsaw-intro/05_Missing_requires](.././session-1-jigsaw-intro/05_Missing_requires)
-   - Missing exports [./session-1-jigsaw-intro/05_Missing_exports](.././session-1-jigsaw-intro/05_Missing_exports)
-   - Services [./session-1-jigsaw-intro/06_Services](.././session-1-jigsaw-intro/06_Services)
-   - javac --patch-module option [./session-1-jigsaw-intro/07_patch_module_option](../session-1-jigsaw-intro/07_patch_module_option)
-   - Modules export conflict [./session-1-jigsaw-intro/08_ModulesExportConflict](../session-1-jigsaw-intro/08_ModulesExportConflict)
-   - Automatic modules [./session-1-jigsaw-intro/09_Automodules](../session-1-jigsaw-intro/09_Automodules)
+- Sesión 1: Introducción a Jigsaw
+   - Greetings [./session-1-jigsaw-intro/01_Greetings/es](.././session-1-jigsaw-intro/01_Greetings/es)
+   - Greetings world [./session-1-jigsaw-intro/02_GreetingsWorld/es](.././session-1-jigsaw-intro/02_GreetingsWorld/es)
+   - Multi-module compilation [./session-1-jigsaw-intro/03_MultiModuleCompilation/es](.././session-1-jigsaw-intro/03_MultiModuleCompilation/es)
+   - Packaging [./session-1-jigsaw-intro/04_Packaging/es](.././session-1-jigsaw-intro/04_Packaging/es)
+   - Missing requires [./session-1-jigsaw-intro/05_Missing_requires/es](.././session-1-jigsaw-intro/05_Missing_requires/es)
+   - Missing exports [./session-1-jigsaw-intro/05_Missing_exports/es](.././session-1-jigsaw-intro/05_Missing_exports/es)
+   - Services [./session-1-jigsaw-intro/06_Services/es](.././session-1-jigsaw-intro/06_Services/es)
+   - javac --patch-module option [./session-1-jigsaw-intro/07_patch_module_option/es](../session-1-jigsaw-intro/07_patch_module_option/es)
+   - Modules export conflict [./session-1-jigsaw-intro/08_ModulesExportConflict/es](../session-1-jigsaw-intro/08_ModulesExportConflict/es)
+   - Automatic modules [./session-1-jigsaw-intro/09_Automodules/es](../session-1-jigsaw-intro/09_Automodules/es)
 
 - Sesión 2: JLink
    - JLink example [./session-2-jlink/01_JLink](../session-2-jlink/01_JLink)
