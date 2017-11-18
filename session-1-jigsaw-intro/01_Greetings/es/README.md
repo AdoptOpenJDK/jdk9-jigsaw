@@ -14,7 +14,7 @@ Ejecute los siguientes comandos para ver el contenido de cada clase Java conteni
 
     $ cat src/com.greetings/com/greetings/Main.java
 
-**Nota:** en caso de que alguno de los anteriores scripts `.sh` falle debido al comando `tree`, por favor vea la seccion [Descargue e instale los comandos `tree` y `wget`](../../es/README.md) en el documento README.md y aplique la solución apropiada.
+**Nota:** en caso de que alguno de los anteriores scripts `.sh` falle debido al comando `tree`, por favor vea la seccion [Descargue e instale los comandos `tree` y `wget`](../../../es/README.md) en el documento README.md y aplique la solución apropiada.
 
 El código es compilado en el directorio `mods/com.greetings` con los siguientes comandos:
 
