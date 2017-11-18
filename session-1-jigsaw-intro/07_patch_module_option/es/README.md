@@ -1,45 +1,45 @@
-### --patch-module example
+### --patch-module ejemplo
 
-Developers that checkout `java.util.concurrent` classes from Doug Lea's CVS will be used to compiling the source files and deploying those classes with `-Xbootclasspath/p`.
-`-Xbootclasspath/p` has been removed from Java, and its module replacement is the option `--patch-module` to override classes in a module. It can also be used to augment the contents of module. 
-The `--patch-module` option is also supported by `javac` to compile code "as if" part of the module.
+Desarrolladores que usen las clases `java.util.concurrent` desde Doug Lea's CVS usarán para compilar sus códigos y desplegar sus clases con `-Xbootclasspath/p`.
+`-Xbootclasspath/p` ha sido removido de Java, y en la modularización su reemplazo es la opción `--patch-module` para sobreescribir clases en un módulo. Esta tambien puede ser utilizada para aumenta los contenidos de un módulo. 
+La opción `--patch-module` tamnbién es soportada por `javac` para compilar códigos "como si fueran" parte del módulo.
 
-Perform the below commands to see the contents of the respective sources contained in the `src` folder:
+Ejecute los siguientes comandos para ver el contenido de los códigos fuente contenidos en el directorio `src`:
 
-- module `java.base` in `mypatches` folder
+- módulo `java.base` en el directorio `mypatches`
     
     ```
     $ tree mypatches
     ```
 
-- module `com.greetings` in `mods` folder
+- módulo `com.greetings` en el directorio `mods`
     
     ```
     $ tree mods
     ```
 
-- module `java.base` in `src` folder
+- módulo `java.base` en el directorio `src`
 
     ```
     $ cat src/java.base/java/util/concurrent/ConcurrentHashMap.java
     ```
 
-- module `com.greetings` in `src` folder
+- módulo `com.greetings` en el directorio `src`
 
     ```
     $ cat src/com.greetings/com/greetings/Main.java
     ```
 
-**Note:** in case one of the below `.sh` script fails due to the `tree` command, please take a look at [Download and install the `tree` and `wget` command](../../README.md) section in the README.md file and apply the appropriate solution.
+**Nota:** en caso de que alguno de los anteriores scripts `.sh` falle debido al comando `tree`, por favor vea la sección [Descargue e instale los comandos `tree` y `wget`](../../../es/README.md) en el documento README.md y aplique la solución apropiada.
 
-Both the modules are compiled from the sources into the folders `mypatch` and `mods` respectively with the following command:
+Los módulos son compilados en los directorios `mypatch` y `mods` respectivamente con el siguiente comando:
 
     $ ./compile.sh
     
-And we run the example twice (with and without the patched code) with the following command:
+Y el ejemplo se ejecuta dos veces (con y sin el patched code) con el siguiente comando:
     
     $ ./run.sh
     
-Check the contents of both these script files (use the `cat` command or a text editor) to see what they are doing and why - interesting instructions and information in there.
+Revise el contenido the los scripts (use el comando `cat` o un editor de texto) para ver que hacen y porque - instrucciones interesantes e información encontrará en cada uno.
 
-See [../01_Greetings/README.md](../01_Greetings/README.md) to learn more about package and module naming conventions and how to avoid confusions between them.
+Vea [../../01_Greetings/es/README.md](../../01_Greetings/es/README.md) para aprender mas acerca de la convención de nombres de paquete y módulos y como evitar confusiones.
