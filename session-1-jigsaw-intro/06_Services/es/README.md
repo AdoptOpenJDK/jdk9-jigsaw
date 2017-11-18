@@ -1,19 +1,19 @@
-### Services example
+### Services ejemplo
 
-Services allow for loose coupling between service consumers modules and service providers modules.
+Servicios permiten bajo acoplamiento entre módulos de servicios consumidores y módulos de servicios proveedores
 
-This example has a service consumer module and a service provider module:
+Este ejemplo tiene un módulo de servicio consumidor y un módulo de servicio proveedor:
 
-- module `com.socket` exports an API for network sockets. 
-  The API is in package `com.socket` so this package is exported. 
-  The API is plug-able to allow for alternative implementations. 
-  The service type is class `com.socket.spi.NetworkSocketProvider` in the same module and thus package `com.socket.spi` is also exported.
+- module `com.socket` exporta un API para acceso a sockets de red (network sockets). 
+  El API esta en el paquete `com.socket` por esto este paquete es exportado. 
+  El API es plug-able para permitir implementaciones alternativas. 
+  La clase del tipo de servicio esta `com.socket.spi.NetworkSocketProvider` en el mismo módulo y por esto el paquete `com.socket.spi` también es exportado.
 
-- module `org.fastsocket` is a service provider module. 
-  It provides an implementation of `com.socket.spi.NetworkSocketProvider`. 
-  It does not export any packages. 
+- module `org.fastsocket` es un módulo de servicio proveedor. 
+  Este provee una implementación de `com.socket.spi.NetworkSocketProvider`. 
+  No exporta paquetes. 
   
-Perform the below commands to see the contents of the respective sources contained in the `src` folder:
+Ejecute los siguientes comandos para ver el contenido de los códigos fuente contenidos en el directorio `src`:
 
 - module `com.socket`
     
@@ -37,16 +37,16 @@ Perform the below commands to see the contents of the respective sources contain
     $ cat src/com.greetings/com/greetings/Main.java
     ```
      
-**Note:** in case one of the below `.sh` script fails due to the `tree` command, please take a look at [Download and install the `tree` and `wget` command](../../README.md) section in the README.md file and apply the appropriate solution.
+**Nota:** en caso de que alguno de los anteriores scripts `.sh` falle debido al comando `tree`, por favor vea la sección [Descargue e instale los comandos `tree` y `wget`](../../../es/README.md) en el documento README.md y aplique la solución apropiada.
 
-Both the modules are compiled together from the sources into the folder `mods` with the following commands:
+Ambos módulos son compilados juntos en el directorio `mods` con el siguiente comando:
 
     $ ./compile.sh
     
-And we run the example with the following command:
+Y ejecute los ejemplos con el siguiente comando:
     
     $ ./run.sh
     
-Check the contents of both these script files (use the `cat` command or a text editor) to see what they are doing and why - interesting instructions and information in there.
+Revise el contenido the los scripts (use el comando `cat` o un editor de texto) para ver que hacen y porque - instrucciones interesantes e información encontrará en cada uno.
 
-See [../01_Greetings/README.md](../01_Greetings/README.md) to learn more about package and module naming conventions and how to avoid confusions between them.
+Vea [../../01_Greetings/es/README.md](../../01_Greetings/es/README.md) para aprender mas acerca de la convención de nombres de paquete y módulos y como evitar confusiones.
