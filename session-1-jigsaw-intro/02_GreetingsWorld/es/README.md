@@ -2,7 +2,7 @@
 
 El segundo ejemplo actualiza la declaracion del módulo para declarar una dependencia con el módulo `org.astro`. El módulo `org.astro` exporta el API del paquete `org.astro`. 
 
-**Nota:** en caso de que alguno de los anteriores scripts `.sh` falle debido al comando `tree`, por favor vea la seccion [Descargue en instale los comandos `tree` y `wget`](../../es/README.md) en el documento README.md y aplique la solución apropiada.
+**Nota:** en caso de que alguno de los anteriores scripts `.sh` falle debido al comando `tree`, por favor vea la sección [Descargue e instale los comandos `tree` y `wget`](../../../es/README.md) en el documento README.md y aplique la solución apropiada.
 
 Ejecute los siguientes comandos para ver el contenido de los códigos fuente contenidos en el directorio `src`:
     
@@ -36,4 +36,4 @@ Y el ejemplo puede ser ejecutado con el siguiente comando:
     
 Revise el contenido the los dos scripts (use el comando `cat` o un editor de texto) para ver que hacen y porque - instrucciones interesantes e información encontrará en cada uno.
 
-Vea [../01_Greetings/es/README.md](../01_Greetings/es/README.md) para aprender mas acerca de la convención de nombres de paquete y módulos y como evitar confusiones.
+Vea [../../01_Greetings/es/README.md](../../01_Greetings/es/README.md) para aprender mas acerca de la convención de nombres de paquete y módulos y como evitar confusiones.
