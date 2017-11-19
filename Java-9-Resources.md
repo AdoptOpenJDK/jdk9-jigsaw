@@ -121,6 +121,7 @@ Misc:
 * [Java 9 Programming By Example](https://www.amazon.co.uk/Java-Programming-Example-Peter-Verhas/dp/178646828X) (Packt; Peter Verhas) - available on [Safari Books online](https://www.safaribooksonline.com/library/view/java-9-programming/9781786468284/)
 * [Java 9 Revealed](http://www.springer.com/gb/book/9781484225912?wt_mc=PPC.Google%20AdWords.3.EPR436.GoogleShopping_Product_UK&gclid=EAIaIQobChMItLHMoK3e1QIVSLHtCh0v8QnCEAQYASABEgIEpfD_BwE) (Springer; Kishori Sharan)
 * [Java 8 & 9 in Action, 2nd Edition](https://www.manning.com/books/java-8-and-9-in-action) (Manning; Raoul-Gabriel Urma, Mario Fusco, Alan Mycroft)
+* [Modern Java recipes](https://www.safaribooksonline.com/library/view/modern-java-recipes/9781491973165/) (O'Reilly Media, Inc.; Ken Kouson) - Java 9 Additions chapter to help migrate from 8 to 9
 
 ### Repositories
 
