@@ -1,29 +1,32 @@
-### Multi-module compilation example
+### Multi-module compilation ejemplo
 
-In this example modules are compiled at the same time unlike with the previous example where the compilation happens sequentially.
+En este ejemplo los módulos son compilados al mismo tiempo a diferencia del ejemplo anterior donde los módulos son compilados de manera secuencial.
 
-**Note:** in case one of the below `.sh` script fails due to the `tree` command, please take a look at [Download and install the `tree` and `wget` command](../../README.md) section in the README.md file and apply the appropriate solution.
+**Nota:** en caso de que alguno de los anteriores scripts `.sh` falle debido al comando `tree`, por favor vea la sección [Descargue e instale los comandos `tree` y `wget`](../../../es/README.md) en el documento README.md y aplique la solución apropiada.
 
-Perform the below commands to see the contents of the respective sources contained in the `src` folder:
-    
+Ejecute los siguientes comandos para ver los códigos contenidos en el directorio `src`:
+
     $ tree -fl src
 
     or 
 
-    $ cmd //c "tree /f /a src"    (for Windows users)
+    $ cmd //c "tree /f /a src"    (para usuarios Windows)
 
-The sources are compiled into the folders `mods/org.astro` and `mods/com.greetings` with the following commands:
+El código es compilado en los directorios `mods/org.astro` and `mods/com.greetings` con los siguientes comandos:
 
     $ ./multiModCompile.sh
-
-Perform the below command to see both the modules created via the above script:
+    
+Ejecute el siguiente comando para ver los módulos creados por medio del script anterior:
 
     $ find mods -type f
     
-And we run the example with the following command:
+Y el ejemplo puede ser ejecutado con el siguiente comando:
     
     $ ./run.sh
     
-Check the contents of all these script files (use the `cat` command or a text editor) to see what they are doing and why - interesting instructions and information in there.
+Revise el contenido the los dos scripts (use el comando `cat` o un editor de texto) para ver que hacen y porque - instrucciones interesantes e información encontrará en cada uno.
 
-See [../01_Greetings/README.md](../01_Greetings/README.md) to learn more about package and module naming conventions and how to avoid confusions between them.
+Vea [../../01_Greetings/es/README.md](../../01_Greetings/es/README.md) para aprender mas acerca de la convención de nombres de paquete y módulos y como evitar confusiones.
+
+**Ver el ejemplo:**
+Para ver los códigos fuentes de este ejemplo vaya a [el directorio 03_MultiModuleCompilation](../), ahí encontrará la versión en Inglés del presente documento, el directorio `src` con los códigos fuentes, y algunos scripts que identificará con la extensión `.sh`.
