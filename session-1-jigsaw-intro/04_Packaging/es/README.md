@@ -41,4 +41,4 @@ Revise el contenido the los scripts (use el comando `cat` o un editor de texto) 
 Vea [../../01_Greetings/es/README.md](../../01_Greetings/es/README.md) para aprender mas acerca de la convención de nombres de paquete y módulos y como evitar confusiones.
 
 **Ver el ejemplo:**
-Para ver los códigos fuentes de este ejemplo vaya a [el directorio 04_Packaging](../), ahí encontrará la version en Inglés del presente documento, el directorio `src` con los códigos fuentes, y algunos scripts que identificará con la extensión `.sh`
+Para ver los códigos fuentes de este ejemplo vaya a [el directorio 04_Packaging](../), ahí encontrará la versión en Inglés del presente documento, el directorio `src` con los códigos fuentes, y algunos scripts que identificará con la extensión `.sh`.
