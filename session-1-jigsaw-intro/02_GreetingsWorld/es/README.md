@@ -39,4 +39,4 @@ Revise el contenido the los dos scripts (use el comando `cat` o un editor de tex
 Vea [../../01_Greetings/es/README.md](../../01_Greetings/es/README.md) para aprender mas acerca de la convención de nombres de paquete y módulos y como evitar confusiones.
 
 **Ver el ejemplo:**
-Para ver los códigos fuentes de este ejemplo vaya a [el directorio 02_GreetingsWorld ](../), ahí encontrará la version en Inglés del presente documento, el directorio `src` con los códigos fuentes, y algunos scritps que identificará con la extensión `.sh`
+Para ver los códigos fuentes de este ejemplo vaya a [el directorio 02_GreetingsWorld ](../), ahí encontrará la versión en Inglés del presente documento, el directorio `src` con los códigos fuentes, y algunos scritps que identificará con la extensión `.sh`.
