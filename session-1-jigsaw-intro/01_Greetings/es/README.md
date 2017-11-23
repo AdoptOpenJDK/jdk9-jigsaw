@@ -50,4 +50,4 @@ Paquetes en Java siguen la usual convención:
 * `Estructura en disco*`, significa la `estructura de directorio - archivo` creada como resultado del módulo o el paquete. Para el caso del Módulo com.greetings.hello existe en disco un único directorio llamado `com.greetings.hello`, para el caso del paquete com.greetings.hello existirá en disco un directorio llamado `com` dentro de este uno llamado `greetings` y dentro de este uno llamado `hello`
 
 **Ver el ejemplo:**
-Para ver los códigos fuentes de este ejemplo vaya a [el directorio 01_Greetings ](../), ahí encontrará la version en Inglés del presente documento, el directorio `src` con los códigos fuentes, y algunos scritps que identificará con la extensión `.sh`
+Para ver los códigos fuentes de este ejemplo vaya a [el directorio 01_Greetings ](../), ahí encontrará la versión en Inglés del presente documento, el directorio `src` con los códigos fuentes, y algunos scritps que identificará con la extensión `.sh`.
