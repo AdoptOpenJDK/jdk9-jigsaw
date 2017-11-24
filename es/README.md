@@ -2,9 +2,9 @@
 
 See [English version](../README.md) (Ver la [versión en Inglés](../README.md))
 
-Ejemplos de algunas de las nuevas caracteristicas de Jigsaw liberadas en el la versión Early Access build de JDK9.
+Ejemplos de algunas de las nuevas características de Jigsaw liberadas en el la versión Early Access build de JDK9.
 
-Algunos de los ejemplos son tomados del Projecto Jigsaw: Module System Quick-Start Guide, para más información visita [http://openjdk.java.net/projects/jigsaw/quick-start](http://openjdk.java.net/projects/jigsaw/quick-start) también tenemos contribuiciones de la comunidad Java.
+Algunos de los ejemplos son tomados del Projecto Jigsaw: Module System Quick-Start Guide, para más información visita [http://openjdk.java.net/projects/jigsaw/quick-start](http://openjdk.java.net/projects/jigsaw/quick-start) también tenemos contribuciones de la comunidad Java.
 
 ___
 
@@ -15,7 +15,7 @@ ___
 
 ___
 
-## Configuracion (todas las plataformas)
+## Configuración (todas las plataformas)
 
 Ver [Descargue e instale y verifique JDK](setupAndVerifyJDK.md) y regrese a esta página para continuar con el resto de pasos.
          
@@ -29,7 +29,7 @@ Ver [Descargue e instale tree y wget](setupTreeAndWget.md) y regrese a esta pág
 
 #### Vagrant box
 
-- Alternativamente Vagrant box es disponible en https://github.com/ali-ince/LJC_April2017_Hackday, por favor haga uso de esta utilidad (thanks @ali-ince).
+- Alternativamente Vagrant box está disponible en https://github.com/ali-ince/LJC_April2017_Hackday, por favor haga uso de esta utilidad (thanks @ali-ince).
 
 #### (Opcional) Instale JDK 9 compliant IDE
 
@@ -47,21 +47,21 @@ Ver [Descargar, instalar y configurar Eclipse Oxygen para JDK9](../setupEclipseO
 
 ##### Usuarios Windows
 
- - si usted usa `git-bash` (Recomendado) o `cgywin` podria funcionar para usted - ejecutar los scripts `.sh` en uno de los ambientes. En el peor de los escenarios, nosotros tendremos que convertir manualmente los archivos `.sh` en `.bat`, con algunos cambios estos podrian funcionar. Estaremos felices de recibir pull request para esto. O usted puede usar **bach**, una plataforma independiente de Java Shell Builder. Su uso es explicado en `session-3-jshell`.
- - revisa si el path de JDK (o `%JAVA_HOME%`) ha sido adicionado al la variable de entorno `PATH` en caso contrario adicionala de manera manual
+ - si usted usa `git-bash` (Recomendado) o `cgywin` podria funcionar para usted - ejecutar los scripts `.sh` en uno de los ambientes. En el peor de los escenarios, tendría que convertir manualmente los archivos `.sh` en `.bat`, con algunos cambios éstos podrían funcionar. Estaremos felices de recibir pull request para esto. Otra alternativa es usar **bach**, una plataforma independiente de Java Shell Builder. Su uso es explicado en `session-3-jshell`.
+ - revisa si el path de JDK (o `%JAVA_HOME%`) ha sido adicionado a la variable de entorno `PATH` en caso contrario adicionala de manera manual
  - asegurese que el JDK esta instalado en una carpeta donde el nombre no contenga espacios en blanco
  - en caso que esta carpeta luzca similar a `C:\Program files...`, asegurese que (el nombre no debe contener espacios):
     - el path del JDK en `JAVA_HOME` es `C:\Program~1` en vez de `C:\Program files...`
     - la variable de entorno `PATH` refiere al la variable de entorno `JAVA_HOME`
-    - la variable de entorno`CLASSPATH` ref a la variable de entorno `JAVA_HOME`
+    - la variable de entorno`CLASSPATH` refiere a la variable de entorno `JAVA_HOME`
  - en algunas instancias `jlink` no estaba disponible aún cuando el JDK es instalado via archivo `.exe`, incluso después de realizado los pasos anteriores de configuracion (por favor verifica antes de continuar)
 
 ##### Usuarios MacOSX
- - `jlink` no esta aun disponible cuando el JDK es instalado via archivo`.dmg` file (por favor verifica antes de continuar)
+ - `jlink` no está aún disponible cuando el JDK es instalado via archivo`.dmg` (por favor verifique antes de continuar)
 
 ## Ejercicios / ejemplos cubiertos
 
-Por favor asegurese de haber verificado que lo el JDK funcionen en su ambiente con la ayuda del documento [Descargue e instale y verifique JDK](setupAndVerifyJDK.md). 
+Por favor asegúrese de haber verificado que el JDK funcionen en su ambiente con la ayuda del documento [Descargue e instale y verifique JDK](setupAndVerifyJDK.md). 
 
 - Sesión 1: Introducción a Jigsaw
    - Greetings [./session-1-jigsaw-intro/01_Greetings/es](.././session-1-jigsaw-intro/01_Greetings/es)
