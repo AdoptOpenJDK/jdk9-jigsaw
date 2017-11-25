@@ -133,6 +133,10 @@ Misc:
 * [Java 9 Revealed](http://www.springer.com/gb/book/9781484225912?wt_mc=PPC.Google%20AdWords.3.EPR436.GoogleShopping_Product_UK&gclid=EAIaIQobChMItLHMoK3e1QIVSLHtCh0v8QnCEAQYASABEgIEpfD_BwE) (Springer; Kishori Sharan)
 * [Java 8 & 9 in Action, 2nd Edition](https://www.manning.com/books/java-8-and-9-in-action) (Manning; Raoul-Gabriel Urma, Mario Fusco, Alan Mycroft)
 
+### Courses
+
+* [What's New in Java 9](http://bit.ly/java9course) (Pluralsight; subscription required, [trial](http://bit.ly/pluralsighttrial) available)
+
 ### Repositories
 
 * [CodeFX-org/demo-java-9](https://github.com/CodeFX-org/demo-java-9) (Nicolai Parlog)
@@ -213,7 +217,7 @@ Downsides/hurdles of Java 9 modularity and Project Jigsaw:
 ### Books
 
 * [Java 9 Module System](https://www.manning.com/books/the-java-9-module-system?a_aid=nipa&a_bid=869915cb) (Manning; Nicolai Parlog)
-* [Java 9 Modularity](http://shop.oreilly.com/product/0636920049494.do) (O’Reilly; Sander Mak and Paul Bakker)
+* [Java 9 Modularity](https://javamodularity.com) (O’Reilly; Sander Mak and Paul Bakker)
 * [Java 9 Modularity Revealed - Project Jigsaw and Scalable Java Applications](http://www.apress.com/de/book/9781484227121) (Apress; Alexandru Jecan)
 * [Modular Programming in Java 9](https://www.packtpub.com/application-development/modular-programming-java-9) (Packt; Koushik Kothagal)
 * [Java 9 Cookbook](https://www.packtpub.com/application-development/java-9-cookbook) (Packt; Mohamed Sanaulla, Nick Samoylov)
@@ -224,7 +228,7 @@ Downsides/hurdles of Java 9 modularity and Project Jigsaw:
 
 ### Courses
 
-* [Java 9 Modularity: First Look](https://www.pluralsight.com/courses/java-9-modularity-first-look) (Pluralsight; subscription required, trial available)
+* [Java 9 Modularity: First Look](http://bit.ly/j9modcourse) (Pluralsight; subscription required, [trial](http://bit.ly/pluralsighttrial) available)
 
 ### Repositories
 
@@ -247,3 +251,6 @@ Downsides/hurdles of Java 9 modularity and Project Jigsaw:
 - [codetojoy/WarO_Java_9_Gradle](https://github.com/codetojoy/WarO_Java_9_Gradle) (Michael Easter; example using Gradle 4.1M1)
 - [codetojoy/WarO_Java_9_Maven](https://github.com/codetojoy/WarO_Java_9_Maven) (Michael Easter; example using Maven 3.5.0)
 - [codetojoy/easter_eggs_for_java_9](https://github.com/codetojoy/easter_eggs_for_java_9) (Michael Easter; various examples including jlink and patching)
+- [jdkapidiff](https://github.com/gunnarmorling/jdkapidiff) (Gunnar Morling; generator for customizable reports of all API changes between JDK 8 and 9)
+- [Visualizaiton: Java 9 - JDK Module Dependencies](https://wildcraft.github.io/2017/08/16/jdk-module-dependencies/) (Narendran Solai Sridharan)
+- [Visualizaiton: Java Module Configuration - Rail Road Diagram](https://wildcraft.github.io/2017/08/13/java-module-configuration/) (Narendran Solai Sridharan)
