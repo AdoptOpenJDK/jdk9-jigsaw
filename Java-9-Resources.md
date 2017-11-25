@@ -1,3 +1,14 @@
+# JUG Hackday Resources
+
+- LJC/VJUG April 2017: [Slides](https://www.slideshare.net/neomatrix369/java-9-jigsaw-ljc-vjug-session-hackday-session) | [GitHub Repo](https://github.com/AdoptOpenJDK/jdk9-jigsaw/) | [Feedback](https://goo.gl/oytFzX) | [Video](https://www.youtube.com/watch?v=y868lMk6NtY&t=7s)
+- ...[Placeholder for any other JUG event that took place]...
+- Ukraine JUG August 2017: [Slides](https://www.slideshare.net/olegtsaltsalko9/java-9-jigsaw-hackday) | [GitHub Repo 1](http://bit.ly/J9HackDay-repo) | [GitHub Repo 2](https://github.com/olegts/junit5/blob/hackday/MIGRATION.md) | [Feedback](https://docs.google.com/document/d/11JxkGH4Em0thovKojITM1oHvi9UmFsdtFw3zDRAKeFQ)
+- ...[Placeholder for any other JUG event that took place]... 
+- AJUG/VJUG August 2017: [Slides](https://www.slideshare.net/neomatrix369/java-9-jigsaw-ajugvjug-session) | [GitHub Repo](https://github.com/AdoptOpenJDK/jdk9-jigsaw/) | [Feedback](http://bit.ly/J9HackDay-AJUG-feedback) | [Video](https://www.youtube.com/watch?v=qZCMMKnxw7M&t=17s)
+- ...[Placeholder for next JUG event to take place]... 
+
+***
+
 # Java/JDK 9 Resources
 
 - [Early Access Download](http://jdk.java.net/9/); ~~or [with latest Jigsaw changes](http://jdk.java.net/jigsaw)~~
@@ -123,6 +134,10 @@ Misc:
 * [Java 8 & 9 in Action, 2nd Edition](https://www.manning.com/books/java-8-and-9-in-action) (Manning; Raoul-Gabriel Urma, Mario Fusco, Alan Mycroft)
 * [Modern Java recipes](https://www.safaribooksonline.com/library/view/modern-java-recipes/9781491973165/) (O'Reilly Media, Inc.; Ken Kouson) - Java 9 Additions chapter to help migrate from 8 to 9
 
+### Courses
+
+* [What's New in Java 9](http://bit.ly/java9course) (Pluralsight; subscription required, [trial](http://bit.ly/pluralsighttrial) available)
+
 ### Repositories
 
 * [CodeFX-org/demo-java-9](https://github.com/CodeFX-org/demo-java-9) (Nicolai Parlog)
@@ -203,7 +218,7 @@ Downsides/hurdles of Java 9 modularity and Project Jigsaw:
 ### Books
 
 * [Java 9 Module System](https://www.manning.com/books/the-java-9-module-system?a_aid=nipa&a_bid=869915cb) (Manning; Nicolai Parlog)
-* [Java 9 Modularity](http://shop.oreilly.com/product/0636920049494.do) (O’Reilly; Sander Mak and Paul Bakker)
+* [Java 9 Modularity](https://javamodularity.com) (O’Reilly; Sander Mak and Paul Bakker)
 * [Java 9 Modularity Revealed - Project Jigsaw and Scalable Java Applications](http://www.apress.com/de/book/9781484227121) (Apress; Alexandru Jecan)
 * [Modular Programming in Java 9](https://www.packtpub.com/application-development/modular-programming-java-9) (Packt; Koushik Kothagal)
 * [Java 9 Cookbook](https://www.packtpub.com/application-development/java-9-cookbook) (Packt; Mohamed Sanaulla, Nick Samoylov)
@@ -214,7 +229,7 @@ Downsides/hurdles of Java 9 modularity and Project Jigsaw:
 
 ### Courses
 
-* [Java 9 Modularity: First Look](https://www.pluralsight.com/courses/java-9-modularity-first-look) (Pluralsight; subscription required, trial available)
+* [Java 9 Modularity: First Look](http://bit.ly/j9modcourse) (Pluralsight; subscription required, [trial](http://bit.ly/pluralsighttrial) available)
 
 ### Repositories
 
@@ -237,3 +252,6 @@ Downsides/hurdles of Java 9 modularity and Project Jigsaw:
 - [codetojoy/WarO_Java_9_Gradle](https://github.com/codetojoy/WarO_Java_9_Gradle) (Michael Easter; example using Gradle 4.1M1)
 - [codetojoy/WarO_Java_9_Maven](https://github.com/codetojoy/WarO_Java_9_Maven) (Michael Easter; example using Maven 3.5.0)
 - [codetojoy/easter_eggs_for_java_9](https://github.com/codetojoy/easter_eggs_for_java_9) (Michael Easter; various examples including jlink and patching)
+- [jdkapidiff](https://github.com/gunnarmorling/jdkapidiff) (Gunnar Morling; generator for customizable reports of all API changes between JDK 8 and 9)
+- [Visualizaiton: Java 9 - JDK Module Dependencies](https://wildcraft.github.io/2017/08/16/jdk-module-dependencies/) (Narendran Solai Sridharan)
+- [Visualizaiton: Java Module Configuration - Rail Road Diagram](https://wildcraft.github.io/2017/08/13/java-module-configuration/) (Narendran Solai Sridharan)
