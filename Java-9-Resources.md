@@ -1,10 +1,12 @@
 # JUG Hackday Resources
 
 - LJC/VJUG April 2017: [Slides](https://www.slideshare.net/neomatrix369/java-9-jigsaw-ljc-vjug-session-hackday-session) | [GitHub Repo](https://github.com/AdoptOpenJDK/jdk9-jigsaw/) | [Feedback](https://goo.gl/oytFzX) | [Video](https://www.youtube.com/watch?v=y868lMk6NtY&t=7s)
-- ...[Placeholder for any other JUG event that took place]...
+
 - Ukraine JUG August 2017: [Slides](https://www.slideshare.net/olegtsaltsalko9/java-9-jigsaw-hackday) | [GitHub Repo 1](http://bit.ly/J9HackDay-repo) | [GitHub Repo 2](https://github.com/olegts/junit5/blob/hackday/MIGRATION.md) | [Feedback](https://docs.google.com/document/d/11JxkGH4Em0thovKojITM1oHvi9UmFsdtFw3zDRAKeFQ)
-- ...[Placeholder for any other JUG event that took place]... 
+
 - AJUG/VJUG August 2017: [Slides](https://www.slideshare.net/neomatrix369/java-9-jigsaw-ajugvjug-session) | [GitHub Repo](https://github.com/AdoptOpenJDK/jdk9-jigsaw/) | [Feedback](http://bit.ly/J9HackDay-AJUG-feedback) | [Video](https://www.youtube.com/watch?v=qZCMMKnxw7M&t=17s)
+
+- MedellinJUG/MadridJUG/XelaJUG/EcuadorJUG/CaliJUG November 2017: [Slides](https://www.slideshare.net/HillmerC/hackday-java-9-spanish-version/HillmerC/hackday-java-9-spanish-version) | [GitHub Repo](https://github.com/AdoptOpenJDK/jdk9-jigsaw/tree/master/es/) | [Video](https://www.youtube.com/watch?v=g1peVeABbxU)
 - ...[Placeholder for next JUG event to take place]... 
 
 ***
