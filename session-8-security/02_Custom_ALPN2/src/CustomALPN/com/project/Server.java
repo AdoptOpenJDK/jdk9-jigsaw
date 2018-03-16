@@ -23,17 +23,6 @@ public class Server {
 	    while (true) {
 	      SSLSocket s = (SSLSocket) ss.accept();
 	      
-	      s.setHandshakeApplicationProtocolSelector((serverSocket, clientProtocols) -> {
-				SSLSession handshakeSession = serverSocket.getHandshakeSession();
-				String cipher = handshakeSession.getCipherSuite();
-				int packetBufferSize = handshakeSession.getPacketBufferSize();
-				if("RC4".equals(cipher) && packetBufferSize > 1024) {
-					return "protocol1";
-				} else {
-					return "protocol2";
-				}
-		  });
-	      
 	      SSLParameters params = s.getSSLParameters();
 	      s.setSSLParameters(params);
 	      

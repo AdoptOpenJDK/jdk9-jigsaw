@@ -22,7 +22,7 @@ public class Server {
 	    while (true) {
 	      SSLSocket s = (SSLSocket) ss.accept();
 	      SSLParameters params = s.getSSLParameters();
-	      params.setApplicationProtocols(new String[] {"XMPP v1.1", "XMPP v1.2"});
+	      
 	      s.setSSLParameters(params);
 	      
 	      BufferedReader in = new BufferedReader(new InputStreamReader(s.getInputStream()));

@@ -23,7 +23,6 @@ public class Client {
 			SSLSocketFactory ssf = (SSLSocketFactory) SSLSocketFactory.getDefault();
 			SSLSocket s = (SSLSocket) ssf.createSocket("127.0.0.1", 4444);
 			SSLParameters params = s.getSSLParameters();
-			params.setApplicationProtocols(new String[] {"protocol1", "protocol2"});
 			s.setSSLParameters(params);
 			
 			PrintWriter out = new PrintWriter(s.getOutputStream(), true);
