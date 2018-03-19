@@ -85,13 +85,23 @@ Please ensure you have verified that the necessary JDK programs work in your env
    - shellFX [./session-3-jshell/shellFX/](./session-3-jshell/shellFX/)
    - teamshell [./session-3-jshell/teamshell/](./session-3-jshell/teamshell/)
    - bach - Java Shell Builder [./session-3-jshell/bach-building-with-jshell](./session-3-jshell/bach-building-with-jshell)
-   
+      
 - Session 3: Refactoring/migration sessions
    - Junit 5 migration to Java 9 modules [./session-3-refactoring-migration/01_junit5_to_java_9](session-3-refactoring-migration/01_junit5_to_java_9)
    - Building Java 9 Modules using Gradle (from monolith to modular) [./session-3-refactoring-migration/02_monolith_to_modular_using_gradle](session-3-refactoring-migration/02_monolith_to_modular_using_gradle)
    - ServiceMonitor - Migration from Java 8 to Java 9 [./session-3-refactoring-migration/03_ServiceMonitor_migration_to_java_9](session-3-refactoring-migration/03_ServiceMonitor_migration_to_java_9)
    - ServiceMonitor - Modularisation to Java 9 Modules (Maven project) [./session-3-refactoring-migration/04_ServiceMonitor_modularisation_to_java_9](session-3-refactoring-migration/04_ServiceMonitor_modularisation_to_java_9)
-        
+   
+- Session 4: Multirelease JARs
+   - Create multirelease JAR file [./session-4-multirelease-jars/01_Create_multirelease_jar/](./session-4-multirelease-jars/01_Create_multirelease_jar/)
+
+- Session 5: Reactive streams API
+   - Create Flow subscriber [./session-5-reactive-api/01_Create_subscriber/](./session-5-reactive-api/01_Create_subscriber/)
+
+- Session 6: Security enhancements
+   - Basic ALPN [./session-6-security/01_Basic_ALPN/](./session-6-security/01_Basic_ALPN/)
+   - Custom ALPN [./session-6-security/02_Custom_ALPN2/](./session-6-security/02_Custom_ALPN2/)
+   
 Each example is enclosed in a folder of its own containing bash scripts to compile, package and run the respective examples. Use these scripts for each of the examples.
 
 ## Community contributions
