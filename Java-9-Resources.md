@@ -46,6 +46,7 @@
 - [9 new features in Java 9](https://www.pluralsight.com/blog/software-development/java-9-new-features) (Sander Mak)
 - [A practical guide to Java 9 - compile, jar, run](https://sites.google.com/a/athaydes.com/renato-athaydes/posts/guidetojava9-compilejarrun) (Renato Athaydes)
 - [Java 9 tutorial](http://javasampleapproach.com/java-9-tutorial)
+- [Top Java 9 Features](https://www.interviewbit.com/blog/java-9-features/) (InterviewBit)
 
 ### Talks
 
